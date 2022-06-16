@@ -1,0 +1,133 @@
+# Title
+Autumn-born children better at sport says study
+
+
+# Paragraph
+
+Adv: <D2>Do you want your child to be good at sport, make the school team and, maybe one day, even compete on the world stage?</D2> Well, try to ensure that your would-be Olympian or World Cup winner is born in November or, failing that, in October. <A3><A1>A study led by one of the UK’s leading experts on children’s physical activity has found that school pupils born in those months are fitter than everyone else in their class.</A1></A3> <D3><D1>November- and October-born children</D1></D3> emerged as fitter, stronger and more powerful than their peers born in the other ten months of the year, <A2>especially those whose birthdays fell in April or June.</A2> <A1>Dr Gavin Sandercock, from the Centre for Sports and Exercise Science at Essex University, and colleagues found that autumn-born children enjoyed “a clear physical advantage” over their classmates.</A1>
+
+Int: <D2>Do you want your child to be good at sport, play for the school team and, maybe one day, even compete in international competitions?</D2> Well, try to make sure that your future Olympian or World Cup winner is born in November or October. <A3><A1>A study by one of the UK’s leading experts on children’s physical activity has found that school pupils born in those months are fitter than everyone else in their class.</A1></A3> <D3><D1>November- and October-born children</D1></D3> were fitter, stronger and more powerful than those born in the other ten months of the year, <A2>especially those whose birthdays were in April or June.</A2> <A3><A1>Dr Gavin Sandercock of Essex University and colleagues found that autumn-born children had “a clear physical advantage” over their classmates.</A1></A3>
+
+Ele: <D2>Do you want your child to be good at sport, play for the school team and, maybe one day, even be in international competitions?</D2> Well, try to make sure that your child is born in November or October. <A3><A1>A study by a top expert on children’s physical activity has found that schoolchildren born in November or October are fitter than everyone else in their class.</A1></A3> Children born in <D3><D1>November or October</D1></D3> were fitter, stronger and more powerful than children born in the other ten months of the year. <A2>They are especially fitter, stronger and more powerful than children with birthdays in April or June.</A2> <A3><A1>Dr Gavin Sandercock of Essex University and his colleagues found that children born in the autumn had “a clear physical advantage” over their classmates.</A1></A3>
+
+Q: Who is the top expert on children’s physical activity who ran the study?
+a: Dr. Gavin Sandercock
+b: The article does not say
+c: Someone born in November or October
+d: Dr. Matt Spencer
+
+Q: What can be said about children born in April or June?
+a: They are the weakest
+b: They are weaker than children born in November and October, but not necessarily the weakest
+c: The tend to play for the school team, and later in international competitions
+d: They tend to be more intellectual than sporty
+
+Q1: What did Dr Gavin Sandercock find about autumn-born children?
+a: They were more athletic than their peers
+b: They were physically larger than other kids their age
+c: They were mainly born in November
+d: They were bullied by their classmates
+
+# Paragraph
+
+Adv: The research involved 8,550 <D2>boys and girls aged between ten and 16 from 26 state schools</D2> in Essex. <A3><A1>All were tested between 2007 and 2010 on three different measures of fitness: stamina, handgrip strength and lower-body power. The results revealed that a child’s month of birth could make “significant” differences to their levels of cardiovascular fitness, muscle strength and ability to accelerate, all of which predict how good someone is at sport, in which such attributes are vital.</A1></A3> Performances at school sports days in the weeks ahead may bear out the findings. <A2><D3><D1>November-born children were the fittest overall as they had the most stamina and power</D1></D3> and were the second strongest.</A2> Those born in October were almost as fit, scoring highest for strength and coming third for power, with December children close behind.
+
+Int: The research involved 8,550 <D2>boys and girls aged between ten and 16 from 26 state schools</D2> in Essex. <A3><A1>All were tested between 2007 and 2010 on three different measures of fitness: stamina, handgrip strength and lower-body power. The results revealed that a child’s month of birth could make “significant” differences to their levels of cardiovascular fitness, muscle strength and ability to accelerate, all of which predict how good someone is at sport.</A1></A3> <A2><D3><D1>November-born children were the fittest overall as they had the most stamina and power</D1></D3> and were the second strongest.</A2> Those born in October were almost as fit, scoring highest for strength and coming third for power, with December children close behind.
+
+Ele: The research involved 8,550 <D2>boys and girls aged between ten and 16 from 26 state schools</D2> in Essex. <A3><A1>All were tested between 2007 and 2010 on three different things: stamina, handgrip strength and lower-body power. The results showed that a child’s month of birth could make big differences to their levels of fitness, muscle strength and ability to accelerate, all of which predict how good someone is at sport.</A1></A3> <A2><D3><D1>November children were the fittest because they had the most stamina and power</D1></D3> and were the second strongest.</A2> Children born in October were almost as fit – they scored highest for strength and came third for power, with December children close behind.
+
+Q: Why did the study measure lower-body power?
+a: To determine ability to accelerate
+b: To measure muscle strength
+c: To find out which students were born in November
+d: To measure how high students could jump
+
+Q: What were the results of the study?
+a: November children were the fittest in ⅔ of the categories
+b: November children were the fittest in all categories
+c: The children were between ages 10 and 16 from 26 state schools
+d: The results were inconclusive
+
+Q1: What factor was found to make the biggest difference in a child’s physical capabilities?
+a: The month a child was born in
+b: The strength of a child’s muscles at birth
+c: The measured stamina and power of a child at birth
+d: The weight of a child
+
+# Paragraph
+
+Adv: <D3><D2>The gap in physical prowess between children in the same class but born in different months was sometimes very wide.</D2></D3> <A1>“For example, we found that a boy born in November can run at least 10% faster, jump 12% higher and is 15% more powerful than a child of the same age born in April.</A1> This is, potentially, a huge physical advantage,” said Sandercock. <A3><A2>Such gaps could ultimately decide who became a top-level athlete because, as the paper says, <D1>“selection into elite sports may often depend on very small margins or differences in an individual’s physical performance”.</D1></A2></A3> The study, which has been published in the International Journal of Sports Medicine, found that, when scores for the three kinds of fitness were combined, those born in April were the least fit, then those in June. That could see those children excluded from school teams and becoming sporting underachievers, Sandercock said.
+
+Int: <D3><D2>The gap in physical ability between children in the same class but born in different months was sometimes very wide.</D2></D3> <A1>“For example, we found that a boy born in November can run at least 10% faster, jump 12% higher and is 15% more powerful than a child of the same age born in April.</A1> This is, potentially, a huge physical advantage,” said Sandercock. <A3><A2>Such gaps could decide who became a top-level athlete because, as the paper says, <D1>“selection into elite sports may often depend on very small margins or differences in an individual’s physical performance”.</D1></A2></A3> The study, which has been published in the International Journal of Sports Medicine, found that, when scores for the three kinds of fitness were combined, those born in April were the least fit, then those in June. That could see those children excluded from school teams and becoming sporting underachievers, Sandercock said.
+
+Ele: <D3><D2>The gap in physical ability between children in the same class but born in different months was sometimes very wide.</D2></D3> <A1>“For example, we found that a boy born in November can run at least 10% faster, jump 12% higher and is 15% more powerful than a child of the same age born in April.</A1> This is a huge physical advantage,” said Sandercock. <A3><A2>These gaps could decide who became a top-level athlete because <D1>“selection into elite sports may often depend on very small differences in a person’s physical performance ”.</D1></A2></A3> The study found that, when scores for the three kinds of fitness were put together, children born in April were the least fit, followed by children born in June.
+
+Q: How are the percentages used in the article?
+a: To show concrete evidence that being born in a different month significantly affects athletic ability
+b: To provide evidence for why November-born children should be athletes
+c: To show how small differences in physical performance affect selection for elite sports
+d: To overwhelm readers with data
+
+Q: Small differences in physical performance...
+a: Can have a large impact on whether a person is selected for a sports team
+b: Are caused by selection for an elite sports team
+c: Are generally caused by being born in different months
+d: Have only a small impact on sport outcomes
+
+Q2: The “gaps” refer to…
+a: Disparity in the physical abilities of children in the same class
+b: The various levels of competitive sports
+c: The number of month separating children in a given class
+d: How far children born in the autumn could jump
+
+# Paragraph
+
+Adv: The findings seem to show that children born in the early months of the school year enjoy a <D3><D2>double “autumn advantage”</D2></D3> – they are already known to have an academic advantage and, now, they also appear to be better equipped for sport, too. The results show that something other than “the relative-age effect” – the greater maturity of those born early in the school year – is at work, especially as the fittest children were not the tallest or heaviest, he added.[a] <A1>The authors believe that autumn-born children’s greater exposure over the summer months, towards the end of pregnancy, to vitamin D – the “sunshine vitamin” linked to a range of health benefits – is the most likely explanation. “Seasonal differences in intrauterine vitamin D concentrations seem most plausible,” they say.</A1> <A3><A2>John Steele, chief executive of the Youth Sport Trust, said the quality of a young person’s introduction to PE and sport at school can be “a major factor” in their sporting development. <D1>“Children that get a high-quality first experience,</D1> which develops their physical literacy, are those that will have greater agility, balance and coordination, and are more likely to develop an enjoyment of physical activity and excel in sport as they grow up”, he said.</A2></A3>
+
+Int: The findings seem to show that children born in the early months of the school year enjoy a <D3><D2>double “autumn advantage”</D2></D3> – they are already known to have an academic advantage and, now, they also appear to be better equipped for sport, too. The results show that something other than “the relative-age effect” – the greater maturity of those born early in the school year – is the cause, especially as the fittest children were not the tallest or heaviest, he added. <A1>The authors believe that autumn-born children’s greater exposure over the summer months, towards the end of pregnancy, to vitamin D is the most likely explanation. “Seasonal differences in vitamin D concentrations in the womb seem most plausible,” they say.</A1> <A3><A2>John Steele, chief executive of the Youth Sport Trust, said the quality of a young person’s introduction to sport at school can be “a major factor” in their sporting development. <D1>“Children that get a high-quality first experience</D1> are those that will have greater agility, balance and coordination, and are more likely to develop an enjoyment of physical activity and excel in sport as they grow up”, he said.</A2></A3>
+
+Ele: The findings seem to show that children born in the early months of the school year enjoy a <D3><D2>double “autumn advantage”</D2></D3> – we already know that they have an academic advantage and, now, they also seem to be better at sport, too. <A1>The authors of the study believe that the most likely explanation is that children born in autumn get more vitamin D over the summer months towards the end of pregnancy.</A1> <A3><A2>John Steele, chief executive of the Youth Sport Trust, said the quality of a young person’s introduction to sport at school can be “a major factor” in their sporting development. <D1>“Children that get a high-quality first experience</D1> will have greater agility, balance and coordination, and are more likely to develop an enjoyment of physical activity and be good at sport as they grow up”, he said.</A2></A3>
+
+Q: How does vitamin D play a role in the study?
+a: The authors of the study believe it explains why fall children are better at sports
+b: The study examined the amount of vitamin D exposure towards the end of pregnancy
+c: According to the study, children with enough vitamin D have a high-quality first experience with sports
+d: The varying amounts of vitamin D interfered with the results of the study
+
+Q: How does Steele’s point of view relate to the study?
+a: It explains why birth month differences last a long time
+b: It proposes an alternative theory for why some children are better at sports
+c: It looks at the study from the perspective of the double “autumn advantage”
+d: It criticizes the study for not taking into account location differences
+
+Q2: What does Steele consider “a major factor” in the development of a child’s athletic abilities?
+a: The quality of the physical education they receive
+b: They enjoyment they derive from sports
+c: The advantages given to autumn-born children
+d: The height and weight of a child
+
+# Paragraph
+
+Adv: <D3><D2>UK Sport could not say if a disproportionately high number of the 1,300 athletes across 47 sports it funds were born in November and October.</D2></D3> <A1>Natalie Dunman, its head of performance pathways, said that, while the differences highlighted in the new findings were borne out by teenagers competing in junior-level competitions, they had disappeared by the time sportspeople were taking part in adult competitions.</A1> <A3><A2>She said: “Looking at elite, senior athletes, there are <D1>many factors that go into making a champion</D1> and our work hasn’t uncovered anything to suggest that month of birth is one of the key ingredients.”</A2></A3>
+
+Int: <D3><D2>UK Sport could not say if a disproportionate majority of the 1,300 athletes across 47 sports it funds were born in November and October.</D2></D3> <A1>Natalie Dunman, its head of performance, said that while the differences highlighted in the new findings were borne out by teenagers competing in junior-level competitions, they had disappeared by the time sportspeople were taking part in adult competitions.</A1> <A3><A2>She said: “With elite, senior athletes, there are <D1>many factors that make a champion</D1> and our work hasn’t uncovered anything to suggest that month of birth is one of the key ingredients.”</A2></A3>
+
+Ele: <D3><D2>UK Sport could not say if a majority of the 1,300 athletes it gives money to were born in November and October.</D2></D3> <A1>Natalie Dunman, its head of performance, said that the differences shown in the new study were true for teenagers in junior-level competitions, but that the differences disappear before sportspeople were in adult competitions.</A1> <A3><A2>She said: “With adult athletes, there are <D1>many factors that make a champion</D1> and we don’t think that month of birth is one of the key ingredients.”</A2></A3>
+
+Q: What criticism would Natalie Dunman pose for the study?
+a: It only investigated children and teenagers
+b: Nothing - she agrees that the differences shown in the study exist
+c: It doesn’t control for other factors that make a champion
+d: It had a small sample size
+
+Q: According to Dunman, when it comes to adult athletes...
+a: Birth month is unimportant
+b: Birth month is only one of the key ingredients
+c: A majority of the 1,300 athletes employed by UK Sport were born in November and October
+d: Getting sufficient vitamin D is important
+
+Q2: Where does Dunamn believe the athletic abilities of adults are derived from?
+a: The many characteristics they have that drive athletic pursuits
+b: The amount of championships they won growing up
+c: The opportunities offered by UK Sport during their youth
+d: The month in which they were born in

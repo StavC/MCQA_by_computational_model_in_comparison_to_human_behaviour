@@ -1,0 +1,139 @@
+from dataclasses import dataclass
+from typing import List, Sequence, Any, Optional
+import json
+import read_articles
+import random
+
+@dataclass()
+class OnestopId:
+    article_id: int
+    paragraph_id: int
+    level: str
+
+@dataclass
+class Document:
+    answers: List[int]
+    options: List[List[str]]
+    questions: List[str]
+    article: str
+    id: Any
+
+@dataclass()
+class QuestionId:
+    paragraph_id: OnestopId
+    question: int
+
+class Example(object):
+    """A single training/test example for the SWAG dataset."""
+
+    def __init__(self,
+                 id,
+                 context_sentence,
+                 start_ending,
+                 ending_0,
+                 ending_1,
+                 ending_2,
+                 ending_3,
+                 label=None):
+        self.id = id
+        self.context_sentence = context_sentence
+        self.start_ending = start_ending
+        self.endings = [
+            ending_0,
+            ending_1,
+            ending_2,
+            ending_3,
+        ]
+        self.label = label
+
+    def __str__(self):
+        return self.__repr__()
+
+    def __repr__(self):
+        l = [
+            "id: {}".format(self.id),
+            "context_sentence: {}".format(self.context_sentence),
+            "start_ending: {}".format(self.start_ending),
+            "ending_0: {}".format(self.endings[0]),
+            "ending_1: {}".format(self.endings[1]),
+            "ending_2: {}".format(self.endings[2]),
+            "ending_3: {}".format(self.endings[3]),
+        ]
+
+        if self.label is not None:
+            l.append("label: {}".format(self.label))
+
+        return ", ".join(l)
+
+
+
+def parse_race(train_dir):
+    docs = []
+    answer_map = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
+    for path in train_dir.iterdir():
+        parsed = json.loads(path.read_bytes())
+        answers = [answer_map[_] for _ in parsed['answers']]
+        example = Document(answers=answers, options=parsed['options'], questions=parsed['questions'],
+                           article=parsed['article'], id=parsed['id'])
+        docs.append(example)
+    examples = split_documents(docs)
+    return examples
+
+
+
+def split_documents(docs: Sequence[Document]):
+    examples = []
+    for doc in docs:
+        n_questions = len(doc.questions)
+        for i in range(n_questions):
+            # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
+            example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article, start_ending=doc.questions[i],
+                              ending_0=doc.options[i][0], ending_1=doc.options[i][1], ending_2=doc.options[i][2],
+                              ending_3=doc.options[i][3], label=doc.answers[i])
+            examples.append(example)
+    return examples
+
+
+def read_race_examples(input_file, is_training):
+    return parse_race(input_file)
+
+def read_onestop_docs():
+    articles = read_articles.read_all_articles(read_articles.ANNOTATIONS_FOLDER)
+    docs = []
+    for article in articles:
+        for annotation in article.paragraph_annotations:
+            for paragraph in annotation.paragraph_versions:
+                questions = []
+                options = []
+                for question in annotation.questions:
+                    answers = []
+                    questions.append(question.question)
+                    for answer in question.answers:
+                        answers.append(answer)
+                    options.append(answers)
+                onestop_id = OnestopId(article_id=article.article_id, paragraph_id=annotation.paragraph_id, level=paragraph.level)
+                doc = Document(answers=[0]*4, options=options, questions=questions, article=paragraph.plain_text, id=onestop_id)
+                docs.append(doc)
+    return docs
+
+def get_article_id(example: Example):
+    return example.id.paragraph_id.article_id
+
+def read_onestop(is_training=True, return_all=False)->List[Example]:
+    docs = read_onestop_docs()
+    examples =  split_documents(docs)
+    if return_all:
+        return examples
+    article_ids = list(set([get_article_id(_) for _ in examples]))
+    last_state = random.getstate()
+    random.seed(0, version=2)
+    random.shuffle(article_ids)
+    n_train = round(.7*len(article_ids))
+    articles_train = set(article_ids[:n_train])
+    articles_test = set(article_ids[n_train:])
+    if is_training:
+        res = [_ for _ in examples if get_article_id(_) in articles_train]
+    else:
+        res = [_ for _ in examples if get_article_id(_) in articles_test]
+    random.setstate(last_state)
+    return res

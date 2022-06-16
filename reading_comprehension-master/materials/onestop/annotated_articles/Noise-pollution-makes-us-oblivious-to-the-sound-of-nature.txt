@@ -1,0 +1,159 @@
+﻿# Title
+Noise pollution makes us oblivious to the sound of nature
+
+
+# Paragraph
+
+Adv: The tranquil chorus of the natural world is in danger of being lost to today’s generation as people screen out the noises that surround them, a senior US researcher warns. <A1>Rising levels of background noise in some areas threaten to make people oblivious to the uplifting sounds of birdsong, trickling water and trees rustling in the wind,</A1> <D1>which can often be heard even in urban centres,</D1> said Kurt Fristrup, a senior scientist at the US National Park Service. <A3><A2>The problem was exacerbated by people listening to music through their earphones instead of tuning in to the birds and other sounds of nature</A2></A3> <D3><D2>that can easily be drowned out by traffic, music and other noises, he said.</D2></D3> 
+
+Int: The tranquil sounds of the natural world might be lost to today’s generation as people screen out the noises that surround them, a senior US researcher warns. <A1>Rising levels of background noise in some areas threaten to make people oblivious to the uplifting sounds of birdsong, trickling water and trees rustling in the wind.</A1> <D1>These sounds can often be heard even in urban centres,</D1> said Kurt Fristrup, a senior scientist at the US National Park Service. <A3><A2>The problem was made worse by people listening to music through their earphones instead of tuning in to the birds and other sounds of nature</A2></A3> <D3><D2>that can easily be drowned out by traffic, music and others noises, he said.</D2></D3>
+
+Ele: People today might not hear the sounds of the natural world because they screen out the noises around them, says a US researcher. <A1>More background noise can make people oblivious to the uplifting sounds of birdsong, water and trees in the wind.</A1> <D1>You can often hear these sounds even in cities,</D1> said Kurt Fristrup, a senior scientist at the US National Park Service. <A3><A2>The problem is even worse because people listen to music through their earphones instead of listening to the birds and other sounds of nature.</A2></A3> <D3><D2>Natural sounds are easily drowned out by traffic, music and others noises, Fristrup said.</D2></D3>
+
+Q: How does increasing background noise affect what people hear?
+a: They do not hear sounds of nature
+b: They do not hear uplifting sounds
+c: They do not hear city sounds
+d: They do not hear people speaking to them
+
+Q: How does listening to music through earphones affect one’s abilities to hear natural sounds?
+a: It worsens one’s abilities to hear natural sounds
+b: It helps one hear birds
+c: It drowns out traffic
+d: It totally ruins one’s abilities to hear natural sounds
+
+Q2: Wearing earphones prevents people from hearing…
+a: Natural sounds such as a bird chirping 
+b: Their own music
+c: The sounds of traffic
+d: Conversations of passersby
+
+# Paragraph
+
+Adv: “This learned deafness is a real issue,” Fristrup told the American Association for the Advancement of Science meeting in San Jose. <D3><D2><D1>“We are conditioning ourselves to ignore the information coming into our ears.”</D1></D2></D3> <A1>“This gift that we are born with – to reach out and hear things hundreds of metres away, all these incredible sounds – is in danger of being lost through a generational amnesia,”</A1> he said. <A3><A2>“There is a real danger, both of loss of auditory acuity, where we are exposed to noise for so long that we stop listening,</A2></A3> but also a loss of listening habits, where we lose the ability to engage with the environment the way we were built to,” he added. 
+
+Int: “This learned deafness is a real problem,” Fristrup told the American Association for the Advancement of Science meeting in San Jose. <D3><D2><D1>“We are training ourselves to ignore the information coming into our ears.”</D1></D2></D3> <A1>“This gift that we are born with – to hear things hundreds of metres away, all these incredible sounds – might be lost,”</A1> he said. <A3><A2>The danger is that we are exposed to noise for so long that we stop listening. </A2></A3>We are also losing the ability to engage with the environment in the way we were built to, he added.
+
+Ele: “This learned deafness is a real problem,” Fristrup told the American Association for the Advancement of Science meeting in San Jose. <D3><D2><D1>“We are training ourselves to ignore the information that comes into our ears.”</D1></D2></D3> <A1>“This gift that we are born with – the ability to hear things hundreds of metres away, all these incredible sounds – might be lost,”</A1> he said. <A3><A2>This is the problem: we hear so many noises that we stop listening.</A2></A3>
+
+Q: What does Fristrup say is the “gift that we are born with”?
+a: Ability to hear from very far
+b: Ability to sound incredible
+c: Ability to ignore the information that enters our ears
+d: Ability to understand sounds
+
+Q: What is a reason hearing so many noises for so long is an issue?
+a: We stop listening
+b: We become deaf
+c: We ignore our ears
+d: We may develop a disease
+
+Q2: The author is implying that:
+a: People should be listening to the sounds of nature
+b: People should try to hear more noises
+c: People should ignore information that enters their ear
+d: People should care more about the environment
+
+# Paragraph
+
+Adv: <A1><D2>For the past ten years, the US National Park Service has recorded sound levels at more than 600 sites across the US,</D2> including Yosemite in California, Yellowstone and Denali in Alaska. Not one was unaffected by some form of noise from human activity, be it over-flying aircraft, motorbikes, motorboats or tour buses.</A1> Fristrup’s team combined the sound levels recorded from national parks with similar data from urban settings to create a model of noise levels across the US.  <D1><A2>They predict that noise pollution is growing faster than the US population and more than doubles every 30 years.</A2></D1> 
+
+Int: <A1><D2>For the past ten years, the US National Park Service has recorded sound levels at more than 600 places across the US,</D2> including Yosemite in California, Yellowstone and Denali in Alaska. All the places were affected by some form of noise from human activity – aircraft, motorbikes, motorboats or tour buses.</A1> Fristrup’s team combined the sound levels recorded from national parks with similar data from urban settings to create a model of noise levels across the US.  <D1><A2>They say that noise pollution more than doubles every 30 years.</A2></D1>
+
+Ele: <A1><D2>For the past ten years, the US National Park Service has recorded sound levels at more than 600 parks in the US,</D2> including Yosemite in California, Yellowstone and Denali in Alaska. There was noise from human activity in all the parks, for example aircraft, motorbikes, motorboats and tour buses.</A1> <D1><A2>Fristrup’s team say that noise pollution more than doubles every 30 years.</A2></D1>
+
+Q: What was heard in all the recordings of US National Parks?
+a: Noise of human activity
+b: Motorbike noises
+c: Pollution
+d: Wolves howling
+
+Q: How has noise pollution changed over the past 30 years?
+a: It is two times more
+b: It is two times less
+c: It has increased by 600
+d: There has been no change
+
+Q2: Who predicted that noise pollution would change every 30 years?
+a: Fristrup’s team of researchers
+b: Noise pollution activists
+c: The US National Park Service
+d: The Environmental Protection Agency
+
+# Paragraph
+
+Adv: “It’s not surprising people are putting on earphones or even noise cancelling headphones to try and create a quieter or more congenial environment,” he said. <D3><A1><D2>“As you raise background sound levels, it has the same effect on your hearing that fog would have on your vision.</D2></D3> Instead of having this expansive experience of all the sounds around you, you are aware of only a small area around you,”</A1> he said. <A3><D1><A2>“Even in most of our cities, there are birds and things to appreciate in the environment, and there can be very rich natural choruses to pay attention to.</A2></D1></A3> And that is being lost.” 
+
+Int: “It’s not surprising people are putting on earphones or even noise cancelling headphones to try and create a quieter environment,” he said. <D3><A1><D2>“As you raise background sound levels, it has the same effect on your hearing as fog would have on your vision.</D2></D3> Instead of having this expansive experience of all the sounds around you, you are aware of only a small area around you,”</A1> he said. <A3><D1><A2>Even in our cities, there are birds and things to appreciate in the environment but the ability to hear them is being lost.</A2></D1></A3>
+
+Ele: “It’s not surprising people put on earphones,” he said. <D3><A1><D2>“More background noise has the same effect on your hearing as fog has on your vision</D2></D3> – you are aware of only a small area around you,”</A1> he said. <A3><D1><A2>Even in our cities, there are birds and things to appreciate in the environment but we are losing the ability to hear them.</A2></D1></A3>
+
+Q: What happens when background noise levels increase?
+a: You are only able to hear noises near you
+b: It becomes foggy
+c: You appreciate things around you
+d: You strain your ears
+
+Q: What does he cite as noises we are able to appreciate even in the city?
+a: Birds
+b: City traffic
+c: Fog
+d: Laughter
+
+Q2: What common assumption regarding cities is he arguing against?
+a: The sounds of nature aren’t present in urban environments
+b: Citydwellers don’t know what a bird sounds like
+c: Background noise helps listeners focus more
+d: Earphones are a negative addition to society
+ 
+# Paragraph
+
+Adv: <D3><D2><A1>People quickly become accustomed to changes in their environments, including rising noise levels,</D2></D3> and, over time, Fristrup fears that we will accept far worse environmental conditions than we should and forget how much quieter the world could be.</A1> <A3><A2><D1>“If finding peace and quiet becomes difficult enough, many, many children will grow up without the experience</D1></A2></A3> and I think it’s a very real problem,” he said. 
+
+Int: <D3><D2><A1>People quickly become used to changes in their environments, including rising noise levels,</D2></D3> and, over time, Fristrup fears that we will accept far worse environmental conditions than we should and forget how much quieter the world could be.</A1> <A3><A2><D1>“If finding peace and quiet becomes too difficult, many, many children will grow up without the experience</D1></A2></A3> and I think it’s a very real problem,” he said.
+
+Ele: <D3><D2><A1>People quickly become used to changes in their environments, including more noise.</D2></D3> Fristrup worries that we will forget how much quieter the world could be.</A1> <A3><A2><D1>“If finding peace and quiet becomes too difficult, many children will grow up without the experience</D1></A2></A3> and I think it’s a very big problem,” he said.
+
+Q: What is Fristrup afraid will happen as we become used to increasing levels of noise?
+a: We will forget how quiet the world could be
+b: Our environment will change
+c: We will grow up without noise
+d: We will become deaf
+
+Q: What experience does Fristrup think children will grow up without?
+a: Finding peace and quiet
+b: Hardships
+c: More noise in our environments
+d: Understanding global warming
+
+Q2: At what point will children grow up without “the experience”?
+a: When noise pollution reaches too high of a level
+b: When cities become quiet all of the time
+c: When they get used to the environment they are raised in
+d: When they start using earphones
+
+# Paragraph
+
+Adv: The warning came as other scientists reported beneficial health effects from listening to natural sounds. <A1>Speaking at the same meeting, Derrick Taff, a social scientist at Pennsylvania State University, described preliminary experiments which suggest that listening to recordings from national parks, of waterfalls, birdsong and wind, helped people recover from stressful events.</A1> <A3><D1><A2>“We know that natural sounds are very important to people. They are some of the main reasons people visit protected areas. They want to hear the natural quiet, the birdsong, and the wind and water,”</A2></D1></A3> Taff said. <D3><D2>“We may be losing this as people are listening to iPods all the time</D2></D3> but I do believe that the public is appreciative of these sounds. My advice is to go to your protected areas and experience what you are missing.” 
+
+Int: The warning came as other scientists reported health benefits from listening to natural sounds. <A1>Speaking at the same meeting, Derrick Taff, a social scientist at Pennsylvania State University, described preliminary experiments which suggest that listening to recordings from national parks, of waterfalls, birdsong and wind, helped people recover from stressful events.</A1> <A3><D1><A2>“We know that natural sounds are very important to people. They are some of the main reasons people visit protected areas. They want to hear the natural quiet, the birdsong, and the wind and water,”</A2></D1></A3> Taff said. <D3><D2>“We may be losing this as people are listening to their iPods all the time.</D2></D3> My advice is to go to your protected areas and experience what you are missing.”
+
+Ele: Other scientists reported health benefits from listening to natural sounds. <A1>Speaking at the same meeting, Derrick Taff, a social scientist at Pennsylvania State University, said that listening to recordings from national parks, of waterfalls, birdsong and wind, helped people feel less stressed.</A1> <A3><D1><A2>“We know that natural sounds are very important to people. They are some of the main reasons people visit protected areas. They want to hear the natural quiet, the birdsong, and the wind and water,”</A2></D1></A3> Taff said. <D3><D2>“We may be losing this as people are listening to their iPods all the time.</D2></D3> My advice is to go to your protected areas and experience what you are missing.”
+
+Q: How does listening to natural sounds affect people, according to Taff?
+a: It helps them destress
+b: They forget their troubles
+c: They want to visit protected areas
+d: They become sleepy
+
+Q: Why do people visit protected areas?
+a: They enjoy natural sounds
+b: They like birds
+c: They don’t listen to their iPods there
+d: They enjoy the view
+
+Q2: What do the scientists believe they know?
+a: The sounds of nature are important to people
+b: Birdsongs are more appreciated than the sounds of the wind
+c: People don’t like listening to iPods
+d: Recordings of natural sounds are not beneficial

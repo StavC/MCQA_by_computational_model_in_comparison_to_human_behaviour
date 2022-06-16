@@ -1,0 +1,107 @@
+#Title
+Mirrors could replace air conditioning
+
+
+# Paragraph
+
+Adv: A mirror that sends heat into the frigid expanse of space has been designed by scientists to replace <D3><D1>air-conditioning units</D1></D3> that keep buildings cool on Earth. <A3><A1>Researchers believe the mirror could slash the amount of energy used to control air temperatures in business premises and shopping centers by doing away with power-hungry cooling systems.</A1></A3> <A2>Around 15% of the energy used by buildings in the US goes on air conditioning,</A2> but the researchers’ calculations suggest that, in some cases, <D2>the mirror could completely offset the need for extra cooling.</D2>
+
+Int: A mirror that sends heat into cold space has been designed by scientists to replace <D3><D1>air-conditioning units</D1></D3> that keep buildings cool on Earth. <A3><A1>Researchers believe the mirror could slash the amount of energy used to control air temperatures in business premises and shopping centers because they won’t need to use cooling systems.</A1></A3> <A2>Around 15% of the energy used by buildings in the US goes on air conditioning</A2> but the researchers’ say that, in some cases, <D2>the mirror could completely offset the need for extra cooling.</D2>
+
+Ele: Scientists have designed a mirror that sends heat into cold space. If you use the mirror, you don’t need to use <D3><D1>air-conditioning units</D1></D3> that keep buildings cool on Earth. <A3><A1>The scientists believe that the mirror could reduce by a lot the amount of energy we use to control air temperatures in offices and shopping centers.</A1></A3> <A2>Around 15% of the energy used by buildings in the US goes on air conditioning.</A2> <D2>The researchers say that the mirror could mean that we no longer need air conditioning.</D2>
+
+Q: Where could we substantially cut energy costs with mirrors, according to the article?
+a: Offices and malls
+b: Air traffic control offices
+c: Cooling units such as fridges
+d: Factories and industrial plants
+
+Q: How much energy would we save if we used mirrors instead of AC?
+a: Around 15% for every building
+b: Around 85% for every building
+c: 100% of energy
+d: Very little - around 5%
+
+Q1: Why would mirrors reduce the energy used by buildings?
+a: They would replace air conditioning systems
+b: They only use 15% of a building’s energy
+c: They require half as many air conditioning units
+d: They provide extra cooling to buildings
+
+# Paragraph
+
+Adv: <A3><A1>In a rooftop comparison of the device in Stanford, California, scientists found that, while <D2>a surface painted black reached 60C more than ambient temperature in sunlight</D2> and bare aluminium reached 40C more, the mirror was up to 5C cooler than the surrounding air temperature. “If you cover significant parts of the roof with this mirror, you can see how much power it can save. You can significantly offset the electricity used for air conditioning,”</A1></A3> <A2>said Shanhui Fan, an expert in photonics at Stanford University, who led the development of the mirror.</A2> “In some situations, the computations say you can completely offset the air conditioning.” <D3><D1>Buildings warm up in a number of different ways.</D1></D3> Hot-water boilers and cooking facilities release heat into their immediate surroundings. In hot countries, warm air comes in through doors and windows. Then, there is visible light and infrared radiation from the sun, which also heat up buildings.
+
+Int: <A3><A1>In a rooftop comparison in Stanford, California, scientists found that <D2>a roof that had been painted black reached 60C more than the air temperature in sunlight</D2> and aluminium reached 40C more. However, the mirror was up to 5C cooler than the surrounding air temperature. “If you cover significant parts of the roof with this mirror, you can see how much power it can save. You can significantly offset the electricity used for air conditioning,”</A1></A3> <A2>said Shanhui Fan, an expert in the study of light at Stanford University, who led the development of the mirror.</A2> “In some situations, you will be able to completely offset the air conditioning.” <D3><D1>Buildings warm up in a number of different ways.</D1></D3> Hot-water boilers and cooking areas release heat into their immediate surroundings. In hot countries, warm air comes in through doors and windows. Then, there is visible light and infrared radiation from the sun, which also heat up buildings.
+
+Ele: <A3><A1>Scientists in Stanford, California, <D2>found that a roof painted black was 60C hotter than the air temperature in sunlight.</D2> They found that aluminium was 40C hotter. But the mirror was 5C cooler than the air temperature. “If you cover large parts of the roof with this mirror, you can save a lot of power,”</A1></A3> <A2>said Shanhui Fan, an expert in the study of light at Stanford University. He led the development of the mirror.</A2> <D3><D1>Buildings warm up in different ways.</D1></D3> Hot-water boilers and cooking areas release heat. In hot countries, warm air comes in through doors and windows. Then, there is visible light and infrared radiation from the sun, which also heat up buildings.
+
+Q: What is the main result of the Stanford experiment?
+a: Covering roofs with mirrors can save power
+b: Painting roofs black causes the house to heat up
+c: There are many sources of warmth for buildings
+d: Mirrors are too fragile to be useful for heating protection
+
+Q: Who is Shanhui Fan?
+a: A scientist who helped develop cooling mirrors
+b: An professor at Stanford who studies light and is opposed to using mirrors for cooling
+c: A person who painted his roof black and found his house heating up
+d: A businessman who wants to sell the cooling mirror to a wider public
+
+Q1: Which type of roof absorbed the most heat?
+a: The one painted black
+b: The one made of aluminum
+c: The heat generated by a roof depends on the type of building
+d: Roofs can’t generate heat
+
+# Paragraph
+
+Adv: The <D3><D1>Stanford mirror</D1></D3> was designed in such a way that it reflects 97% of the visible light that falls on it. But, more importantly, it works as a thermal radiator. <A3><A1>When the mirror is warmed up, it releases heat at a specific wavelength of infrared light that passes easily through the atmosphere and out into space.</A1></A3> <D2>The mirror is built from several layers of wafer-thin materials.</D2> The first layer is reflective silver. On top of this are alternating layers of silicon dioxide and hafnium oxide. These layers improve the reflectivity but, also, turn the mirror into a thermal radiator. When silicon dioxide heats up, it radiates the heat as infrared light at a wavelength of around ten micrometres. Since there is very little in the atmosphere that absorbs at that wavelength, the heat passes straight out to space. The total thickness of the mirror is around two micrometres or two thousandths of a millimetre. <A2>“The cold darkness of the universe can be used as a renewable thermodynamic resource, even during the hottest hours of the day,”</A2> the scientists write in Nature. In tests, the mirror had a cooling power of 40 watts per square metre at ambient temperature.
+
+Int: The <D3><D1>Stanford mirror</D1></D3> was designed to reflect 97% of the visible light that falls on it. But, more importantly, it works as a thermal radiator. <A3><A1>When the mirror is warmed up, it releases heat at a specific wavelength of infrared light that passes easily through the atmosphere and out into space.</A1></A3> To make anything cool, you need what engineers call a heat sink: somewhere to put unwanted heat. The heat sink has to be cooler than the object that needs cooling or it will not do its job. For example, a bucket of ice will cool a bottle of wine because it becomes a sink for heat in the liquid. The Stanford mirror relies on the best heat sink: the universe itself.[a] <D2>The mirror is built from several layers of very thin materials.</D2> The first layer is reflective silver. On top of this are layers of silicon dioxide and hafnium oxide. These layers turn the mirror into a thermal radiator. When silicon dioxide heats up, it radiates the heat as infrared light at a wavelength of around ten micrometres and the heat passes straight out to space. The total thickness of the mirror is around two micrometres or two thousandths of a millimetre. <A2>“The cold darkness of the universe can be used as a renewable thermodynamic resource, even during the hottest hours of the day,”</A2> the scientists write in Nature. In tests, the mirror had a cooling power of 40 watts per square metre at outside temperatures.
+
+Ele: The <D3><D1>Stanford mirror</D1></D3> reflects 97% of the visible light that falls on it. But, more importantly, it releases heat. <A3><A1>When the mirror is warmed up, it releases heat at a specific wavelength of infrared light that goes easily through the atmosphere and out into space.</A1></A3> <D2>The mirror is made from several layers of very thin materials.</D2> These layers help the mirror to release heat. The mirror sends the heat as infrared light out to space. <A2>“The mirror can use the cold darkness of the universe, even during the hottest hours of the day,”</A2> the scientists say.
+
+Q: Where does heat from the mirror go in the end?
+a: To space
+b: It is absorbed to heat the mirror up
+c: Stanford
+d: To provide heating for houses in the winter
+
+Q: What does the quote from the scientists mean?
+a: That the mirror is still successful when it is very hot out
+b: That the mirror only works if it is not too hot
+c: That the mirror is made out of several layers of very thin materials
+d: That the mirror is very cost-effective
+
+Q1: Why is it important that the mirror releases heat as infrared light?
+a: The wavelength of infrared light travels easily through the atmosphere
+b: Infrared light is the only light that can exist in space
+c: The Stanford mirror was designed specifically for infrared light
+d: Infrared light is the cheapest to produce
+
+# Paragraph
+
+Adv: <D3><D2>Writing in the journal, Fan puts the installed cost of mirrors at between $20 and $70 per square metre</D2></D3> and <A1>calculates an annual electricity saving of 100MWh on a three-story building.</A1> Fan said that the mirror could cool buildings – or other objects – simply by putting it in direct contact with them. Coating the roof of a building with the mirror would prevent heating from sunlight but do little to remove heat from its interior. More likely, the mirror would be used to cool water or some other fluid that would then be pumped around the building.[b] <D1>He ruled out the idea of using the mirrors to slow down global warming. <A3><A2>“Roof space accounts for only a small portion of the Earth’s surface so, at this point, we don’t think this would be a geoengineering solution.</D1> Rather, our contribution on the greenhouse-gas-emission issue is simply to reduce electricity consumption,” he said.</A2></A3> “I’m really excited by the potential it has and the applications for cooling,” said Marin Soljačić, a physicist at the Massachusetts Institute of Technology. “You could use this on buildings so you have to spend much less on air conditioning or maybe you wouldn’t need it at all. You could put it on top of shopping malls. With a large enough surface, you could get substantial cooling.”
+
+Int: <D3><D2>Writing in the journal, Fan says that the cost of the mirrors is between $20 and $70 per square metre.</D2><D3> <A1>He calculates an annual electricity saving of 100MWh on a three-story building.</A1> Fan said that the mirror could cool buildings but he said that the mirrors would not slow down global warming. <A3><A2><D1>“Roof space is only a small portion of the Earth’s surface so the mirror is not a solution to the problem of global warming.</D1> But our mirror will help limit greenhouse gas emissions by reducing electricity consumption,” he said.</A2></A3> “I’m really excited by the potential it has,” said Marin Soljacic, a physicist at the Massachusetts Institute of Technology. “You could use this on buildings and spend much less money on air conditioning or maybe you wouldn’t need it at all. You could put it on top of shopping malls.”
+
+Ele: <D3><D2>Shanhui Fan says the mirrors costs between $20 and $70 per square metre.</D2></D3> <A1>He says that a mirror on a three-story building could save 100MWh of electricity per year.</A1> <A3><A2><D1>Fan also said that the mirror could cool buildings but it would not slow down global warming.</D1> But it would reduce the amount of electricity that businesses use.</A2></A3> “I’m really excited by this,” said Marin Soljačić, a physicist at the Massachusetts Institute of Technology. “You could use the mirrors on buildings and spend much less money on air conditioning or maybe you wouldn’t need it at all. You could put the mirrors on top of shopping malls.”
+
+Q: What is the purpose of “100MWh” in the article?
+a: It tells us how much energy mirrors save
+b: It tells us how much energy a building normally uses without mirrors
+c: It tells us why mirrors are not enough to stop global warming
+d: It shows us why we need mirrors
+
+Q: Will the mirror benefit the environment?
+a: Yes, because it will reduce energy usage
+b: No, because it will not slow down global warming
+c: No, because they are too expensive
+d: Yes, because they will prevent endangered species from overheating
+
+Q2: Why doesn’t Fan consider the mirrors a “geoengineering solution”?
+a: They would fail to slow down global warming
+b: They barely reduce the amount of electricity used by businesses
+c: They cost too much to produce enough for every rooftop
+d: They only work on three-story buildings and shopping malls

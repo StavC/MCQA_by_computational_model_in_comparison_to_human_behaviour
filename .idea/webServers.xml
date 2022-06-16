@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="68609b69-17dd-4739-a7e9-32c0f0cb69c0" name="TechnionNLPGPU11">
+        <fileTransfer rootFolder="/data/home/cohnstav" accessType="SFTP" host="nlp11.iem.technion.ac.il" port="22" sshConfigId="5568e2d8-9802-41f7-b379-3edcfeb54d15" sshConfig="cohnstav@nlp11.iem.technion.ac.il:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

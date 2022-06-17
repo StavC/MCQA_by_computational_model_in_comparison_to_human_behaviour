@@ -182,8 +182,11 @@ def load_data(args, is_training=True):
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
-    else:
+    elif (not (args.run_yev)) and (is_training==True):
         return read_race_examples(Path(__file__).parent.parent/'data'/'RACE'/'train'/'middle', is_training=is_training)
+    else:
+        return read_race_examples(Path(__file__).parent.parent/'data'/'RACE'/'dev'/'middle', is_training=is_training)
+
 
 def load_output_model(model, name):
     model.load_state_dict(torch.load(name))
@@ -323,7 +326,7 @@ def main():
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     if args.finetune:
-        load_output_model(model, os.path.join(args.output_dir, 'to_finetune.bin'))
+        load_output_model(model, os.path.join(args.output_dir, '4acc:0.960033043546674'))
     if args.fp16:
         model.half()
     model.to(device)
@@ -436,18 +439,8 @@ def main():
                     optimizer.step()
                     optimizer.zero_grad()
                     global_step += 1
-                    
-            #### Stavs code
-            model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
-
-            output_model_file = os.path.join(args.output_dir, _)
 
 
-            torch.save(model_to_save.state_dict(), output_model_file)
-            output_config_file = os.path.join(args.output_dir, CONFIG_NAME)
-            with open(output_config_file, 'w') as f:
-                f.write(model_to_save.config.to_json_string())
-            ####
 
 
             #now do eval
@@ -505,20 +498,29 @@ def main():
                 except UnboundLocalError:
                     if args.do_train:
                         print("Training loss not available")
-            output_eval_file = os.path.join(args.output_dir, "eval_results.txt")
+            output_eval_file = os.path.join(args.output_dir, f"eval_results epoch:{_}.txt")
             with open(output_eval_file, "w") as writer:
                 logger.info("***** Eval results *****")
                 for key in sorted(result.keys()):
                     logger.info("  %s = %s", key, str(result[key]))
                     writer.write("%s = %s\n" % (key, str(result[key])))
+                #### Stavs code
+            model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
+            name=f'{_}acc:{eval_accuracy}'
+            output_model_file = os.path.join(args.output_dir, name)
 
+            torch.save(model_to_save.state_dict(), output_model_file)
+            output_config_file = os.path.join(args.output_dir, CONFIG_NAME)
+            with open(output_config_file, 'w') as f:
+                f.write(model_to_save.config.to_json_string())
+            ####
 
     if args.do_train:
         # Save a trained model and the associated configuration
         model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
 
         #### Stavs code
-        output_model_file = os.path.join(args.output_dir, _)
+        output_model_file = os.path.join(args.output_dir, 'lastepoch')
 
         ######
 

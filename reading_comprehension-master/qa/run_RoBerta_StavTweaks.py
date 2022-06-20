@@ -39,6 +39,12 @@ from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 from pytorch_pretrained_bert.modeling import (BertForMultipleChoice, BertConfig, WEIGHTS_NAME, CONFIG_NAME)
 from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
 from pytorch_pretrained_bert.tokenization import BertTokenizer
+
+from transformers import RobertaConfig
+from transformers import RobertaTokenizer, RobertaForMultipleChoice
+from transformers import  TrainingArguments, Trainer
+
+
 from load_data import read_race_examples, read_onestop
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
@@ -105,7 +111,7 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
             _truncate_seq_pair(context_tokens_choice, ending_tokens, max_seq_length - 3)
             #TODO: Stav Thinks we can change the truncate function to cut more context and not answers
 
-            tokens = ["[CLS]"] + context_tokens_choice + ["[SEP]"] + ending_tokens + ["[SEP]"]
+            tokens = ["<s>"] + context_tokens_choice + ["</s>"] + ending_tokens + ["</s>"]
             segment_ids = [0] * (len(context_tokens_choice) + 2) + [1] * (len(ending_tokens) + 1)
 
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
@@ -200,10 +206,9 @@ def main():
     #                     type=str,
     #                     required=True,
     #                     help="The input data dir. Should contain the .csv files (or other data files) for the task.")
-    parser.add_argument("--bert_model", default=None, type=str, required=True,
-                        help="Bert pre-trained model selected in the list: bert-base-uncased, "
-                             "bert-large-uncased, bert-base-cased, bert-large-cased, bert-base-multilingual-uncased, "
-                             "bert-base-multilingual-cased, bert-base-chinese.")
+    parser.add_argument("--RoBerta_model", default='roberta-base', type=str, required=True,
+                        help="roberta-base")
+
     parser.add_argument("--output_dir",
                         default=None,
                         type=str,
@@ -239,7 +244,7 @@ def main():
                         type=float,
                         help="The initial learning rate for Adam.")
     parser.add_argument("--num_train_epochs",
-                        default=3.0,
+                        default=10,
                         type=float,
                         help="Total number of training epochs to perform.")
     parser.add_argument("--warmup_proportion",
@@ -307,7 +312,8 @@ def main():
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
-    tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    #tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    tokenizer = RobertaTokenizer.from_pretrained(args.RoBerta_model,do_lower_case=args.do_lower_case)
 
     train_examples = None
     num_train_optimization_steps = None
@@ -319,30 +325,21 @@ def main():
             num_train_optimization_steps = num_train_optimization_steps // torch.distributed.get_world_size()
 
     # Prepare model
-    model = BertForMultipleChoice.from_pretrained(args.bert_model,
+    model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model,
                                                   cache_dir=os.path.join(str(PYTORCH_PRETRAINED_BERT_CACHE),
-                                                                         'distributed_{}'.format(args.local_rank)),
-                                                  num_choices=4)
+                                                                         'distributed_{}'.format(args.local_rank)),)
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     if args.finetune:
         load_output_model(model, os.path.join(args.output_dir, 'bert-base/6acc:0.5780642520974013'))
-    if args.fp16:
-        model.half()
+
     model.to(device)
     print(
         "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     print(n_gpu)
-    if args.local_rank != -1:
-        try:
-            from apex.parallel import DistributedDataParallel as DDP
-        except ImportError:
-            raise ImportError(
-                "Please install apex from https://www.github.com/nvidia/apex to use distributed and fp16 training.")
 
-        model = DDP(model)
 
-    elif n_gpu > 1:
+    if n_gpu > 1:
         model = torch.nn.DataParallel(model)
 
     # Prepare optimizer
@@ -357,27 +354,16 @@ def main():
         {'params': [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)], 'weight_decay': 0.01},
         {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
     ]
-    if args.fp16:
-        try:
-            from apex.optimizers import FP16_Optimizer
-            from apex.optimizers import FusedAdam
-        except ImportError:
-            raise ImportError(
-                "Please install apex from https://www.github.com/nvidia/apex to use distributed and fp16 training.")
 
-        optimizer = FusedAdam(optimizer_grouped_parameters,
-                              lr=args.learning_rate,
-                              bias_correction=False,
-                              max_grad_norm=1.0)
-        if args.loss_scale == 0:
-            optimizer = FP16_Optimizer(optimizer, dynamic_loss_scale=True)
-        else:
-            optimizer = FP16_Optimizer(optimizer, static_loss_scale=args.loss_scale)
-    else:
-        optimizer = BertAdam(optimizer_grouped_parameters,
+
+    """optimizer = BertAdam(optimizer_grouped_parameters,
                              lr=args.learning_rate,
                              warmup=args.warmup_proportion,
-                             t_total=num_train_optimization_steps)
+                             t_total=num_train_optimization_steps)"""
+    from transformers import AdamW
+
+
+    optimizer = AdamW(model.parameters())
 
     global_step = 0
     if args.do_train:
@@ -424,18 +410,11 @@ def main():
                 nb_tr_examples += input_ids.size(0)
                 nb_tr_steps += 1
 
-                if args.fp16:
-                    optimizer.backward(loss)
-                else:
-                    loss.backward()
+
+
+                loss.backward()
                 if (step + 1) % args.gradient_accumulation_steps == 0:
-                    if args.fp16:
-                        # modify learning rate with special warm up BERT uses
-                        # if args.fp16 is False, BertAdam is used that handles this automatically
-                        lr_this_step = args.learning_rate * warmup_linear(global_step / num_train_optimization_steps,
-                                                                          args.warmup_proportion)
-                        for param_group in optimizer.param_groups:
-                            param_group['lr'] = lr_this_step
+
                     optimizer.step()
                     optimizer.zero_grad()
                     global_step += 1
@@ -529,11 +508,11 @@ def main():
         with open(output_config_file, 'w') as f:
             f.write(model_to_save.config.to_json_string())
         # Load a trained model and config that you have fine-tuned
-        config = BertConfig(output_config_file)
-        model = BertForMultipleChoice(config, num_choices=4)
+        config = RobertaConfig(output_config_file)
+        model = RobertaForMultipleChoice(config)
         model.load_state_dict(torch.load(output_model_file))
     else:
-        model = BertForMultipleChoice.from_pretrained(args.bert_model, num_choices=4)
+        model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model, num_choices=4)
         load_output_model(model, output_model_file)
         # model.load_state_dict(torch.load(output_model_file))
 

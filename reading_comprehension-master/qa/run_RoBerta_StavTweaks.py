@@ -25,6 +25,8 @@ import random
 import sys
 from io import open
 import json
+from transformers import AdamW
+
 from dataclasses import dataclass
 from typing import Any, List, Sequence
 from pathlib import Path
@@ -42,16 +44,16 @@ from pytorch_pretrained_bert.tokenization import BertTokenizer
 
 from transformers import RobertaConfig
 from transformers import RobertaTokenizer, RobertaForMultipleChoice
-from transformers import  TrainingArguments, Trainer
+from transformers import TrainingArguments, Trainer
+import transformers
 
-
+transformers.logging.set_verbosity_error()
 from load_data import read_race_examples, read_onestop
 
 logging.basicConfig(format='%(asctime)s - %(levelname)s - %(name)s -   %(message)s',
                     datefmt='%m/%d/%Y %H:%M:%S',
                     level=logging.INFO)
 logger = logging.getLogger(__name__)
-
 
 
 class InputFeatures(object):
@@ -66,9 +68,9 @@ class InputFeatures(object):
             {
                 'input_ids': input_ids,
                 'input_mask': input_mask,
-                'segment_ids': segment_ids
+
             }
-            for _, input_ids, input_mask, segment_ids in choices_features
+            for _, input_ids, input_mask in choices_features
         ]
         self.label = label
 
@@ -112,7 +114,7 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
             #TODO: Stav Thinks we can change the truncate function to cut more context and not answers
 
             tokens = ["<s>"] + context_tokens_choice + ["</s>"] + ending_tokens + ["</s>"]
-            segment_ids = [0] * (len(context_tokens_choice) + 2) + [1] * (len(ending_tokens) + 1)
+            #segment_ids = [0] * (len(context_tokens_choice) + 2) + [1] * (len(ending_tokens) + 1)
 
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
             input_mask = [1] * len(input_ids)
@@ -121,24 +123,108 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
             padding = [0] * (max_seq_length - len(input_ids))
             input_ids += padding
             input_mask += padding
-            segment_ids += padding
+            #segment_ids += padding
 
             assert len(input_ids) == max_seq_length
             assert len(input_mask) == max_seq_length
-            assert len(segment_ids) == max_seq_length
+            #assert len(segment_ids) == max_seq_length
 
-            choices_features.append((tokens, input_ids, input_mask, segment_ids))
+            choices_features.append((tokens, input_ids, input_mask))
 
         label = example.label
         if example_index < 5:
             logger.info("*** Example ***")
             logger.info("id: {}".format(example.id))
-            for choice_idx, (tokens, input_ids, input_mask, segment_ids) in enumerate(choices_features):
+            for choice_idx, (tokens, input_ids, input_mask) in enumerate(choices_features):
                 logger.info("choice: {}".format(choice_idx))
                 logger.info("tokens: {}".format(' '.join(tokens)))
                 logger.info("input_ids: {}".format(' '.join(map(str, input_ids))))
                 logger.info("input_mask: {}".format(' '.join(map(str, input_mask))))
-                logger.info("segment_ids: {}".format(' '.join(map(str, segment_ids))))
+            if is_training:
+                logger.info("label: {}".format(label))
+
+        features.append(
+            InputFeatures(
+                example_id=example.id,
+                choices_features=choices_features,
+                label=label
+            )
+        )
+
+    return features
+
+def convert_examples_to_features2(examples, tokenizer, max_seq_length,
+                                 is_training):
+    """Loads a data file into a list of `InputBatch`s."""
+
+    # Swag is a multiple choice task. To perform this task using Bert,
+    # we will use the formatting proposed in "Improving Language
+    # Understanding by Generative Pre-Training" and suggested by
+    # @jacobdevlin-google in this issue
+    # https://github.com/google-research/bert/issues/38.
+    #
+    # Each choice will correspond to a sample on which we run the
+    # inference. For a given Swag example, we will create the 4
+    # following inputs:
+    # - [CLS] context [SEP] choice_1 [SEP]
+    # - [CLS] context [SEP] choice_2 [SEP]
+    # - [CLS] context [SEP] choice_3 [SEP]
+    # - [CLS] context [SEP] choice_4 [SEP]
+    # The model will output a single value for each input. To get the
+    # final decision of the model, we will run a softmax over these 4
+    # outputs.
+    features = []
+    for example_index, example in enumerate(examples):
+        context_tokens = tokenizer.tokenize(example.context_sentence)
+        start_ending_tokens = tokenizer.tokenize(example.start_ending)
+
+        choices_features = []
+        for ending_index, ending in enumerate(example.endings):
+            # We create a copy of the context tokens in order to be
+            # able to shrink it according to ending_tokens
+            context_tokens_choice = context_tokens[:]
+            ending_tokens = start_ending_tokens + tokenizer.tokenize(ending)
+            # Modifies `context_tokens_choice` and `ending_tokens` in
+            # place so that the total length is less than the
+            # specified length.  Account for [CLS], [SEP], [SEP] with
+            # "- 3"
+            _truncate_seq_pair(context_tokens_choice, ending_tokens, max_seq_length - 3)
+            # TODO: Stav Thinks we can change the truncate function to cut more context and not answers
+            # second_part=example.start_ending+"</s>"+ending
+
+            second_part = example.context_sentence + '</s>' + example.start_ending + "</s>" + ending
+            # tokens = ["<s>"] + context_tokens_choice + ["</s>"] + ending_tokens + ["</s>"]
+
+            # tokenized_examples = tokenizer(example.context_sentence, second_part, truncation=True, max_length=512)
+            tokenized_examples = tokenizer(second_part, truncation=True, max_length=512, padding='max_length')
+
+            # input_ids = tokenizer.convert_tokens_to_ids(tokens)
+            # input_mask = [1] * len(input_ids)
+
+            # Zero-pad up to the sequence length.
+            # padding = [0] * (max_seq_length - len(input_ids))
+            # input_ids += padding
+            # input_mask += padding
+
+            full_sent = second_part
+            input_ids = tokenized_examples['input_ids']
+            input_mask = tokenized_examples['attention_mask']
+
+            # choices_features.append((full_sent, tokenized_examples['input_ids'], tokenized_examples['attention_mask']))
+            choices_features.append((full_sent, input_ids, input_mask))
+            # choices_features.append((tokens, input_ids, input_mask))
+
+        label = example.label
+        if example_index < 5:
+            logger.info("*** Example ***")
+            logger.info("id: {}".format(example.id))
+            for choice_idx, (
+            full_sent, tokenized_examples['input_ids'], tokenized_examples['attention_mask']) in enumerate(
+                    choices_features):
+                logger.info("choice: {}".format(choice_idx))
+                logger.info("tokens: {}".format(''.join(full_sent)))
+                logger.info("input_ids: {}".format(' '.join(map(str, tokenized_examples['input_ids']))))
+                logger.info("input_mask: {}".format(' '.join(map(str, tokenized_examples['attention_mask']))))
             if is_training:
                 logger.info("label: {}".format(label))
 
@@ -184,18 +270,22 @@ def select_field(features, field):
         for feature in features
     ]
 
+
 def load_data(args, is_training=True):
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
-    elif (not (args.run_yev)) and (is_training==True):
-        return read_race_examples(Path(__file__).parent.parent/'data'/'RACE'/'train'/'combined', is_training=is_training)
+    elif (not (args.run_yev)) and (is_training == True):
+        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'train' / 'middle',
+                                  is_training=is_training)
     else:
-        return read_race_examples(Path(__file__).parent.parent/'data'/'RACE'/'dev'/'combined', is_training=is_training)
+        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'middle',
+                                  is_training=is_training)
 
 
 def load_output_model(model, name):
     model.load_state_dict(torch.load(name))
+
 
 def main():
     parser = argparse.ArgumentParser()
@@ -312,8 +402,9 @@ def main():
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
-    #tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
-    tokenizer = RobertaTokenizer.from_pretrained(args.RoBerta_model,do_lower_case=args.do_lower_case)
+    # tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
+    # tokenizer = RobertaTokenizer.from_pretrained(args.RoBerta_model,use_fast=True)
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
 
     train_examples = None
     num_train_optimization_steps = None
@@ -325,9 +416,8 @@ def main():
             num_train_optimization_steps = num_train_optimization_steps // torch.distributed.get_world_size()
 
     # Prepare model
-    model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model,
-                                                  cache_dir=os.path.join(str(PYTORCH_PRETRAINED_BERT_CACHE),
-                                                                         'distributed_{}'.format(args.local_rank)),)
+    # model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model)
+    model = RobertaForMultipleChoice.from_pretrained('roberta-base')
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     if args.finetune:
@@ -337,7 +427,6 @@ def main():
     print(
         "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     print(n_gpu)
-
 
     if n_gpu > 1:
         model = torch.nn.DataParallel(model)
@@ -355,16 +444,13 @@ def main():
         {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
     ]
 
-
     """optimizer = BertAdam(optimizer_grouped_parameters,
                              lr=args.learning_rate,
                              warmup=args.warmup_proportion,
                              t_total=num_train_optimization_steps)"""
-    from transformers import AdamW
 
-
-    optimizer = AdamW(model.parameters())
-
+    #optimizer = AdamW(model.parameters())
+    optimizer=AdamW(optimizer_grouped_parameters)
     global_step = 0
     if args.do_train:
         train_features = convert_examples_to_features(
@@ -375,15 +461,15 @@ def main():
         logger.info("  Num steps = %d", num_train_optimization_steps)
         all_input_ids = torch.tensor(select_field(train_features, 'input_ids'), dtype=torch.long)
         all_input_mask = torch.tensor(select_field(train_features, 'input_mask'), dtype=torch.long)
-        all_segment_ids = torch.tensor(select_field(train_features, 'segment_ids'), dtype=torch.long)
         all_label = torch.tensor([f.label for f in train_features], dtype=torch.long)
-        train_data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label)
+        train_data = TensorDataset(all_input_ids, all_input_mask, all_label)
+
         if args.local_rank == -1:
             train_sampler = RandomSampler(train_data)
         else:
             train_sampler = DistributedSampler(train_data)
         train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=args.train_batch_size)
-
+        print('above train')
         model.train()
         n_trained_batches = 0
         for _ in trange(int(args.num_train_epochs), desc="Epoch"):
@@ -396,33 +482,28 @@ def main():
                     if n_trained_batches > args.max_batches:
                         break
                 batch = tuple(t.to(device) for t in batch)
-                input_ids, input_mask, segment_ids, label_ids = batch
-                loss = model(input_ids, segment_ids, input_mask, label_ids)
+                input_ids, input_mask, label_ids = batch
+
+                loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
                 if n_gpu > 1:
-                    loss = loss.mean()  # mean() to average on multi-gpu.
-                if args.fp16 and args.loss_scale != 1.0:
-                    # rescale loss for fp16 training
-                    # see https://docs.nvidia.com/deeplearning/sdk/mixed-precision-training/index.html
-                    loss = loss * args.loss_scale
+                    # loss = loss.mean()  # mean() to average on multi-gpu.
+                    loss = loss.loss.mean()
+
                 if args.gradient_accumulation_steps > 1:
-                    loss = loss / args.gradient_accumulation_steps
-                tr_loss += loss.item()
+                    loss = loss.loss / args.gradient_accumulation_steps
+
+                # tr_loss += loss.loss.item()
+                tr_loss += loss
                 nb_tr_examples += input_ids.size(0)
                 nb_tr_steps += 1
 
-
-
                 loss.backward()
                 if (step + 1) % args.gradient_accumulation_steps == 0:
-
                     optimizer.step()
                     optimizer.zero_grad()
                     global_step += 1
 
-
-
-
-            #now do eval
+            # now do eval
             eval_examples = load_data(args, is_training=False)
             eval_features = convert_examples_to_features(
                 eval_examples, tokenizer, args.max_seq_length, True)
@@ -431,9 +512,8 @@ def main():
             logger.info("  Batch size = %d", args.eval_batch_size)
             all_input_ids = torch.tensor(select_field(eval_features, 'input_ids'), dtype=torch.long)
             all_input_mask = torch.tensor(select_field(eval_features, 'input_mask'), dtype=torch.long)
-            all_segment_ids = torch.tensor(select_field(eval_features, 'segment_ids'), dtype=torch.long)
             all_label = torch.tensor([f.label for f in eval_features], dtype=torch.long)
-            eval_data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label)
+            eval_data = TensorDataset(all_input_ids, all_input_mask, all_label)
             # Run prediction for full data
             eval_sampler = SequentialSampler(eval_data)
             eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
@@ -442,22 +522,25 @@ def main():
             eval_loss, eval_accuracy = 0, 0
             nb_eval_steps, nb_eval_examples = 0, 0
             eval_results = []
-            for input_ids, input_mask, segment_ids, label_ids in eval_dataloader:
+            for input_ids, input_mask, label_ids in eval_dataloader:
                 input_ids = input_ids.to(device)
                 input_mask = input_mask.to(device)
-                segment_ids = segment_ids.to(device)
                 label_ids = label_ids.to(device)
 
                 with torch.no_grad():
-                    tmp_eval_loss = model(input_ids, segment_ids, input_mask, label_ids)
-                    logits = model(input_ids, segment_ids, input_mask)
+                    #tmp_eval_loss = model(input_ids, input_mask, label_ids)
+                    tmp_eval_loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
+                    logits = model(input_ids=input_ids, attention_mask=input_mask)
 
-                logits = logits.detach().cpu().numpy()
+                # logits = logits.detach().cpu().numpy()
+                #logits = logits.numpy()
+                logits = logits.logits.detach().cpu().numpy()
                 eval_results.append(logits)
                 label_ids = label_ids.to('cpu').numpy()
                 tmp_eval_accuracy = accuracy(logits, label_ids)
 
-                eval_loss += tmp_eval_loss.mean().item()
+                #eval_loss += tmp_eval_loss.mean().item()
+                eval_loss += tmp_eval_loss.loss.mean()
                 eval_accuracy += tmp_eval_accuracy
 
                 nb_eval_examples += input_ids.size(0)
@@ -485,7 +568,7 @@ def main():
                     writer.write("%s = %s\n" % (key, str(result[key])))
                 #### Stavs code
             model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
-            name=f'{_}acc:{eval_accuracy}'
+            name = f'{_}acc:{eval_accuracy}'
             output_model_file = os.path.join(args.output_dir, name)
 
             torch.save(model_to_save.state_dict(), output_model_file)
@@ -512,7 +595,7 @@ def main():
         model = RobertaForMultipleChoice(config)
         model.load_state_dict(torch.load(output_model_file))
     else:
-        model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model, num_choices=4)
+        model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model)
         load_output_model(model, output_model_file)
         # model.load_state_dict(torch.load(output_model_file))
 
@@ -527,9 +610,8 @@ def main():
         logger.info("  Batch size = %d", args.eval_batch_size)
         all_input_ids = torch.tensor(select_field(eval_features, 'input_ids'), dtype=torch.long)
         all_input_mask = torch.tensor(select_field(eval_features, 'input_mask'), dtype=torch.long)
-        all_segment_ids = torch.tensor(select_field(eval_features, 'segment_ids'), dtype=torch.long)
         all_label = torch.tensor([f.label for f in eval_features], dtype=torch.long)
-        eval_data = TensorDataset(all_input_ids, all_input_mask, all_segment_ids, all_label)
+        eval_data = TensorDataset(all_input_ids, all_input_mask, all_label)
         # Run prediction for full data
         eval_sampler = SequentialSampler(eval_data)
         eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
@@ -538,22 +620,26 @@ def main():
         eval_loss, eval_accuracy = 0, 0
         nb_eval_steps, nb_eval_examples = 0, 0
         eval_results = []
-        for input_ids, input_mask, segment_ids, label_ids in eval_dataloader:
+        for input_ids, input_mask, label_ids in eval_dataloader:
             input_ids = input_ids.to(device)
             input_mask = input_mask.to(device)
-            segment_ids = segment_ids.to(device)
             label_ids = label_ids.to(device)
 
             with torch.no_grad():
-                tmp_eval_loss = model(input_ids, segment_ids, input_mask, label_ids)
-                logits = model(input_ids, segment_ids, input_mask)
+                #tmp_eval_loss = model(input_ids, input_mask, label_ids)
+                tmp_eval_loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
+                logits = model(input_ids=input_ids, attention_mask=input_mask)
+            print(logits)
 
-            logits = logits.detach().cpu().numpy()
+            #logits = logits.detach().cpu().numpy()
+            logits = logits.numpy()
             eval_results.append(logits)
             label_ids = label_ids.to('cpu').numpy()
             tmp_eval_accuracy = accuracy(logits, label_ids)
 
-            eval_loss += tmp_eval_loss.mean().item()
+            #eval_loss += tmp_eval_loss.mean().item()
+            eval_loss += tmp_eval_loss.loss().mean()
+
             eval_accuracy += tmp_eval_accuracy
 
             nb_eval_examples += input_ids.size(0)
@@ -569,7 +655,7 @@ def main():
                   }
         if args.do_train:
             try:
-                result['loss'] = tr_loss/nb_tr_steps
+                result['loss'] = tr_loss / nb_tr_steps
             except UnboundLocalError:
                 if args.do_train:
                     print("Training loss not available")

@@ -39,7 +39,8 @@ from tqdm import tqdm, trange
 
 from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
 from pytorch_pretrained_bert.modeling import (BertForMultipleChoice, BertConfig, WEIGHTS_NAME, CONFIG_NAME)
-from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
+from transformers import get_linear_schedule_with_warmup
+#from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
 from pytorch_pretrained_bert.tokenization import BertTokenizer
 
 from transformers import RobertaConfig
@@ -117,16 +118,19 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
             #segment_ids = [0] * (len(context_tokens_choice) + 2) + [1] * (len(ending_tokens) + 1)
 
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
-            input_mask = [1] * len(input_ids)
 
+            input_mask = [1] * len(input_ids) +[0] * (max_seq_length - len(input_ids))
             # Zero-pad up to the sequence length.
-            padding = [0] * (max_seq_length - len(input_ids))
-            input_ids += padding
-            input_mask += padding
+            #padding = [0] * (max_seq_length - len(input_ids))
+            padding_ids = [1] * (max_seq_length - len(input_ids)) # 1 for roberta
+            #padding_mask= [0] * (max_seq_length - len(input_ids)) # 0 for roberta
+            input_ids += padding_ids
+            #input_mask += padding_mask
             #segment_ids += padding
-
-            assert len(input_ids) == max_seq_length
-            assert len(input_mask) == max_seq_length
+            #print(input_ids)
+            #print(input_mask)
+            #assert len(input_ids) == max_seq_length
+            #assert len(input_mask) == max_seq_length
             #assert len(segment_ids) == max_seq_length
 
             choices_features.append((tokens, input_ids, input_mask))
@@ -205,7 +209,7 @@ def convert_examples_to_features2(examples, tokenizer, max_seq_length,
             # padding = [0] * (max_seq_length - len(input_ids))
             # input_ids += padding
             # input_mask += padding
-
+            #print(tokenized_examples)
             full_sent = second_part
             input_ids = tokenized_examples['input_ids']
             input_mask = tokenized_examples['attention_mask']
@@ -276,10 +280,10 @@ def load_data(args, is_training=True):
         print("Using yev data")
         return read_onestop(is_training=is_training)
     elif (not (args.run_yev)) and (is_training == True):
-        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'train' / 'middle',
+        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'train' / 'combined',
                                   is_training=is_training)
     else:
-        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'middle',
+        return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'combined',
                                   is_training=is_training)
 
 
@@ -330,7 +334,8 @@ def main():
                         type=int,
                         help="Total batch size for eval.")
     parser.add_argument("--learning_rate",
-                        default=5e-5,
+                        #default=5e-5,
+                        default=0.00001,
                         type=float,
                         help="The initial learning rate for Adam.")
     parser.add_argument("--num_train_epochs",
@@ -404,7 +409,7 @@ def main():
 
     # tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
     # tokenizer = RobertaTokenizer.from_pretrained(args.RoBerta_model,use_fast=True)
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-base')
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base',use_fast=True)
 
     train_examples = None
     num_train_optimization_steps = None
@@ -421,7 +426,7 @@ def main():
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     if args.finetune:
-        load_output_model(model, os.path.join(args.output_dir, 'bert-base/6acc:0.5780642520974013'))
+        load_output_model(model, os.path.join(args.output_dir, '1acc:0.7370574994884387'))
 
     model.to(device)
     print(
@@ -450,7 +455,13 @@ def main():
                              t_total=num_train_optimization_steps)"""
 
     #optimizer = AdamW(model.parameters())
-    optimizer=AdamW(optimizer_grouped_parameters)
+    #optimizer=AdamW(optimizer_grouped_parameters)
+    optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
+
+    """scheduler = WarmupLinearSchedule(optimizer, warmup_steps=args.warmup_proportion,
+                                     t_total=num_train_optimization_steps)  # PyTorch scheduler"""
+    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.warmup_proportion, num_training_steps=num_train_optimization_steps)
+
     global_step = 0
     if args.do_train:
         train_features = convert_examples_to_features(
@@ -498,10 +509,15 @@ def main():
                 nb_tr_steps += 1
 
                 loss.backward()
-                if (step + 1) % args.gradient_accumulation_steps == 0:
+                scheduler.step()
+                optimizer.step()
+                optimizer.zero_grad()
+                global_step += 1
+                """if (step + 1) % args.gradient_accumulation_steps == 0:
+                    scheduler.step()
                     optimizer.step()
                     optimizer.zero_grad()
-                    global_step += 1
+                    global_step += 1"""
 
             # now do eval
             eval_examples = load_data(args, is_training=False)

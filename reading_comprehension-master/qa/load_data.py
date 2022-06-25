@@ -67,7 +67,7 @@ class Example(object):
 
 
 
-def parse_race(train_dir):
+def parse_race(train_dir,is_training):
     docs = []
     answer_map = {'A': 0, 'B': 1, 'C': 2, 'D': 3}
     for path in train_dir.iterdir():
@@ -76,12 +76,12 @@ def parse_race(train_dir):
         example = Document(answers=answers, options=parsed['options'], questions=parsed['questions'],
                            article=parsed['article'], id=parsed['id'])
         docs.append(example)
-    examples = split_documents(docs)
+    examples = split_documents(docs,is_training)
     return examples
 
 
 
-def split_documents(docs: Sequence[Document]):
+def split_documentsOriginal(docs: Sequence[Document]): # original form johns code, the problem is that all the labels are 0 and might bias the model
     examples = []
     for doc in docs:
         n_questions = len(doc.questions)
@@ -90,12 +90,65 @@ def split_documents(docs: Sequence[Document]):
             example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article, start_ending=doc.questions[i],
                               ending_0=doc.options[i][0], ending_1=doc.options[i][1], ending_2=doc.options[i][2],
                               ending_3=doc.options[i][3], label=doc.answers[i])
+            print(doc.answers[i])
             examples.append(example)
     return examples
 
+def split_documents(docs: Sequence[Document], is_training):  # randomizing the questions order to undo the bias
+        examples = []
+        j = 0
+        if is_training:
+            for doc in docs:
+                n_questions = len(doc.questions)
+                for i in range(n_questions):
+                    if j == 0:
+                        # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
+                        example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
+                                          start_ending=doc.questions[i],
+                                          ending_0=doc.options[i][0], ending_1=doc.options[i][1],
+                                          ending_2=doc.options[i][2],
+                                          ending_3=doc.options[i][3], label=0)
+                        j += 1
+                    elif j == 1:
+                        example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
+                                          start_ending=doc.questions[i],
+                                          ending_0=doc.options[i][1], ending_1=doc.options[i][0],
+                                          ending_2=doc.options[i][2],
+                                          ending_3=doc.options[i][3], label=1)
+                        j += 1
+                    elif j == 2:
+                        example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
+                                          start_ending=doc.questions[i],
+                                          ending_0=doc.options[i][2], ending_1=doc.options[i][1],
+                                          ending_2=doc.options[i][0],
+                                          ending_3=doc.options[i][3], label=2)
+                        j += 1
+                    elif j == 3:
+                        example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
+                                          start_ending=doc.questions[i],
+                                          ending_0=doc.options[i][3], ending_1=doc.options[i][1],
+                                          ending_2=doc.options[i][2],
+                                          ending_3=doc.options[i][0], label=3)
+                        j = 0
+                    examples.append(example)
+        else:
+            for doc in docs:
+                n_questions = len(doc.questions)
+                for i in range(n_questions):
+                    # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
+                    example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
+                                      start_ending=doc.questions[i],
+                                      ending_0=doc.options[i][0], ending_1=doc.options[i][1],
+                                      ending_2=doc.options[i][2],
+                                      ending_3=doc.options[i][3], label=doc.answers[i])
+
+                    examples.append(example)
+        return examples
+
+
 
 def read_race_examples(input_file, is_training):
-    return parse_race(input_file)
+    return parse_race(input_file,is_training)
 
 def read_onestop_docs():
     articles = read_articles.read_all_articles(read_articles.ANNOTATIONS_FOLDER)
@@ -121,7 +174,7 @@ def get_article_id(example: Example):
 
 def read_onestop(is_training=True, return_all=False)->List[Example]:
     docs = read_onestop_docs()
-    examples =  split_documents(docs)
+    examples =  split_documents(docs,is_training)
     if return_all:
         return examples
     article_ids = list(set([get_article_id(_) for _ in examples]))

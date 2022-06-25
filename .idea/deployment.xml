@@ -27,6 +27,8 @@
         <serverdata>
           <mappings>
             <mapping deploy="/tmp/pycharm_project_972" local="$PROJECT_DIR$" />
+            <mapping deploy="/data/home/cohnstav/ModelWeights/TransferMeHome" local="D:/RobertaModels" />
+            <mapping local="" />
           </mappings>
         </serverdata>
       </paths>

@@ -275,7 +275,7 @@ def select_field(features, field):
     ]
 
 
-def load_data2(args, is_training=True):#use this when running from home
+def load_data2(args, is_training=True): #use this when running from home
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
@@ -286,7 +286,7 @@ def load_data2(args, is_training=True):#use this when running from home
         return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'combined',
                                   is_training=is_training)
 
-def load_data(args, is_training=True):#use this when running through tmux
+def load_data(args, is_training=True): # use this when running tmux
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
@@ -346,11 +346,11 @@ def main():
                         help="Total batch size for eval.")
     parser.add_argument("--learning_rate",
                         #default=5e-5,
-                        default=0.000008,#0.00001 for roberta on race
+                        default=0.00001,
                         type=float,
                         help="The initial learning rate for Adam.")
     parser.add_argument("--num_train_epochs",
-                        default=15,
+                        default=10,
                         type=float,
                         help="Total number of training epochs to perform.")
     parser.add_argument("--warmup_proportion",
@@ -437,13 +437,7 @@ def main():
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     if args.finetune:
-        #load_output_model(model, os.path.join(args.output_dir, 'robertatraininguptoEpoch11/8acc:0.7468794761612442'))
-        #load_output_model(model, os.path.join(args.output_dir, '7acc:0.7487210967873952.pt'))
-        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/4acc:0.740536116226724'))
-        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/2acc:0.7403314917127072')) # 0.7946 on epoch 6
-
-        # un comment above
-        load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/RobertaTrainedRaceAndOneStopRDYToPredict/3acc:0.7912457912457912OneStopQA.pt')) # 0.7946 on epoch 6
+        load_output_model(model, os.path.join(args.output_dir, '9acc:0.7507673419275629'))
 
     model.to(device)
     print(
@@ -571,7 +565,6 @@ def main():
                 eval_results.append(logits)
                 label_ids = label_ids.to('cpu').numpy()
                 tmp_eval_accuracy = accuracy(logits, label_ids)
-                print(label_ids)
 
                 #eval_loss += tmp_eval_loss.mean().item()
                 eval_loss += tmp_eval_loss.loss.mean()
@@ -579,7 +572,7 @@ def main():
 
                 nb_eval_examples += input_ids.size(0)
                 nb_eval_steps += 1
-            output_eval_pickle = os.path.join(args.output_dir, f"eval_resultsEpoch{_}.pickle")
+            output_eval_pickle = os.path.join(args.output_dir, "eval_results.pickle")
             torch.save(eval_results, output_eval_pickle)
             eval_loss = eval_loss / nb_eval_steps
             eval_accuracy = eval_accuracy / nb_eval_examples
@@ -602,8 +595,7 @@ def main():
                     writer.write("%s = %s\n" % (key, str(result[key])))
                 #### Stavs code
             model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
-            #name = f'{_}acc:{eval_accuracy}'
-            name = f'{_}acc:{eval_accuracy}OneStopQA.pt'
+            name = f'{_}acc:{eval_accuracy}'
             output_model_file = os.path.join(args.output_dir, name)
 
             torch.save(model_to_save.state_dict(), output_model_file)

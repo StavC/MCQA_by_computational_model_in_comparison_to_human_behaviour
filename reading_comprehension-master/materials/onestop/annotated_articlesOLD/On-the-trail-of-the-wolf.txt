@@ -1,0 +1,211 @@
+﻿# Title
+On the Trail of the Wolf
+
+
+# Paragraph
+
+Adv: <D3><D2>Robert Mysłajek stops dead.</D2></D3> <D1>Between two paw prints on a muddy mountain track, the scientist finds what he is looking for.</D1> <A3><A2><A1>“Droppings!” he enthuses. Wolf sightings are so rare that the sighting of their feces marks a good day, even for a seasoned tracker.</A1></A2></A3>
+
+Int:  <D3><D2>Robert Myslajek stops.</D2></D3> <D1>Between two paw prints on a muddy mountain track, the scientist finds what he is looking for.</D1> <A3><A2><A1>“Droppings!’’ he says happily. It is so rare to see a wolf that seeing feces makes it a good day.</A1></A2></A3>
+
+Ele:  <D3><D2>Robert Mysłajek stops.</D2></D3> <D1>Between two paw prints on a mountain path, the scientist finds what he is looking for.</D1> <A3><A2><A1>“Droppings!” he says happily. It is so rare to see a wolf that seeing droppings makes it a good day.</A1></A2></A3>
+
+Q: What does Myslajek see on the mountain path?
+a: Wolf poo
+b: A wolf
+c: Wolf paw prints
+d: Wolf fur
+
+Q: How does Myslajek react to what he sees?
+a: He is joyous
+b: He drops to the ground
+c: He stops looking at it
+d: He screams
+
+Q2: Spotting a wolf is the wild is considered…
+a: An uncommon occurrence
+b: A happy experience
+c: Something that isn’t worth stopping for
+d: Good luck for the upcoming year
+
+# Paragraph
+
+Adv: <D3><D2>But it is getting easier.<D1></D3> There are now an estimated 1,500 wolves in Poland.</D1> <A1>The number has doubled in 15 years.</A1></D2> Wolves are – along with the brown bear, the lynx and the wolverine – Europe’s last large predator carnivores. <A3><A2>Conservationists from Britain, Germany and the Netherlands are beating a path here to find out how the country has saved this protected species, slandered even in fairy tales.</A2></A3>
+
+Int: <D3><D2>But it is getting easier. <D1>There are now about 1,500 wolves in Poland.</D1></D3> <A1>The number has doubled in 15 years.</A1></D2> Wolves are – along with the brown bear, the lynx and the wolverine – Europe’s last large predator carnivores. <A3><A2>Conservationists from Britain, Germany and the Netherlands are coming here to find out how the country has saved wolves who are criticized even in fairy tales.</A2></A3>
+
+Ele: <D3><D2>But it is getting easier to see a wolf. <D1>There are now about 1,500 wolves in Poland.</D1> <A2>The number has doubled in 15 years.</A1></D2></D3> The wolf, the brown bear, the lynx and the wolverine are Europe’s last large predator carnivores. <A3><A2>Scientists from Britain, Germany and the Netherlands are coming here to find out how the country has saved wolves who have a bad reputation even in fairy tales.</A2></A3>
+
+Q: How do the wolves today in Poland compare to those 15 years ago?
+a: There are two times as many
+b: There are two times less
+c: There are 1,500 more
+d: They are larger
+
+Q: Why are scientists from different countries coming to Poland according to the article?
+a: To understand how it has saved wolves
+b: To understand why wolves have bad reputations
+c: To increase the number of wolves in Poland
+d: To hunt the wolves
+
+Q2: Why have wolves developed a bad reputation?
+a: They are portrayed negatively in mythological stories
+b: They are critiqued in works published by European scientists
+c: They are too easy to spot nowadays
+d: They are known to attack small children
+
+# Paragraph
+
+Adv: The scientist, who is a familiar face on Polish television, says wolves are exceptional animals that are capable of moving up to 30km during a single hunt. “The Beskidy pack is a strong unit, eight or nine individuals. <D3><D1>This year, we have recorded five cubs, two yearlings and two adults.</D1></D3> <A3><D2><A1>“We track them using motion-activated cameras in the forest and by following their prints in the mud and snow.</A1></D2></A3> In each family group, only one pair reproduces, once a year. <A2>All pack members care for the young with solidarity and devotion.”</A2> 
+
+Int: The scientist says wolves can move up to 30 kilometres during a single hunt. “The Beskidy pack is a strong unit, eight or nine animals. <D3><D1>This year, we have recorded five cubs, two young wolves and two adults.</D1></D3> <A3><D2><A1>“We track them using motion cameras in the forest and by following their prints in the mud and snow.</A1></D2></A3> In each family group, only one pair of adults has cubs each year. <A2>All pack members care for the young.”</A2>
+
+Ele: The scientist says wolves can move up to 30 kilometres during a single hunt. “The pack that he is tracking is a strong group of eight or nine animals. <D3><D1>“This year, we have recorded five cubs, two young wolves and two adults.</D1></D3> <A3><D2><A1>“We follow them using special cameras in the forest and by following their prints in the mud and snow.</A1></D2></A3> In each family group, only one pair of adults has cubs each year. <A2>All the wolves in the pack look after the young.”</A2>
+
+Q: How do scientists like Mysłajek follow the wolves?
+a: Special cameras and following their tracks
+b: Printing their pictures
+c: Recording devices on the animals
+d: Following them with a helicopter
+
+Q: How do older wolves interact with younger wolves?
+a: They watch over them with dedication
+b: They pack them away
+c: They follow them
+d: They abandon them
+
+Q1: How do the scientists use the mud and snow to their advantage?
+a: The mud and snow reveal the tracks left behind by the wolfpack
+b: The mud and snow don’t do any damage to their special cameras
+c: The mud and snow provide ideal conditions for young and old wolves
+d: The mud and snow make spotting wolf droppings fairly easy
+
+# Paragraph
+
+Adv: <A1>Mysłajek, the son of a shepherd, is puzzled by wolves’ bad reputation. <D3><D2>“Why does one speak of a 'lone-wolf gunman'? Why did we have to have Little Red Riding Hood?"</D2></A1></D3> <A3><A2>He is fascinated by <D1>these aloof canines who remained in the wild 33,000 years ago when others decided on a much more comfortable existence as domestic dogs.</D1></A2></A3>
+
+Int: <A1>Myslajek, the son of a shepherd, doesn’t understand wolves’ bad reputation. <D3><D2>“Why did we have to have the fairy tale Little Red Riding Hood, with its big bad wolf?’’</D2></A1></D3> <A3><A2>He is fascinated by <D1>these aloof animals who remained in the wild 33,000 years ago when others decided on a much more comfortable life as domestic dogs.</D1></A2></A3>
+
+Ele: <A1>Mysłajek, the son of a shepherd, doesn’t understand wolves’ bad reputation. <D3><D2>“Why did we have to have the fairy tale Little Red Riding Hood, with its big bad wolf?”</D2></A1></D3> <A3><A2>He is fascinated by <D1>these animals, who remained in the wild 33,000 years ago when other types of dog decided on a much more comfortable life as pets.</D1></A2></A3>
+
+Q: How do fairy tales like Little Red Riding Hood affect wolves’ reputations, as implied by Myslajek?
+a: They damage their reputations
+b: They confuse their reputations
+c: They depict them like domestic pets
+d: They inspire awe
+
+Q: How are wolves different from other dogs?
+a: They remained in the wild
+b: They have more comfortable lives
+c: They are in fairy tales
+d: They are bigger
+
+Q2: Why is Myslajek fascinated by wolves?
+a: They don’t live the domestic lifestyle that other dogs do
+b: They existed over 33,000 years ago
+c: They play a significant role in Little Red Riding Hood
+d: They have fur that allows them to survive in very cold weather
+
+# Paragraph
+
+Adv: Wolves are not pooches. Mysłajek says only scientific arguments – <D1>the need to regenerate forests and control the wild animal population</D1> – can save Europe’s wild carnivores, especially the unpopular wolf. <A1>“Natural predators balance the ecosystem. <D2><D3>They keep herbivores in check, thus allowing trees to grow tall for birds to nest in.”</D3></D2></A1> <A2><A3>The ban on wolf hunting in the western Carpathians came into force in 1995 and nationwide in Poland in 1998.</A3> There are now resident packs in virtually all the country’s major forests. The predators coexist with humans rather than being fenced off, as they are in African safari parks.</A2> 
+
+Int: Myslajek says only scientific arguments – <D1>the need to regenerate forests and control the wild animal population</D1> – can save Europe’s wild carnivores, especially the unpopular wolf. <A1>“Natural predators balance the ecosystem. <D3><D2>They reduce the number of herbivores, which allows trees to grow tall for birds to nest in.”</D2></D3></A1> <A2><A3>The ban on wolf hunting in the western Carpathians became law in 1995 and in the whole of Poland in 1998.</A3> There are now wolf packs in nearly all the country’s major forests where the wolves coexist with humans.</A2>
+
+Ele: Mysłajek says only <D1>the need to save forests and control the wild animal population</D1> can save Europe’s wild carnivores, especially the unpopular wolf. <A1>“Natural predators balance the ecosystem. <D2><D3>They reduce the number of herbivores, which allows trees to grow tall for birds to nest in.”</D3></D2></A1> <A2><A3>The ban on wolf hunting in the western Carpathian mountains became law in 1995 and in the whole of Poland in 1998.</A3> There are now wolf packs in nearly all the country’s major forests where the wolves exist together with humans.</A2>
+
+Q: Why are wolves important for the ecosystem?
+a: They decrease the number of herbivores
+b: They directly help trees grow taller
+c: They save forests
+d: They kill harmful animals
+
+Q: How did the wolf hunting ban affect how wolves interact with humans?
+a: They exist together in forests
+b: Humans are bounded by law to live with wolves
+c: They reduce the number of animals humans eat
+d: There has been no effect
+
+Q2: Where was wolf hunting first banned?
+a: The Carpathian mountains
+b: The country of Poland
+c: Forests where there were too many birds
+d: All of Europe
+
+# Paragraph
+
+Adv: <A3><A1>The Polish government pays compensation for livestock killed by wolves. <D2>Mysłajek advises farmers on erecting electric fences.</D2></A1></A3> He has helped revive the use of <A2>two deterrents that, for reasons no one quite understands, wolves find particularly scary: <D3><D1>red bunting (hung around sheep pens) and the bark of the fluffy white Tatra Mountain Sheepdog.</D2></A2></D3> 
+
+Int: <A3><A1>The Polish government pays compensation for farm animals killed by wolves. <D2>Myslajek advises farmers to put up electric fences.</D2></A1></A3> He has helped bring back the use of <A1>two deterrents that, for reasons no one understands, wolves find very scary: <D3><D1>strings of small red flags (that you hang around sheep pens) and the Tatra Mountain Sheepdog.</D1></D3></A2>
+
+Ele: <A3><A1>The Polish government pays compensation to farmers when a wolf kills their farm animals. <D2>Mysłajek tells farmers to put up electric fences.</D2></A1></A3> He also tells them to use <A2>two things that wolves find scary: <D3><D1>strings of small red flags (to keep wolves away from sheep) and the Tatra Mountain Sheepdog.</D1></D3></A2>
+
+Q: How should people prevent wolves from killing their farm animals, according to Myslajek?
+a: Construct electric fences
+b: Pay compensation
+c: Hang up Tatra Mountain Sheepdogs
+d: Set up traps around their farms
+
+Q: What do wolves find scary?
+a: Red flags
+b: Mountain sheep
+c: Electric fences
+d: Humans
+
+Q1: What does the Polish government do when a wolf kills a farm animal?
+a: Pay the dead farm animal’s owner
+b: Put up an electric fence
+c: Give them a guard dog
+d: Kill the wolf immediately
+
+# Paragraph
+
+Adv: The survival and mobility of Poland’s wolves has been helped by the country’s belated infrastructure development. In 1989, when the communists relinquished power, Poland had only one motorway. Major road projects – requiring wildlife impact studies – began after Poland joined the European Union in 2004. The country now has one of the highest densities in the world of overhead crossings and underpasses for wild animals. <A3><A1>Attitudes have also changed. <A2>“For many years, hunting was cultural. In 1975, there were fewer than 100 wolves in Poland.</A2></A1></A3> Beginning in the 1950s, hunting wolves had been encouraged by the authorities. They paid a reward for killing a wolf worth a month’s salary. It was carnage.” <D3><D2><D1>Mysłajek says the improvement in Polish wolves’ survival chances has been considerable but remains fragile. Packs are mobile across borders and hunting still goes on in neighboring Russia, Lithuania, Belarus, Ukraine and Slovakia. </D1></D2></D3>
+
+Int: Poland’s wolves have been helped by the country’s late infrastructure development. In 1989, when the communists left power, Poland had only one motorway. Major road projects began after Poland joined the European Union in 2004 and they are required to consider wild animals. <A3><A1>Attitudes have also changed. <A2>“For many years, hunting was cultural. In 1975, there were fewer than 100 wolves in Poland.</A2></A1></A3> From the 1950s, hunting wolves was encouraged by the authorities. They paid a reward for killing a wolf worth a month’s salary. It was carnage.’’ <D3><D2><D1>Myslajek says that Polish wolves are much safer now but they are not completely safe. Packs of wolves cross country borders and hunting still happens in neighboring Russia, Lithuania, Belarus, Ukraine and Slovakia.</D1></D2></D3>
+
+Ele: Poland didn’t have many big roads until recently and this has helped wolves. In 1989, when the communists left power, Poland had only one motorway. Big road projects began after Poland joined the European Union in 2004 and they now have to consider wild animals.<A3><A1> The way people think about wolves has also changed. <A2>“For many years, hunting was a part of life in Poland. In 1975, there were fewer than 100 wolves in Poland.”</A2></A1></A3> <D3><D2><D1>Mysłajek says that Polish wolves are much safer now but they are not completely safe. Packs go into neighboring countries – Russia, Lithuania, Belarus, Ukraine and Slovakia – where there is still hunting.</D1></D2></D3>
+
+Q: How have people’s attitude toward wolves changed?
+a: Hunting wolves is no longer part of their culture
+b: There are too few wolves now
+c: Wolves are not safe in other countries but Poland
+d: Wolves are not as vicious as they thought
+
+Q: What effect does Myslajek imply that hunting had on wolves?
+a: It drastically reduced the number of wolves
+b: It reduced the number of wolves by 100
+c: It made hunting in other countries more dangerous
+d: It caused them to hate humans more
+
+Q1: It can be inferred that people in Poland no longer need wolves…
+a: For food and overall survival
+b: For safety and protection
+c: For money and trade with neighboring nations
+d: For coats and blankets
+
+# Paragraph
+
+Adv: <A3><A1>He claims Poland’s new government, elected in October 2015, is hostile to wolves. “The Environment Minister, Jan Szyszko, makes no secret of being a hunter. There are 120,000 licensed hunters in Poland and they are influential in parliament. <D2>Being a wolf advocate is not easy.</D2></A1></A3> <D3><D1>“It is not as if you can argue to the politicians that wolves are a big tourist attraction.</D1></D3> <A2>Most tourists want to see the animals but wolves stay away from humans. They have a tremendously sensitive sense of smell.”</A2>
+
+Int: <A3><A1>He says Poland’s new government, elected in October 2015, doesn’t like wolves. “The Environment Minister, Jan Szyszko, is a hunter. There are 120,000 licensed hunters in Poland and they have a lot of influence.</A1></A3> <D2>“Being a wolf advocate is not easy.</D2> <D3><D1>You can’t argue to the politicians that wolves are a big tourist attraction.</D1></D3> <A2>Most tourists want to see the animals but wolves stay away from humans. They have a very sensitive sense of smell.”</A2>
+
+Ele: <A3><A1>He says Poland’s new government doesn’t like wolves. “The Environment Minister, Jan Szyszko, is a hunter. There are 120,000 hunters in Poland and they have a lot of influence.</A1></A3> <D2>“It’s not easy to defend wolves.</D2> <D3><D1>You can’t say to the politicians that wolves are a big tourist attraction.</D1></D3> <A2>Most tourists want to see the animals but wolves stay away from humans. They have a very strong sense of smell.”</A2>
+
+Q: Why is it hard to support wolves in Poland’s new government?
+a: Wolf hunters have a large influence in government
+b: No one in the government likes wolves
+c: It is hard to talk to politicians
+d: They do not think wolves are important
+
+Q: Why are wolves not a big tourist attraction?
+a: It is hard to see wolves
+b: Wolves have a strong smell
+c: Wolves are hard to support and advocate for
+d: Wolves are not interesting to people
+
+Q1: Why does the Environment Minister not want to protect wolves?
+a: He prefers to hunt them instead
+b: He does want to upset Polish hunters
+c: He want the tourist industry to grow in Poland
+d: He is very scared of them

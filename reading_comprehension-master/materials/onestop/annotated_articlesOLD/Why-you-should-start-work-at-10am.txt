@@ -1,0 +1,159 @@
+﻿# Title
+Why you should start work at 10AM
+
+
+# Paragraph
+
+Adv: <A1>Lots of us know we are sleep-deprived but imagine if we could fix it with a fairly simple solution: getting up later. In a speech at the British Science Festival, <D3><D2>Dr Paul Kelley, clinical research associate at the Sleep and Circadian Neuroscience Institute at Oxford University, called for schools to stagger their starting times to work with the natural biological rhythms of their students.</D2></A1></D3> <A3><A2><D1>It would improve cognitive performance, exam results and students’ health (sleep deprivation has been linked with diabetes, depression, obesity and an impaired immune system).</A2></D1></A3> 
+
+Int: <A1>Many of us know we don’t get enough sleep but imagine if we could fix it with a fairly simple solution: getting up later. In a speech at the British Science Festival, <D3><D2>Dr Paul Kelley of the Sleep and Circadian Neuroscience Institute at Oxford University said schools should stagger their starting times to work with the natural biological rhythms of their students.</D2></A1></D3> <A3><A2><D1>It would improve cognitive performance, exam results and students’ health (lack of sleep can cause diabetes, depression, obesity and immune system problems).</A2></D1></A3>
+
+Ele: <A1>Many of us know we don’t get enough sleep but imagine if there was a simple solution: getting up later. In a speech at the British Science Festival, <D3><D2>Dr Paul Kelley from Oxford University said schools should stagger their starting times to work with the natural rhythms of their students.</D2></A1></D3> <A3><A2><D1>This would improve exam results and students’ health (lack of sleep can cause diabetes, depression, obesity and other health problems).</A2></D1></A3>
+
+Q: What does Dr. Kelley suggest schools do to help students get more sleep?
+a: Change school starting times
+b: Help students use natural music to sleep
+c: Make easier exams to improve results and reduce stress
+d: Set a limit to the amount of homework a class can assign
+
+Q: What are some of the effects of following Dr. Kelley’s suggestion?
+a: Better performance at school and improved health
+b: Increase the chance of diabetes, but decrease the chance of other diseases
+c: More natural sleep rhythms
+d: Less stress
+
+Q2: Which of the following is not mentioned as being caused by a lack of sleep?
+a: Loss of appetite 
+b: Weight gain
+c: Disruption of students’ natural rhythms
+d: Poor mental health
+
+# Paragraph
+
+Adv: <A3><A1>It follows a paper, published in 2014, in which he noted that, when children are around ten, their biological wake-up time is about 6.30am; at 16, this rises to 8am; <D2>and, at 18, someone you may think of as a lazy teenager actually has a natural waking hour of 9am.</A1></D2></A3> The conventional school starting time works for 10-year-olds but not 16- to 18-year-olds. For the older teenagers, it might be more sensible to start the school day at 11am or even later.  <D3><A2><D1>“A 7am alarm call for older adolescents,” Kelley and his colleagues pointed out in the paper, “is the equivalent of a 4.30am start for a teacher in their 50s.” </A2></D1> </D3>
+
+Int: <A3><A1>In 2014, he published a paper in which he noted that, when children are around ten, their biological wake-up time is about 6.30am; at 16, this rises to 8am; <D2>and, at 18, someone you may think is just a lazy teenager actually has a natural waking hour of 9am.</A1></D2></A3> The normal school starting time works for 10-year-olds but not for 16- to 18-year-olds. For the older teenagers, it might be more sensible to start the school day at 11am or even later.  <D3><A2><D1>“A 7am alarm call for older teenagers,” Kelley and his colleagues wrote in the paper, “is the equivalent of a 4.30am start for a teacher in their 50s.”</A2></D1><D3>
+
+Ele: <A3><A1>Dr Kelley said that, when children are around ten, their natural wake-up time is about 6.30am; at 16, this rises to 8am; <D2>and, at 18, a person’s natural waking hour is 9am, although you may think they are just a lazy teenager.</A1></D2></A3> The normal school starting time works for 10-year-olds but not for 16- to 18-year-olds. For the older teenagers, it might be better to start the school day at 11am or even later. <D3><A2><D1>“A 7am wake-up time for older teenagers,” says Kelley, “is the same as a 4.30am start for a teacher in their 50s.” </A2></D1></D3>
+
+Q: Why is the normal 7am starting time alright for 10-year-olds but not 16- to 18-year-olds?
+a: 7am is closer to the natural wake-up time for 10-year-olds but not 16- to 18-year-olds
+b: 16- to 18-year-olds are lazy teenagers
+c: 16- to 18-year-olds are closer to 50-years old, where 7am is an unnatural
+d: 10-year-olds tend to sleep earlier than 16- to 18-year-olds
+
+Q: How do older teenagers feel about waking up at 7AM?
+a: It is unnatural
+b: They feel like a 50-year old
+c: They despise it because they are lazy
+d: It is uncomfortable but necessary
+
+Q1: Why shouldn’t teenagers be considered lazy for waking up later?
+a: They have a natural wake-up time of 9am
+b: They woke up early when they were younger
+c: They already wake up at 7am for school
+d: They take a rigorous course load at school
+
+# Paragraph
+
+Adv: <A3><A1>He says it’s not as simple as persuading teenagers to go to bed earlier. “The body’s natural rhythm is controlled by a particular kind of light,” says Kelley.</A1></A3> <D3><A2><D1>“The eye doesn’t just contain rods and cones; it contains cells that then report to the suprachiasmatic nuclei in the hypothalamus.”</D1></A2></D3> This part of the brain controls our circadian rhythms over a 24-hour cycle.<D2> “It’s the light that controls it.</D2> It’s like saying: 'Why can’t you control your heartbeat?'” 
+
+Int: <A3><A1>He says the solution is not to persuade teenagers to go to bed earlier. “The body’s natural rhythm is controlled by a particular kind of light,” says Kelley.</A1></A3> <D3><A2><D1>“The eye contains cells that report to a part of the brain that controls our circadian rhythms over a 24-hour cycle.</D1></A2></D3> <D2>It’s the light that controls it.</D2> It’s like saying: ‘Why can’t you control your heartbeat?’”
+
+Ele: <A3><A1>He says the solution is not to tell teenagers to go to bed earlier. “The body’s natural rhythm is controlled by a particular kind of light,” says Kelley.</A1></A3> <D3><A2><D1>“The eye has cells that report to a part of the brain that controls our sleep rhythms over a 24-hour cycle.</D1></A2></D3> <D2>It’s the light that controls it.”</D2> 
+
+Q: Why does Kelley say sleeping earlier not the solution?
+a: Light controls our rhythms, not our sleeping patterns
+b: Teenagers are unable to sleep at particular levels of light
+c: Our eyes need rest depending on our sleep rhythms
+d: Teenagers experience social pressures to sleep later
+
+Q: How do our eyes help regulate our sleep rhythms?
+a: It reports to the part of our brain in charge of sleep rhythms
+b: Its cells process the information and control our sleep rhythms
+c: It controls the light, which controls our sleeping patterns
+d: It gets tired and prompts us to sleep
+
+Q1: Which of the following would Kelley consider a solution to the problem?
+a: None of the following 
+b: Changing the lighting in a teen’s bedroom
+c: Closely studying the natural rhythm of teens
+d: Giving teenagers less freedom
+
+# Paragraph
+
+Adv: <D2>But it isn’t just students who would benefit from a later start. <D3><D1>Kelley says the working day should be more forgiving of our natural rhythms.</D1></D3></D2> <A3><A1>Describing the average sleep loss per night for different age groups, he says: “Between 14 and 24, it’s more than two hours. For people aged between 24 and about 30 or 35, it’s about an hour and a half. <A2>That can continue up until you’re about 55 when it’s in balance again.</A1></A3> The 10-year-old and 55-year-old wake and sleep naturally at the same time.”</A2> 
+
+Int: <D2>But it isn’t just students who would benefit from a later start. </D3><D1>Kelley says the working day should be more linked to our natural rhythms.</D1></D3></D2> <A3><A1>Describing the average sleep loss per night for different age groups, he says: “Between 14 and 24, it’s more than two hours. For people aged between 24 and about 30 or 35, it’s about an hour and a half. <A2>That can continue up until you’re about 55 when it’s in balance again.</A1></A3> The 10-year-old and 55-year-old wake and sleep naturally at the same time.”</A2>
+
+Ele: <D2>But it isn’t just students who would benefit from a later start. <D3><D1>Kelley says the working day should be more linked to our natural rhythms.</D1></D3></D2> <A3><A1>Describing the average sleep loss per night for different age groups, he says: “Between 14 and 24, people lose more than two hours. For people aged between 24 and about 30 or 35, they lose about an hour and a half. <A2>That can continue up until you’re about 55 when it’s in balance again.</A1></A3> The 10-year-old and 55-year-old wake and sleep naturally at the same time.”</A2>
+
+Q: How does our average sleep loss per night change as we age?
+a: It decreases as we age
+b: It remains imbalanced forever
+c: It becomes more linked to our natural rhythms
+d: It increases as we age
+
+Q: When do our natural wake times become the same as when we were ten years old?
+a: 55 years old
+b: 24-35 years old
+c: After we are no longer students
+d: It never resets
+
+Q1: What is the consequence of an early day that doesn’t acknowledge natural rhythms?
+a: The duration of a night’s sleep is shortened
+b: Only those above age 24 get enough sleep
+c: Working days are drastically lengthened
+d: The quality of one’s sleep is above average
+
+# Paragraph
+
+Adv: This might be why, he adds, the traditional nine to five is so ingrained; it is maintained by bosses, many of them in their mid-50s and upwards because “it is best for them”. <A1>So, should workplaces have staggered starting times, too? Should those in their 50s and above come in at 8am, while those in their 30s start at 10am and the teenage intern or apprentice be encouraged to turn up at 11am?</A1> <D3><D2>Kelley says that synchronized hours could have “many positive consequences.</D2></D3> <A3><A2><D1>The positive side of this is people’s performance, mood and health will improve. It’s very uplifting in a way because it’s a solution that will make people less ill, and happier and better at what they do.”<A2></D1><A3>
+
+Int: This might be why, he adds, the traditional nine to five is so ingrained; bosses control working hours and many of them are in their mid-50s and older so “it is best for them”. <A1>So, should workplaces have staggered starting times, too? Should those in their 50s and above come in at 8am, while those in their 30s start at 10am and the teenage apprentice be encouraged to start at 11am?</A1> <D3><D2>Kelley says that synchronized hours could have “many positive consequences.</D2></D3> <A3><A2><D1>The positive side of this is people’s performance, mood and health will improve. It’s very uplifting because it’s a solution that will make people less ill, and happier and better at what they do.”</A2></D1><A3>
+
+Ele: <A1>So, should workplaces have staggered starting times, too? Should people in their 50s and above come in at 8am, people in their 30s start at 10am and the teenage apprentice at 11am?</A1> <D3><D2>Kelley says that synchronized hours could have “many positive effects.</D2></D3> <A3><A2><D1>The positive side is that people’s performance, mood and health will improve. It’s very positive because it’s a solution that will make people less ill, and happier and better at what they do.”</A2></D1></A3>
+
+Q: Who arrives earliest in the staggered starting times proposed in the article??
+a: The elderly
+b: The more experienced
+c: The healthy
+d: The youth
+
+Q: According to Kelley, how will staggered starting times affect the employees?
+a: They will be happier
+b: They will be better at acting and performing 
+c: People will be more synchronized and thus have better teamwork
+d: People will be less stressed
+
+Q2: How would staggered times benefit workplaces?
+a: More work would get done 
+b: Employees would receive more sick days
+c: Bosses and employees would be synchronized 
+d: Teenagers will find employment more easily
+
+# Paragraph
+
+Adv: There would probably be fewer accidents as drivers would be more alert, he says. <A1>It could spell the end of rush hour as people stagger their work and school-run times.</A1> <D1>A later start to the day for many,</D1> says Kelley, “is <A3><A2>something that would benefit everyone, particularly families. Parents go and try to wake up teenagers who are waking up three hours too early. It creates tensions for everybody.”</A2></A3>  So, what time does Kelley start work? “I am 67 so that means I’m back to being ten years old and I get up just after six. I wake naturally.” <D3><D2>And, yes, he says he finds the start of his working day much easier now than he did when he was younger.</D2></D3>
+
+Int: There would probably be fewer accidents because drivers would be more alert, he says. <A1>It could mean the end of rush hour as people staggered their work and school-run times.</A1> <D1>A later start to the day for many,</D1> says Kelley, “is <A3><A2>something that would benefit all people, particularly families. Parents go and try to wake up teenagers who are waking up three hours too early. It creates tensions for everybody.”</A2></A3> So, what time does Kelley start work? “I am 67 so that means I’m like a 10-year-old and I get up just after six. I wake naturally.” <D3><D2>And, yes, he says he finds the start of his working day much easier now than he did when he was younger.</D2></D3>
+
+Ele: There would probably be fewer accidents because drivers would be more awake, he says. <A1>It could mean the end of rush hour because people would stagger their work times and the times of their school run.</A1> <D1>A later start to the day for many,</D1> says Kelley, “is <A3><A2>something that would benefit all people, particularly families. Parents go and try to wake up teenagers who are waking up three hours too early. It creates problems for everybody.”</A2></A3> So, what time does Kelley start work? “I am 67 so that means I’m like a 10-year-old and I get up just after six. I wake naturally.” <D3><D2>And, yes, he says he finds the start of his working day much easier now than when he was younger.</D2></D3>
+
+Q: How would staggered times affect traffic according to Kelley?
+a: There would be less traffic
+b: There would be no traffic
+c: Traffic would occur later in the day
+d: Traffic would occur earlier in the day
+
+Q: How would later start times affect families?
+a: There would be less problems and tension
+b: Children wake up three hours later
+c: Parents wake up easier than children
+d: There would be less fighting
+
+Q2: According to Kelley, who is responsible for waking up teenagers too early?
+a: Parents
+b: Brothers and sisters
+c: Anyone younger than them
+d: Teenagers themselves

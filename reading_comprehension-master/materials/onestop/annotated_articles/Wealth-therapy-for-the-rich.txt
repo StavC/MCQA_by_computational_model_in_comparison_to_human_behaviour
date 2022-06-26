@@ -1,159 +1,160 @@
-﻿# Title
-Wealth therapy for the rich
+# Title
+Wealth Therapy for the Rich
 
 
 # Paragraph
 
-Adv: <D1><D2>Clay Cockrell is sitting in his office at Columbus Circle, across the street from 1 Central Park West, which houses Trump International Hotel and Tower.</D1></D2> <A1>In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions.</A1> <A3><A2>Cockrell, a former Wall Street worker turned therapist,<A2></A3> <D3>spends large parts of his days walking through Central Park or the Battery Park in downtown Manhattan near Wall Street,</D3> as a confidant and counsellor to some of New York’s wealthiest people. 
+Adv: <A3><A1><D2>Clay Cockrell is sitting in his office at Columbus Circle, across the street from 1 Central Park West, which houses Trump International Hotel and Tower.</D2> In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions.</A1></A3> <A2>Cockrell, a former Wall Street worker turned therapist,</A2> spends large parts of his days walking through Central Park or the Battery Park in downtown Manhattan <D1><D3>near Wall Street,</D3></D1> as a confidant and counselor to some of New York’s wealthiest people. 
 
-Int: <D1><D2>Clay Cockrell is sitting in his office across the street from 1 Central Park West, the address of the Trump International Hotel and Tower.</D1></D2> <A1>In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions. </A1> <A3><A2>Cockrell, a former Wall Street worker who is now a therapist,</A2></A3> <D3>spends large parts of his days walking through Central Park or the Battery Park in downtown Manhattan near Wall Street,</D3> as a confidant and counsellor to some of New York’s wealthiest people.
+Int: <A3><A1><D2>Clay Cockrell is sitting in his office across the street from 1 Central Park West, the address of the Trump International Hotel and Tower.</D2> In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions.</A1></A3> <A2>Cockrell, a former Wall Street worker who is now a therapist,</A2> spends large parts of his days walking through Central Park or the Battery Park in downtown Manhattan <D1><D3>near Wall Street,</D3></D1> as a confidant and counselor to some of New York’s wealthiest people.
 
-Ele: <D1><D2>Clay Cockrell is sitting in his office opposite the Trump International Hotel and Tower.</D1></D2> <A1>In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions.</A1> <A3><A2>Cockrell is a former Wall Street worker who is now a therapist.</A2></A3> <D3>He spends large parts of his days walking in Central Park or the Battery Park in downtown Manhattan near Wall Street,</D3> talking to some of New York’s wealthiest people.
+Ele: <A3><A1><D2>Clay Cockrell is sitting in his office opposite the Trump International Hotel and Tower.</D2> In front of the tower is Central Park, where Cockrell holds his popular walk and talk therapy sessions.</A1></A3> <A2>Cockrell is a former Wall Street worker who is now a therapist.</A2> He spends large parts of his days walking in Central Park or the Battery Park in downtown Manhattan <D1><D3>near Wall Street,</D3></D1> talking to some of New York’s wealthiest people.
 
-Q: Where does Clay Cockrell hold his walk and talk therapy sessions?
-a: Central Park
-b: Wall Street
-c: Trump International Hotel and Tower
-d: In his clinic 
+Q: Where does Clay Cockrell hold his popular therapy sessions?
+a: At a park near the Trump International Hotel and Tower
+b: In his office opposite the Trump International Hotel and Tower
+c: On Wall Street
+d: At a golf course 
 
-Q: What was Cockrell’s previous job?
-a: Wall street worker
+Q: What was Cockrell’s occupation before taking on his current job?
+a: Wall Street worker
 b: Therapist
-c: Office worker in Trump International Hotel and Tower
-d: Actor
+c: Manager at the Trump International Hotel and Tower
+d: Real estate agent
 
-Q2: What structure is Central Park in front of, as mentioned in the article?
+Q1: What is opposite Cockrell’s office?
 a: Trump International Hotel and Tower
-b: Cockrell’s office
-c: Wall Street
-d: The Metropolitan Museum of Art
+b: Central Park
+c: Wall Street offices
+d: Cockrell’s apartment complex
 
 # Paragraph
 
-Adv: “I shifted towards it naturally,” he said of his becoming an expert in wealth therapy. <D1>“Many of the extremely wealthy – the 1% of the 1% – feel that their problems are really not problems.</D1> But they are. A lot of therapists do not give enough weight to their issues.” So, what issues are America’s 1% struggling with? <A1>“There is guilt over being rich in the first place,” he said. “There is the feeling that they have to hide the fact that they are rich.</A1> <D3><D2>And, then, there is the isolation – being in the 1%, it turns out, can be lonely.”</D2></D3> It seems F Scott Fitzgerald was right: the very rich “are different from you and me.” <A3><A2>Counsellors argue things have become worse since the financial crisis and the debate over income inequality that has been spurred on by movements like Occupy Wall Street and the Fight for $15 fair wage campaign.</A2></A3>
+Adv: “I shifted towards it naturally,” he said of his becoming an expert in wealth therapy. <A1><A3>“Many of the extremely wealthy – the 1% of the 1% – feel that their problems are really not problems.</A3></A1> But they are. A lot of therapists do not give enough weight to their issues.” So, what issues are America’s 1% struggling with? <A2>“There is guilt over being rich in the first place,” he said. “There is the feeling that they have to hide the fact that they are rich. And, then, there is the isolation – being in the 1%, it turns out, can be lonely.”</A2> It seems F. Scott Fitzgerald was right: the very rich “are different from you and me.” Counselors argue things have become <D3>worse since the financial crisis</D3> and <D2>the debate over income inequality</D2> that has been spurred on by movements like <D1>Occupy Wall Street</D1> and the Fight for $15 fair wage campaign.
 
-Int: <D1>“Many of the extremely wealthy – the 1% of the 1% – feel that their problems are really not problems.</D1> But they are,” he says. So, what issues do America’s 1% have? <A1>“There is guilt because they are rich,” he said. “There is the feeling that they have to hide the fact that they are rich.</A1> <D3><D2>And, then, there is the isolation – being in the 1% can be lonely.”</D2></D3> <A3><A2>Counsellors argue that things have become worse since the financial crisis and the discussion about income inequality brought on by movements like Occupy Wall Street.</A2></A3>
+Int: <A1><A3>“Many of the extremely wealthy – the 1% of the 1% – feel that their problems are really not problems.</A3></A1> But they are,” he says. So, what issues do America’s 1% have? <A2>“There is guilt because they are rich,” he said. “There is the feeling that they have to hide the fact that they are rich. And, then, there is the isolation – being in the 1% can be lonely.”</A2> Counselors argue that things have become <D3>worse since the financial crisis</D3> <D2>and the discussion about income inequality</D2> brought on by movements like <D1>Occupy Wall Street.</D1>
 
-Ele: <D1>“Many of the very wealthy – the 1% of the 1% – feel that their problems are really not problems.</D1> But they are,” he says. So, what problems do America’s 1% have? <A1>“There is guilt that they are rich,” he said. “There is the feeling that they have to hide that they are rich.</A1> <D3><D2>And, then, there is the isolation – being in the 1% can be lonely.”</D2></D3> <A3><A2>Counsellors say that things have become worse since the financial crisis in 2008. People now talk about the gap between rich and poor more because of groups like Occupy Wall Street.</A2></A3>
+Ele: <A1><A3>“Many of the extremely wealthy – the 1% of the 1% – feel that their problems are really not problems.</A3></A1> But they are,” he says. So, what problems do America’s 1% have? <A2>“There is guilt that they are rich,” he said. “There is the feeling that they have to hide that they are rich. And, then, there is the isolation – being in the 1% can be lonely.”</A2> Counselors say that things have become <D3>worse since the financial crisis.</D3> <D2>People now talk about the gap between rich and poor more</D2> because of movements like <D1>Occupy Wall Street.</D1>
 
-Q: Why do the rich hide their wealth?
-a: They feel guilty
-b: They are lonely
-c: They do not feel that their problems are real
-d: They do not want to be stolen from
+Q: Who thinks that the problems of the wealthy are not real?
+a: A large number of the extremely wealthy people
+b: 1% of the extremely wealthy people
+c: Occupy Wall Street
+d: No one
 
-Q: According to the article, what has happened since 2008?
-a: There is more discussion about inequality between the rich and poor
-b: Things have become worse for the counselors
-c: 1% of rich people feel lonelier
-d: People hate the wealthy more
+Q: What do wealthy people feel guilty about?
+a: Their wealth
+b: The need to hide that they are rich
+c: Creating separation between the rich and the poor
+d: Not working as hard as poor people
 
-Q2: Why did things become worse in 2008?
-a: There was a financial crisis
-b: The disparity between rich and poor increased
-c: The 1% grew more isolated
-d: There were more protests than usual
+Q1: What do the wealthy feel is not real?
+a: Their problems
+b: Their wealth
+c: The financial crisis
+d: Media reports
 
 # Paragraph
 
-Adv: “The Occupy Wall Street movement was a good one and had some important things to say about income inequality but it singled out the 1% and painted them globally as something negative,” said Jamie Traeger-Muney, a wealth psychologist and founder of the Wealth Legacy Group. <A3><A1><D2>The media, she said, is partly to blame for making the rich “feel like they need to hide or feel ashamed”.</D2></A1></A3> <D3><A2><D1>“Sometimes, I am shocked by things that people say.</D1></D3> You would never refer to another group of people in the way that it seems perfectly normal to refer to wealth holders.”</A2>
+Adv: <D1><D3>“The Occupy Wall Street movement was a good one and had some important things to say about income inequality but it singled out the 1% and painted them globally as something negative,”</D3></D1> said Jamie Traeger-Muney, a wealth psychologist and founder of the Wealth Legacy Group. <A1><D2>The media, she said, is partly to blame for making the rich “feel like they need to hide or feel ashamed”.</D2></A1> <A2><A3>“Sometimes, I am shocked by things that people say. You would never refer to another group of people in the way that it seems perfectly normal to refer to wealth holders.”</A3></A2>
 
-Int: “The Occupy Wall Street movement was a good one and had some important things to say about income inequality but it singled out the 1% as something negative,” said Jamie Traeger-Muney, a wealth psychologist and founder of the Wealth Legacy Group. <A3><A1><D2>The media, she said, is partly to blame for making the rich “feel like they need to hide or feel ashamed”.</D2></A1></A3> Traeger-Muney runs a global business and specializes in working with inheritors, who often get a bad reputation in the press. <D3><A2><D1>“Sometimes, I am shocked by things that people say.</D1></D3> You would never refer to another group of people in the way that it seems perfectly normal to refer to wealthy people.”</A2>
+Int: <D1><D3>“The Occupy Wall Street movement was a good one and had some important things to say about income inequality but it singled out the 1% as something negative,”</D3></D1> said Jamie Traeger-Muney, a wealth psychologist and founder of the Wealth Legacy Group. <A1><D2>The media, she said, is partly to blame for making the rich “feel like they need to hide or feel ashamed”.</D2></A1> Traeger-Muney runs a global business and specializes in working with inheritors, who often get a bad reputation in the press. <A2><A3>“Sometimes, I am shocked by things that people say. You would never refer to another group of people in the way that it seems perfectly normal to refer to wealthy people.”</A3></A2>
 
-Ele: “Occupy Wall Street had some important things to say about the gap between rich and poor but it was negative about the 1%,” said Jamie Traeger-Muney, a wealth psychologist. <A3><A1><D2>The media, she said, makes the rich “feel like they need to hide or feel ashamed”.</D2></A1></A3> <D3><A2><D1>“Sometimes, I am shocked by things that people say.</D1></D3> You would never talk about another group of people in the way that it seems perfectly normal to talk about wealthy people.”</A2>
+Ele: <D1><D3>“Occupy Wall Street had some important things to say about the gap between rich and poor but it was negative about the 1%,”</D3></D1> said Jamie Traeger-Muney, a wealth psychologist. <A1><D2>The media, she said, makes the rich “feel like they need to hide or feel ashamed”.</D2></A1> <A2><A3>“Sometimes, I am shocked by things that people say. You would never talk about another group of people in the way that it seems perfectly normal to talk about wealthy people.”</A3></A2>
 
-Q: How does the media affect rich people?
-a: They feel ashamed
-b: They stay in hiding
-c: They are shocked
-d: They are revered
+Q: How does the media affect rich people, according to Traeger-Muney?
+a: It makes them feel like they should be ashamed about their wealth
+b: It makes them hide their shame about being rich
+c: It makes them develop negative feelings towards movements like Occupy Wall Street
+d: It makes them want to give some of their money to others
 
-Q: What does Traeger-Muney imply about what people say about wealthy people?
-a: They say abnormally mean things
-b: They talk about how wealthy people are perfectly normal
-c: They say the rich should feel ashamed of their wealth
+Q: What does Traeger-Muney imply people say about the wealthy?
+a: They say cruel things about wealthy people
+b: They say that wealthy people are perfectly normal
+c: They say wealthy people shame the media
 d: They say wealthy people should share their wealth
 
-Q1: What does “the media” refer to?
-a: Sources of information such as newspapers
-b: Wealth psychologists like Traeger-Muney
-c: The things that people say
-d: Protest movements such as Occupy Wall Street
+Q2: What is Traeger-Muney sometimes shocked by?
+a: What people say about the wealthy
+b: What wealthy people say about themselves
+c: What Occupy Wall Street says about poor people
+d: What poor people say about wealth therapists
 
 # Paragraph
 
-Adv: “It’s really isolating to have a lot of money. People’s reactions to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><D2><A1>“We are all taught not to talk about money. It’s not polite to talk about money. Ironically, it’s harder to talk about having money than it is to talk about not having money. It’s much more socially acceptable to say 'I am broke. Things are hard.' You can’t say 'I have a ton of money.'</A1></D2></A3> <D3><D1>You have to keep a lot of your life private.”</D1></D3> <A3><A2>As a result, Cockrell points out, the rich tend to hang out with other rich Americans, not out of snobbery but in order to be around those who understand them and their problems.</A2></A3>
+Adv: <D1>“It’s really isolating to have a lot of money.</D1> People’s reactions to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><A1><D2>“We are all taught not to talk about money. It’s not polite to talk about money.</D2> Ironically, it’s harder to talk about having money than it is to talk about not having money. It’s much more socially acceptable to say ‘I am broke. Things are hard.’ You can’t say ‘I have a ton of money.’</A1></A3> <A2><D3>You have to keep a lot of your life private.” As a result, Cockrell points out, the rich tend to hang out with other rich Americans, not out of snobbery but in order to be around those who understand them and their problems.</D3></A2>
 
-Int: “It’s really isolating to have a lot of money. People’s reactions to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><D2><A1>“We are all taught not to talk about money. It’s not polite to talk about money. But it’s harder to talk about having money than it is to talk about not having money. It’s much more socially acceptable to say ‘I am broke. Things are hard.’ You can’t say ‘I have a ton of money.’</A1></D2></A3> <D3><D1>You have to keep a lot of your life private.”</D1></D3> <A3><A2>As a result, Cockrell says, the rich usually hang out with other rich Americans who understand them and their problems.</A2></A3>
+Int: <D1>“It’s really isolating to have a lot of money.</D1> People’s reactions to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><A1><D2>“We are all taught not to talk about money. It’s not polite to talk about money.</D2> But it’s harder to talk about having money than it is to talk about not having money. It’s much more socially acceptable to say ‘I am broke. Things are hard.’ You can’t say ‘I have a ton of money.’</A1></A3> <A2><D3>You have to keep a lot of your life private.” As a result, Cockrell says, the rich usually hang out with other rich Americans who understand them and their problems.</D3></A2>
 
-Ele: “It’s really isolating to have a lot of money. People’s reaction to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><D2><A1>“We are all taught not to talk about money. It’s not polite to talk about money. But it’s harder to talk about being rich than it is to talk about being poor. People don’t mind if you say ‘I am broke. Things are hard.’ You can’t say ‘I have a ton of money.’</A1></D2></A3> <D3><D1>You have to keep a lot of your life private.”</D1></D3> <A3><A2>As a result, Cockrell says, the rich hang out with other rich Americans who understand them and their problems.</A2></A3>
+Ele: <D1>“It’s really isolating to have a lot of money.</D1> People’s reaction to you can be scary,” said Barbara Nusbaum, an expert in money psychology. <A3><A1><D2>“We are all taught not to talk about money. It’s not polite to talk about money.</D2> But it’s harder to talk about being rich than it is to talk about being poor. People don’t mind if you say ‘I am broke. Things are hard.’ You can’t say ‘I have a ton of money.’</A1></A3> <A2><D3>You have to keep a lot of your life private.” As a result, Cockrell says, the rich hang out with other rich Americans who understand them and their problems.</D3></A2>
 
-Q: What is not acceptable to talk about, according to Nusbaum?
-a: How rich you are
-b: How poor you are
-c: Your private life
-d: Politics
+Q: What is the quote ‘I am broke. Things are hard’ an example of?
+a: An acceptable thing to say in society
+b: Something wealthy people prefer saying instead of admitting they have money
+c: The isolation of not having a lot of money
+d: The modern American class struggle
 
-Q: Why do the wealthy spend more time with other wealthy people?
-a: They are able to understand each other 
-b: They have problems with people who are less rich
-c: It is not polite for them to talk with less wealthy people
-d: They are arrogant
+Q: According to Cockrell, why do the wealthy tend to spend more time with other wealthy people?
+a: They are able to empathize with each other’s issues
+b: People who are not wealthy are less willing to meet in private
+c: Other wealthy people tend not to talk about money
+d: They tend to encounter more wealthy people in their day-to-day lives
 
-Q1: What purpose does the quote “I am broke. Things are hard” serve in the article?
-a: It provides an example of an acceptable thing to say in society
-b: It gives the testimony of a poor person
-c: It exemplifies how one has to keep a lot of one’s life private
-d: It highlights the modern American class struggle
-
-# Paragraph
-
-Adv: The number of extremely wealthy people has also been climbing. <D1>According to research from Spectrem Group, in 2014, the number of US households with $1m or more in assets – excluding the value of their primary home – increased by 500,000 to 10.1m.</D1> In 2007, that number was 9.2m. <A1>Households worth $5m or more reached 1.3m and 142,000 households are now worth $25m or more.<A/1> <A3><A2>Since the 2008 financial crisis, the income gap has expanded and the situation “has gotten worse for the wealthy”, Cockrell said. The main reason? Not knowing if your friends are friends with you or your money.</A2></A3> “Someone else who is also a billionaire – they don’t want anything from you. <D3><D2>Never being able to trust your friendships with people of different means,</D2></D3> I think that is difficult,” said Cockrell. “As the gap has widened, the rich have become more and more isolated.” 
-
-Int: In the US, over the last three decades, the number of extremely wealthy people has been increasing. <D1>According to research from Spectrem Group, in 2014, the number of US households with $1m or more – excluding the value of their main home – increased by 500,000 to 10.1m.</D1> Households worth $5m or more reached 1.3m and 142,000 households are now worth $25m or more. <A3><A2>Since the 2008 financial crisis, the income gap has grown and the situation “has gotten worse for the wealthy”, Cockrell said. The main reason? Not knowing if your friends are friends with you or with your money.</A2></A3> “Someone else who is also a billionaire – they don’t want anything from you. <D3><D2>Never being able to trust your friendships with other people, I think that is difficult,”</D2></D3> said Cockrell. “As the gap has widened, the rich have become more and more isolated.”
-
-Ele: In the US, over the last 30 years, the number of very wealthy people has grown. <D1>In 2014, the number of US households with $1m or more – excluding the value of their main home – was 10.1 million.</D1> <A1>There were 1.3 million households worth $5 million and 142,000 worth $25 million or more.</A1> <A3><A2>Since the 2008 financial crisis, the gap between the rich and the poor has grown and the situation “has gotten worse for the wealthy”, Cockrell said. The main reason? Not knowing if your friends are friends with you or with your money.</A2></A3> “Someone else who is also a billionaire – they don’t want anything from you. <D3><D2>Never being able to trust your friendships with other people,</D2></D3> I think that is difficult,” said Cockrell. 
-
-Q: Approximately how many US households have more than $5 million?
-a: 1.3 million
-b: 142,000
-c: 10.1 million
-d: 500,000
-
-Q: What is the main problem for the wealthy since the 2008 financial crisis?
-a: They do not know if people like them for them or their wealth
-b: They do not want anything from others
-c: They cannot trust anyone
-d: They and their money’s safety
-
-Q2: Why have things worsened for the wealthy?
-a: The gap between those with and without money has widened
-b: There are more wealthy people to compete with
-c: They can only trust friends poorer than them
-d: They experienced extreme financial losses during 2008
+Q1: What is the quote ‘I have a ton of money’ an example of?
+a: Something that people wouldn’t say
+b: Something that poor people prefer saying instead of admitting they have no money
+c: Something that a wealthy person regularly says in private
+d: Something that anyone would want to say
 
 # Paragraph
 
-Adv: “Wealth can be a barrier to connecting with other people,” confessed a spouse of a tech entrepreneur who made about $80m. Some Americans have taken to keeping their wealth secret. “We talk about it as stealth wealth. There are a lot of people that are hiding their wealth because they are concerned about negative judgment,” said Traeger-Muney. <D3><D2><A1>If wealthy Americans talk about the unique challenges that come with their wealth, people often dismiss their experience. “People say 'Oh, poor you.' There is not a lot of sympathy there,” she said.</D2></A1></D3> “Wealth is still one of our last taboos.” Speaking in his soft, soothing voice that makes you want to spill all your worries, <D3><A2><D1>Cockrell said that a common mistake that many of his wealthy clients make is letting their money define them.</A2></D1></D3> “I don’t think it’s healthy to discount your problems. If you are part of the 1%, you still have problems and they are legitimate to you. Even when you say, 'I don’t have to struggle for money', there are other parts of your life. Money is not the only thing that defines you,” he said. “Your problems are legitimate.”
+Adv: In the US, over the last three decades, the number of extremely wealthy people has been climbing. <A1>According to research from Spectrem Group, in 2014, <D3>the number of US households with <D2>$1m or more</D2> in assets –  excluding the value of their primary home – increased</D3> by 500,000 to 10.1m.</A1> In 2007, that number was 9.2m. Households worth $5m or more reached 1.3m and <D1>142,000</D1> households are now worth $25m or more. <A3><A2>Since the 2008 financial crisis, the income gap has expanded and the situation “has gotten worse for the wealthy,” Cockrell said. The main reason? Not knowing if your friends are friends with you or your money. “Someone else who is also a billionaire – they don’t want anything from you. Never being able to trust your friendships with people of different means, I think that is difficult,” said Cockrell. “As the gap has widened, the rich have become more and more isolated.”</A2></A3> 
 
-Int: “Wealth can stop you from connecting with other people,” said the wife of a tech entrepreneur who made about $80m. Some Americans keep their wealth secret. “We talk about it as stealth wealth. There are a lot of people that hide their wealth because they are worried about negative judgment,” said Traeger-Muney. <D3><D2><A1>If wealthy Americans talk about the problems that come with their wealth, people often say ‘Oh, poor you.’ There is not a lot of sympathy there,”</D2></A1></D3> she said. Speaking in his soft, soothing voice that makes you want to tell him all your worries, <A3><A2><D1>Cockrell said that a common mistake that many of his wealthy clients make is letting their money define them.</A2></D1></A3> “If you are part of the 1%, you still have problems and they are real to you. Even when you say, ‘I don’t have to struggle for money’, there are other parts of your life. Money is not the only thing that defines you,” he said. “Your problems are real.”
+Int: In the US, over the last three decades, the number of extremely wealthy people has been increasing. <A1>According to research from Spectrem Group, in 2014, <D3>the number of US households with <D2>$1m or more</D2> – excluding the value of their main home – increased</D3> by 500,000 to 10.1m.</A1> Households worth $5m or more reached 1.3m and <D1>142,000</D1> households are now worth $25m or more. <A3><A2>Since the 2008 financial crisis, the income gap has grown and the situation “has gotten worse for the wealthy,” Cockrell said. The main reason? Not knowing if your friends are friends with you or with your money. “Someone else who is also a billionaire – they don’t want anything from you. Never being able to trust your friendships with other people, I think that is difficult,” said Cockrell. “As the gap has widened, the rich have become more and more isolated.”</A2></A3>
 
-Ele: “Wealth can stop you from connecting with other people,” said the wife of a man who made about $80 million. Some Americans keep their wealth secret. “There are a lot of people hiding their wealth because they are worried about negative judgment,” said Traeger-Muney. <D3><D2><A1>If wealthy Americans talk about their problems, people don’t have a lot of sympathy,” she said.</A1></D2></D3> <A3><A2><D1>Cockrell said that there is a common mistake that many of his wealthy clients make – they let their money be the most important thing in their lives.</A2></D1></A3> “If you are part of the 1%, you still have problems. There are other parts of your life. Money is not the only thing,” he said. “Your problems are real.”
+Ele: In the US, over the last 30 years, the number of very wealthy people has grown. <A1>In 2014, <D3>the number of US households with <D2>$1 million or more</D2> – excluding the value of their main home – increased</D3> by 500,000 to 10.1 million.</A1> There were 1.3 million households worth $5 million and <D1>142,000</D1> worth $25 million or more. <A3><A2>Since the 2008 financial crisis, the gap between the rich and the poor has grown and the situation “has gotten worse for the wealthy,” Cockrell said. The main reason? Not knowing if your friends are friends with you or with your money. “Someone else who is also a billionaire – they don’t want anything from you. Never being able to trust your friendships with other people, I think that is difficult,” said Cockrell.</A2></A3> 
 
-Q: What often happens when wealthy people talk about their problems?
-a: Others do not sympathize
-b: People judge their problems
-c: Money becomes the most important part of the discussion
-d: The media do not listen
+Q: What is excluded from the presented wealth estimates in the US?
+a: The worth of real estate where one lives
+b: The worth of real estate valued less than $500,000
+c: The worth of real estate valued less than $142,000
+d: The worth of real estate owned abroad
+
+Q: What is something that got worse for the wealthy since the 2008 financial crisis?
+a: They don’t know if their friends are truly their friends
+b: They are no longer trusted by their less wealthy friends
+c: They lost more than $1 million on average
+d: They have been receiving more threats
+
+Q2: How have things changed for the wealthy since the 2008 financial crisis, according to Cockrell?
+a: The gap between them and those without money has increased
+b: Their poorer friends have stopped being friends with them
+c: The value of their homes decreased
+d: They experienced severe financial losses
+
+# Paragraph
+
+Adv: Some Americans have taken to keeping their wealth secret. “There are a lot of people that are hiding their wealth because <D3>they are concerned about negative judgment,”</D3> said Traeger-Muney. <D3><D2><A1>“If wealthy Americans talk about the unique challenges that come with their wealth, people often dismiss their experience. People say ‘Oh, poor you.’ There is not a lot of sympathy there,” she said.</D2></A1></D3> “Wealth is still one of our last taboos.” <A2><D1>Cockrell said that a common mistake that many of his wealthy clients make is letting their money define them.</D1> “I don’t think it’s healthy to discount your problems. <A3>If you are part of the 1%, you still have problems and they are legitimate to you. Even when you say, ‘I don’t have to struggle for money’, there are other parts of your life. Money is not the only thing that defines you,” he said. “Your problems are real.”</A3></A2>
+
+Int: Some Americans keep their wealth secret. “We talk about it as stealth wealth. There are a lot of people that hide their wealth because <D3>they are worried about negative judgment,”</D3> said Traeger-Muney. <D3><D2><A1>“If wealthy Americans talk about the problems that come with their wealth, people often say ‘Oh, poor you.’ There is not a lot of sympathy there,”</D2></A1></D3> she said. <A2><D1>Cockrell said that a common mistake that many of his wealthy clients make is letting their money define them.</D1> <A3>“If you are part of the 1%, you still have problems and they are real to you. Even when you say, ‘I don’t have to struggle for money’, there are other parts of your life. Money is not the only thing that defines you,” he said. “Your problems are real.”</A3></A2>
+
+Ele: Some Americans keep their wealth secret. “There are a lot of people hiding their wealth because <D3>they are worried about negative judgment,”</D3> said Traeger-Muney. <D3><D2><A1>“If wealthy Americans talk about their problems, people often don’t have a lot of sympathy,” she said.</A1></D2></D3> <A2><D1>Cockrell said that there is a common mistake that many of his wealthy clients make – they let their money define them.</D1> <A3>“If you are part of the 1%, you still have problems. There are other parts of your life. Money is not the only thing,” he said. “Your problems are real.”</A3></A2>
+
+Q: What does Traeger-Muney say often happens when wealthy people talk about their problems?
+a: Listeners don’t sympathize with them
+b: People pretend to sympathize
+c: Money becomes a central part of the discussion
+d: They make others feel better about themselves
 
 Q: What does Cockrell say is a common mistake that his wealthy clients make?
 a: They define themselves by their money
-b: They do not understand their real problems
+b: They think that their financial problems are not real
 c: They talk about their problems with unsympathetic people
-d: They trust people too much
+d: They trust people with friendship too easily
 
-Q2: What do all of Cockrell’s clients have in common?
-a: They have a lot of money
-b: They don’t care about their money
-c: They lack sympathy for other income brackets
-d: They all suffer from depression
+Q2: What does Cockrell say is true if someone is part of the 1%?
+a: Even if they don't have problems with money, they may grapple with other issues
+b: They still occasionally face problems with money
+c: They don’t pay attention to negative judgement from others
+d: They tend to spoil their children
+

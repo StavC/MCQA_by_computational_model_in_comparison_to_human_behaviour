@@ -292,7 +292,9 @@ def load_data(args, is_training=False):#use this when running through tmux
         print("Using yev data")
         return read_onestop(is_training=is_training)
     else:
-        return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/combined'),
+        #return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/high'),
+        return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/middle'),
+        #return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/combined'),
                                   is_training=is_training)
 
 
@@ -437,7 +439,20 @@ def main():
 
 
     #make predictions
-    eval_examples = load_data(args, is_training=False)
+    df=pd.read_csv(Path(__file__).parent.parent / 'data' / 'prolificData' / 'prolific.csv')
+    print(df)
+    from load_data import Example, QuestionId
+    eval_examples=[]
+    for row in df:
+        example = Example(id=QuestionId(paragraph_id=row['item_id'], question=0), context_sentence=row['paragraph'],
+                          start_ending=row['question'],
+                          ending_0=row['answer1'], ending_1=row['answer2'], ending_2=row['answer3'],
+                          ending_3=row['answer3'], label=0)
+
+        eval_examples.append(example)
+
+
+
     """print(type(eval_examples[0]))
 
     print(eval_examples[0].id)
@@ -491,14 +506,20 @@ def main():
 
 
             ###stav addons for analyze
-
+            print(row)
+            """
+            print(row.id)
+            print(row.id.paragraph_id.article_id)
+            print(row.id.paragraph_id.paragraph_id)
+            print(row.id.paragraph_id.level)
+            print(row.id.question)
             print('@@@@@@@@@@@')
             print(logits)
-            print(label_ids)
+            print(label_ids)"""
             m = torch.nn.Softmax(dim=1)
             softmax=m(logitsCopy.logits)
             predicted_label = np.argmax(logits)
-            dataAndPrediction.append([row.id, row.context_sentence, row.start_ending, row.endings[0], row.endings[1], row.endings[2],
+            dataAndPrediction.append(['RACE',row.id.paragraph_id,'Middle',row.id.question,row.id, row.context_sentence, row.start_ending, row.endings[0], row.endings[1], row.endings[2],
                          row.endings[3], row.label,logits,softmax,predicted_label])
 
             # eval_loss += tmp_eval_loss.mean().item()
@@ -507,10 +528,10 @@ def main():
 
             nb_eval_examples += input_ids.size(0)
             nb_eval_steps += 1
-    predictionDF=pd.DataFrame(data=dataAndPrediction,columns=['QuestionId','context','question','ending0','ending1','ending2','ending3','label','logits','softmax','predicted_label'])
+    predictionDF=pd.DataFrame(data=dataAndPrediction,columns=['Dataset','paragraph_id','level','questionNumber','QuestionId','context','question','ending0','ending1','ending2','ending3','label','logits','softmax','predicted_label'])
 
-    predictionDF.to_csv(r'PredictionsOnRaceTest.csv',index=False)
-    #predictionDF.to_csv(r'PredictionsOnOneStopQA.csv',index=False)
+    #predictionDF.to_csv(r'PredictionsOnRaceTestHigh.csv',index=False)
+    predictionDF.to_csv(r'PredictionsOnRaceTestMiddle.csv',index=False)
     output_eval_pickle = os.path.join(args.output_dir, "eval_results.pickle")
     torch.save(eval_results, output_eval_pickle)
     eval_loss = eval_loss / nb_eval_steps

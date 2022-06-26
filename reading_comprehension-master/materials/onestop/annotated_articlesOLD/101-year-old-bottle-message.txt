@@ -1,0 +1,211 @@
+# Title
+101-Year-Old Bottle Message
+
+
+# Paragraph
+
+Adv: <A1>Angela Erdmann never knew her grandfather.</A1> He died in 1946, six years before she was born. But, on Tuesday 8th April, 2014, she described the extraordinary moment when she received a message in a bottle, <A1>101 years after he had lobbed it <D3><D2>into the Baltic Sea.</A1></D2></D3> Thought to be the world’s oldest message in a bottle, <A3><A2>it was presented to Erdmann by the <D1>museum</D1> that is now exhibiting it in Germany.</A2></A3>
+
+Int: <A1>Angela Erdmann never knew her grandfather.</A1> He died in 1946, six years before she was born. But, on Tuesday April 8th, 2014, she described the extraordinary moment when she received a message in a bottle, <A1>101 years after he had thrown it <D3><D2>into the Baltic Sea.</A1></D2></D3> The bottle is believed to be the world’s oldest message in a bottle and <A3><A2>it was presented to Erdmann by the <D1>museum</D1> that is now exhibiting it in Germany.</A2></A3>
+
+Ele: <A1>Angela Erdmann never knew her grandfather.</A1> He died in 1946, six years before she was born. But, on Tuesday April 8th, 2014, she described the extraordinary moment when she received a message in a bottle, <A1>101 years after he threw it <D3><D2>into the Baltic Sea.</A1></D2></D3> The bottle is possibly the world’s oldest message in a bottle. <A3><A2>It was presented to Erdmann by the <D1>museum</D1> that is now exhibiting it in Germany.</A2></A3>
+
+Q: Who threw the bottle into the Baltic Sea?
+a: Angela’s grandfather
+b: Angela
+c: A museum worker
+d: A fisherman
+
+Q: Where can you find the bottle?
+a: On exhibit in Germany
+b: At Angela Erdmann’s house
+c: In the Baltic Sea
+d: In the recycling
+
+Q2: How did Angela Erdmann find the bottle?
+a: A museum told her that they had it
+b: She coincidentally went to the exhibit where it was being shown
+c: It floated up to her while she was swimming in the Baltic Sea
+d: Her grandfather mailed it to her 
+
+# Paragraph
+
+Adv: “It was very surprising,” Erdmann, 62, said, recalling how she found out about the bottle.  <A3><A1>“A man stood at my door and told me he had post from my grandfather. He then told me that a message in a bottle had been found and that the name that was on the card was that of my grandfather.”</A1></A3> <A2>Her visitor was a genealogical researcher</A2> who had managed to track her down in Berlin after <D3><D1>the letter was given to the International Maritime Museum</D1></D3> in the northern port city of <D2>Hamburg.</D2>
+
+Int: “It was very surprising,” Erdmann, 62, said, describing how she found out about the bottle.  <A3><A1>“A man stood at my door and told me he had post from my grandfather. He then told me that a message in a bottle had been found and that the name that was on the card was that of my grandfather.”</A1></A3> <A2>Her visitor was a genealogical researcher</A2> who had managed to find her in Berlin after <D3><D1>the letter was given to a museum</D1></D3> in the northern port city of <D2>Hamburg.</D2>
+
+Ele: “It was very surprising,” Erdmann, 62, said, when she described how she found out about the bottle. <A3><A1>“A man came to my door and told me he had post from my grandfather. Then, he told me that someone had found a message in a bottle and that on the card was my grandfather’s name.”</A1></A3> <A2>Her visitor was a family-tree researcher</A2> who found her in Berlin after someone gave <D3><D1>the letter to a museum</D1></D3> in the northern city of <D2>Hamburg.</D2>
+
+Q: What did the visitor deliver?
+a: News about the discovery of the bottle
+b: The message in the bottle
+c: The letter from a museum
+d: Angela’s mail
+
+Q: Who visited Angela?
+a: A family-tree researcher
+b: Her grandfather
+c: Her friend from Hamburg
+d: A postman
+
+Q1: How did the visitor know the message in the bottle was written by Angela’s grandfather?
+a: His name was on the card
+b: The letter had a return address
+c: Her grandfather told the museum it was his in a letter
+d: Genealogical research revealed the bottle to belong to him
+
+# Paragraph
+
+Adv: <A1>The brown beer bottle, which had been in the water for 101 years, was found in the catch of Konrad Fischer, a fisherman,</A1> who had been out in the Baltic Sea off the northern city of Kiel. <A3><A2>Holger von Neuhoff, curator for ocean and science at the museum, said this bottled message was the oldest he had come across.</A2></A3> “There are documents that have been found without the bottle that are older and <D1>are in the museum,”</D1> he said. “But, with the bottle and the document, <A3><A2>this is certainly the oldest at the moment.</A2></A3> <D3><D2>It is in extremely good condition.”</D2></D3>
+
+Int: <A1>The brown beer bottle, which had been in the water for 101 years, was found by a fisherman,</A1> who had been out in the Baltic Sea off the northern city of Kiel. <A3><A2>Holger von Neuhoff, a curator at the museum, said this bottled message was the oldest he had come across.</A2></A3> “There are documents that have been found without the bottle that are older and <D1>are in the museum,”</D1> he said. “But, with the bottle and the document, <A3><A2>this is certainly the oldest at the moment.</A2></A3> <D3><D2>It is in extremely good condition.”</D2></D3>
+
+Ele: The brown beer bottle was in the water for 101 years. <A1>A fisherman found it.</A1> <A3><A2>Holger von Neuhoff, a curator at the museum, said this bottled message was the oldest he had ever seen.</A2></A3> “There are documents without the bottle that are older and <D1>they are in the museum,”</D1> he said. “But, with the bottle and the document, <A3><A2>this is certainly the oldest at the moment.</A2></A3> <D3><D2>It is in very good condition.”</D2></D3>
+
+Q: How was the bottle discovered?
+a: Someone found it while fishing
+b: Someone found it while selling fish
+c: It was found in the museum
+d: We don’t know
+
+Q: What is special about the bottled message, according to von Neuhoff?
+a: It is the oldest bottled message
+b: He has found it
+c: It is in the best condition of all bottled messages
+d: It gives useful information about the time period
+
+Q2: It can be inferred that the museum…
+a: Is home to many documents
+b: Only displays bottled messages
+c: Is in good condition
+d: was founded 100 years ago
+
+# Paragraph
+
+Adv: Researchers believe Erdmann’s grandfather, Richard Platz, <D3><D2>threw the bottle in the sea</D2></D3> while on a hike with a nature appreciation group in 1913. He was 20 years old at the time. <A1>Much of the postcard was indecipherable, although the address in Berlin on the front of the card was legible,</A1> as was <A3><A2>the author’s <D1>polite request that the note be sent by the finder to his home address.</D1></A2></A3>
+
+Int: Researchers believe Erdmann’s grandfather, Richard Platz, <D3><D2>threw the bottle in the sea</D2></D3> while on a hike in 1913. He was 20 years old at the time. <A1>A lot of the message on the postcard was impossible to read, although the address in Berlin on the front of the card was legible.</A1> Also legible was <A3><A2>the author’s polite request that <D1>the person finding it should send it to his home address.</D1></A2></A3>
+
+Ele: Researchers believe that Erdmann’s grandfather, Richard Platz, <D3><D2>threw the bottle into the sea</D2></D3> when he was on a hike in 1913. He was 20 years old at the time. <A1>A lot of the message on the postcard was impossible to read, but the address in Berlin on the front of the card was legible.</A1> <A3><A2><D1>Platz asked the person who found it to send the postcard to his home address.</D1></A2></A3>
+
+Q: What is true about the message on the postcard?
+a: You can read the address on the front, but not much else
+b: It is impossible to read any of it
+c: It asked the person who found it to send the postcard to Erdmann
+d: It was a letter to Platz’s friend
+
+Q: What did Platz ask the finder of the bottle to do?
+a: Send the postcard to a certain address
+b: Read the postcard
+c: Throw the bottle into the sea
+d: Go on a hike
+
+Q2: Where did Platz want the postcard to eventually end up?
+a: His home
+b: In the hands of whoever found it
+c: The bottom of the sea
+d: A museum
+
+# Paragraph
+
+Adv: <A3><A1><D2>“He also included two stamps from that time that were also in the bottle, so the finder would not incur a cost,”</D2> Erdmann said. “But he did not think it would take 101 years.”</A1></A3> <A2>She said <D3><D1>she was moved by the arrival of the message,</D1></D3> although she had not known her grandfather because he died, at the age of 54, six years before she was born.</A2>
+
+Int: <A3><A1><D2>“He also included two stamps from that time that were in the bottle, so the finder would not have to pay for postage,”</D2> Erdmann said. “But he did not think it would take 101 years.”</A1></A3> <A2>She said <D3><D1>she was moved by the arrival of the message,</D1></D3> although she had not known her grandfather because he died, at the age of 54, six years before she was born.</A2>
+
+Ele: <A3><A1><D2>“He also included two stamps from that time that were also in the bottle, so the finder would not have to pay for postage,”</D2> Erdmann said. “But he did not think it would take 101 years.”</A1></A3> <A2>She said <D3><D1>she was moved by the arrival of the message,</D1></D3> but she did not known her grandfather because he died, at the age of 54, six years before she was born.</A2>
+
+Q: What would Erdmann’s grandfather find surprising?
+a: That it would take 101 years for the bottle to be delivered
+b: That paying for postage would take 101 years
+c: That Erdmann would be moved by the arrival of the message
+d: That the bottle would be delivered to the right address
+
+Q: Was the arrival of the message meaningful to Erdmann?
+a: Yes, even though she never knew her grandfather
+b: Yes, because her grandfather died when she was six
+c: Yes, because he included postage stamps so the finder would not have to pay for postage
+d: Yes, because it made her famous
+
+Q1: Thanks to the forethought of Erdmann’s grandfather, the finder of the bottle did not have to...
+a: Pay for postage
+b: Include two stamps in the bottle
+c: Tell Erdmann the bad news
+d: Travel to Berlin
+
+# Paragraph
+
+Adv: “I knew very little about my grandfather, but I found out that <D3><D2><D1>he was a writer</D1></D3> who was very open-minded, and believed in freedom</D2> and that everyone should respect each other,” she said. <A3><A1>“He did a lot for the young and later travelled with his wife and two daughters.</A1></A3> <A2>It was wonderful because I could see where my roots came from.”</A2>
+
+Int: “I knew very little about my grandfather, but I found out that <D3><D2><D1>he was a writer</D1></D3> who was very open-minded, and believed in freedom</D2> and that everyone should respect each other,” she said. <A3><A1>“He did a lot for the young and later travelled with his wife and two daughters.</A1></A3> <A2>It was wonderful because I could see where my roots came from.”</A2>
+
+Ele: “I knew very little about my grandfather. But I found out that <D3><D2><D1>he was a writer.</D1></D3> He was very open-minded, and he believed in freedom</D2> and that everyone should respect each other,” she said. <A3><A1>“He did a lot for the young and later travelled with his wife and two daughters.</A1></A3> <A2>It was wonderful because I could see where my roots came from.”</A2>
+
+Q: According to the article, for whom did Erdmann’s grandfather do a lot?
+a: Children
+b: His wife
+c: Writers
+d: Erdmann
+
+Q: Because of the bottle…
+a: Erdmann learned about her family history
+b: Erdmann learned that her grandfather planted her tree’s roots
+c: Erdmann learned to be open-minded and believe in freedom like her grandfather
+d: Erdmann became famous
+
+Q1: What is something Erdmann’s grandfather did with his family?
+a: Travel
+b: Volunteer
+c: Write
+d: Cook
+
+# Paragraph
+
+Adv: Like her grandfather, Erdmann said, she also <D2>liked culture and travelling around the world.</D2> She described herself as open-minded, too. “What he taught his two daughters, my mother taught me and I have then given to my sons,” she said. <A3><A1>Despite her joy at receiving the bottled message, she said that she hoped others would not repeat what her grandfather had done and throw bottles with messages into the sea.</A1></A3> <D3><A2><D1>“Today, the sea is so full of so many bottles and rubbish that more shouldn’t be thrown in there,“ she said.</D1></A2></D3>
+
+Int: Erdmann said she also liked <D2>culture and travelling around the world,</D2> just like her grandfather. She described herself as open-minded, too. “What he taught his two daughters, my mother taught me and I have then given to my sons,” she said. <A3><A1>She was very happy to receive the bottled message, she said, but she hoped other people would not do what her grandfather had done and throw bottles with messages into the sea.</A1></A3> <D3><A2><D1>“Today, the sea is so full of so many bottles and rubbish that more shouldn’t be thrown in there,” she said.</D1></A2></D3>
+
+Ele: Erdmann said she also liked <D2>culture and travelling around the world,</D2> just like her grandfather. She described herself as open-minded, too. <A3><A1>She was very happy to receive the bottled message, she said, but she hoped other people would not do what her grandfather did and throw bottles with messages into the sea.</A1></A3> <D3><A2><D1>“Today, the sea is so full of bottles and rubbish that we shouldn’t throw more in there,” she said.</D1></A2></D3>
+
+Q: What does Erdmann think about bottled messages?
+a: She thinks people should not send more bottled messages
+b: She was happy to receive the bottled message and thinks they should be more common
+c: She was upset that her grandfather threw bottles and rubbish in the sea
+d: She thinks that sending messages by mail is more efficient
+
+Q: What can we tell about Erdmann?
+a: She cares about the environment
+b: She doesn’t think people should throw away their rubbish
+c: She dislikes culture and traveling
+d: She was born in Hamburg
+
+Q1: Which of the following best describes Erdmann’s immediate feelings upon receiving the bottle?
+a: Happy 
+b: Hopeful 
+c: Disapproving
+d: Embarrassed
+
+# Paragraph
+
+Adv: The message and <D3><D1>the bottle will be on display</D1></D3> at Hamburg’s Maritime Museum until the beginning of May 2014, after which <D2>experts will attempt to decipher the rest of the text.</D2> <A3><A1>It is not clear what will then happen to the bottle, but Erdmann hopes it will stay at the museum.</A1></A3> <A2>“We want to make a few photos available to put with the bottle and give it a face, so visitors can see the young man who threw the bottle into the water,” she said.</A2>
+
+Int: The message and <D3><D1>the bottle will be on display</D1></D3> at Hamburg’s Maritime Museum until the beginning of May 2014, after which <D2>experts will attempt to decipher the rest of the text.</D2> <A3><A1>It is not clear what will then happen to the bottle, but Erdmann hopes it will stay at the museum.</A1></A3> <A2>“We want to make a few photos available to put with the bottle and give it a face, so visitors can see the young man who threw the bottle into the water,” she said.</A2>
+
+Ele: The message and <D3><D1>the bottle will be on display</D1></D3> at Hamburg’s Maritime Museum until the beginning of May 2014. Then, <D2>experts will try to decipher the rest of the text.</D2> <A3><A1>It is not clear what will happen to the bottle after that, but Erdmann hopes it will stay at the museum.</A1></A3> <A2>“We want to find a few photos to put with the bottle and give it a face, so visitors can see the young man who threw the bottle into the water,” she said.</A2>
+
+Q: What will happen to the bottle after the experts will finish examining the text?
+a: We don’t know
+b: It will stay at the Maritime Museum
+c: It will be on display
+d: It will be given to Erdmann
+
+Q: What does Erdmann want to add to the exhibit?
+a: Pictures of her grandfather
+b: Photos of the bottle
+c: A fully-deciphered copy of the text
+d: A warning about littering
+
+Q1: What does Erdmann want to happen to the bottle later on?
+a: She wants it to remain at the museum
+b: She is not sure what she wants to happen to it
+c: She wants to take it off display
+d: She wants to throw it back into the water

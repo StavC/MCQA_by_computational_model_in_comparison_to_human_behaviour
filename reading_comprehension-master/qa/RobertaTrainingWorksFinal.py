@@ -440,13 +440,10 @@ def main():
         #load_output_model(model, os.path.join(args.output_dir, 'robertatraininguptoEpoch11/8acc:0.7468794761612442'))
         #load_output_model(model, os.path.join(args.output_dir, '7acc:0.7487210967873952.pt'))
         #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/4acc:0.740536116226724'))
-
-        ##### Race tained model used to finetune on onestop
-        load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/2acc:0.7403314917127072')) # 0.7946 on epoch 6
-        ##### Race tained model used to finetune on onestop
+        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/2acc:0.7403314917127072')) # 0.7946 on epoch 6
 
         # un comment above
-        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/RobertaTrainedRaceAndOneStopRDYToPredict/3acc:0.7912457912457912OneStopQA.pt')) # 0.7946 on epoch 6
+        load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/RobertaTrainedRaceAndOneStopRDYToPredict/3acc:0.7912457912457912OneStopQA.pt')) # 0.7946 on epoch 6
 
     model.to(device)
     print(
@@ -607,17 +604,9 @@ def main():
             model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
             #name = f'{_}acc:{eval_accuracy}'
             name = f'{_}acc:{eval_accuracy}OneStopQA.pt'
-
             output_model_file = os.path.join(args.output_dir, name)
 
             torch.save(model_to_save.state_dict(), output_model_file)
-            ############ trying new saving
-            eval_accuracy_string=str(eval_accuracy)
-            name = f'{_}acc{eval_accuracy_string[2:]}OneStopQAWHOLEMODEL.pt'
-            output_model_file = os.path.join(args.output_dir, name)
-            torch.save(model, output_model_file)
-
-
             output_config_file = os.path.join(args.output_dir, CONFIG_NAME)
             with open(output_config_file, 'w') as f:
                 f.write(model_to_save.config.to_json_string())

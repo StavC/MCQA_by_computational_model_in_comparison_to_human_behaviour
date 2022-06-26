@@ -1,133 +1,134 @@
 # Title
-Philip Pullman illegal downloading is moral squalor
+Philip Pullman Illegal Downloading Is Moral Squalor
 
 
 # Paragraph
 
-Adv: Illegal downloading is a kind of “moral squalor” and theft, as much as reaching in to someone’s pocket and stealing their wallet is theft, says author Philip Pullman. <A1>In an article for Index on Censorship, Pullman, who is president of the Society of Authors, <D3><D2>makes a robust defence</D2> of copyright laws.</A1></D3> <A3><A2>He is highly critical of internet users <D1>who think it is OK to download music or books without paying for them.</D1></A2></A3>
+Adv: <D1>Illegal downloading is a kind of “moral squalor” and theft, as much as reaching in to someone’s pocket and stealing their wallet is theft,</D1> says author Philip Pullman. <A1>In an article for Index on Censorship, Pullman, who is president of the Society of Authors,</A1> <D3><D2>makes a robust defence of copyright laws.</D2></D3> <A3><A2>He is highly critical of Internet users who think it is OK to download music or books without paying for them.</A2></A3>
 
-Int: Illegal downloading is a kind of “moral squalor” and theft, as much as reaching in to someone’s pocket and stealing their wallet is theft, says author Philip Pullman. <A1>In an article for Index on Censorship, Pullman, who is president of the Society of Authors, <D3><D2>makes a robust defence</D2></D3> of copyright laws.</A1> <A3><A2>He is highly critical of internet users who <D1>think it is OK to download music or books without paying for them.</D1></A2></A3>
+Int: <D1>Illegal downloading is a kind of “moral squalor” and theft, as much as reaching in to someone’s pocket and stealing their wallet is theft,</D1> says author Philip Pullman. <A1>In an article for Index on Censorship, Pullman, who is president of the Society of Authors,</A1> <D3><D2>makes a robust defence of copyright laws.</D2></D3> <A3><A2>He is highly critical of Internet users who think it is OK to download music or books without paying for them.</A2></A3>
 
-Ele: Illegal downloading is morally wrong, and it is theft, the same as putting your hand in someone’s pocket and stealing their wallet is theft, says author Philip Pullman. <A1>In an article for magazine Index on Censorship, Pullman, who is president of the Society of Authors, <D3><D2>strongly defends</D2> copyright laws.</A1></D3> <A3><A2>He criticizes internet users who <D1>think it is OK to download music or books without paying for them.</D1></A2></A3>
+Ele: <D1>Illegal downloading is morally wrong, and it is theft, the same as how putting your hand in someone’s pocket and stealing their wallet is theft,</D1> says author Philip Pullman. <A1>In an article for the magazine Index on Censorship, Pullman, who is president of the Society of Authors,</A1> <D3><D2>strongly defends copyright laws.</D2></D3> <A3><A2>He criticizes Internet users who think it is OK to download music or books without paying for them.</A2></A3>
 
-Q: What is the most likely reason that Pullman defends copyright laws?
-a: He is looking out for the interests of writers
-b: He publishes a magazine, Index on Censorship, that speaks out against pirating
-c: He doesn’t - he thinks it’s OK to download music or books without paying for them
-d: He is a law-abiding person
+Q: Where does Philip Pullman hold a senior position?
+a: The “Society of Authors”
+b: The “Index on Censorship”
+c: The “Association Against Illegal Downloading”
+d: The “Arts Union”
 
 Q: What does Pullman think about pirating?
-a: He disapproves
-b: He thinks it is OK to download music or books without paying for them sometimes
-c: He strongly defends it
-d: He thinks it depends on the situation
+a: He disapproves of people who are OK with pirating
+b: He thinks it is only OK to download music or books without paying for them if it is done infrequently
+c: He believes it is a robust defense against copyright laws
+d: He thinks it depends on the user’s financial situation
 
-Q2: Which of the following actions would Pullman disapprove of?
-a: Downloading a song without paying for it
-b: Using the internet everyday
-c: Defending copyright laws
-d: Publishing original songs online
-
-# Paragraph
-
-Adv: <D3><D2>“The technical brilliance is so dazzling</D2></D3> that people can’t see the moral squalor of what they’re doing,” he writes. <A1>“It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, as surely as reaching into someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street, where the issue of web piracy was discussed. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty and obscurity for years</D1> to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of making a living from it is taken away from them”.</A2></A3> He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does, we should pay for it.”
-
-Int: <D3><D2>“The technical brilliance is so dazzling</D2></D3> that people can’t see the moral squalor of what they’re doing,” he writes. <A1>“It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, as surely as reaching into someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street, where the issue of web piracy was discussed. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty and obscurity for years</D1> to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of making a living from it is taken away from them”.</A2></A3> He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does, we should pay for it.”
-
-Ele: <D3><D2>“The technology is so dazzling</D2></D3> that people can’t see that what they’re doing is wrong,” he writes. “It is outrageous that anyone can steal an artist’s work without punishment. <A1>It is theft, just as putting your hand in someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street to discuss the issue of web piracy. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty for years</D1> to bring their work to the level “that gives happiness to their audiences and, when they achieve that, the possibility of making money from it is taken away from them”.</A2></A3> He concludes: “If we want to enjoy the work that someone does, we should pay for it.”
-
-Q: Why does Pullman compare pickpocketing and piracy?
-a: To convince people that piracy is a form of theft
-b: Because you need to be good at pickpocketing to commit piracy
-c: To evoke pity for the victims of piracy
-d: To show how different they are
-
-Q: According to Pullman, why shouldn’t people pirate?
-a: It hurts authors and musicians
-b: They won’t get as much happiness out of the content
-c: It uses dazzling technology
-d: It hurts the economy 
-
-Q2: Why is being an author or musician not an easy job?
-a: Many live in poverty due to lack of money
-b: They are rarely happy with their work
-c: It requires a lot of technological knowledge
-d: Book and music are just not as popular as they used to be
+Q2: Who does Pullman criticize?
+a: People who think it’s alright to download books without paying for them
+b: People who post music or books online to places where other people can access them without paying
+c: People who don’t defend copyright laws
+d: Websites that support illegal downloading
 
 # Paragraph
 
-Adv: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons, which offers open content licenses “that lets creators take copyright into their own hands”. <A3><A1>Casserly argues that there is much wrong with copyright, which was created “in an analogue age”. She writes: “By default, copyright closes the door on countless ways that people can share, build upon and <D2>remix each other’s work,</D2> possibilities that were unimaginable when those laws were established.”</A1></A3> <A2><D3><D1>She says artists need to think creatively</D1> about how they distribute and monetize their work,</D3> quoting the science fiction writer Cory Doctorow, who said: “My problem is not piracy, it’s obscurity.”</A2>
+Adv: <D3>“The technical brilliance is so dazzling</D3> that <D2>people can’t see the moral squalor of what they’re doing,” he writes.</D2> <A1>“It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, as surely as reaching into someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street, where the issue of web piracy was discussed. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty and obscurity for years</D1> to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of making a living from it is taken away from them”.</A2></A3> He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does, we should pay for it.”
 
-Int: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons, which offers open content licenses “that lets creators take copyright into their own hands”. <A3><A1>Casserly argues that there is much wrong with copyright, which was created “in an analogue age”. She writes: “By default, copyright closes the door on countless ways that people can share, build upon and <D2>remix each other’s work,</D2> possibilities that were unimaginable when those laws were established.”</A1></A3> <A2><D3><D1>She says artists need to think creatively</D1> about how they distribute and monetize their work,</D3> quoting the science fiction writer Cory Doctorow, who said: “My problem is not piracy, it’s obscurity.”</A2>
+Int: <D3>“The technical brilliance is so dazzling</D3> that <D2>people can’t see the moral squalor of what they’re doing,” he writes.</D2> <A1>“It is outrageous that anyone can steal an artist’s work and get away with it. It is theft, as surely as reaching into someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street, where the issue of web piracy was discussed. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty and obscurity for years</D1> to bring their work to the level “that gives delight to their audiences and, as soon as they achieve that, the possibility of making a living from it is taken away from them”.</A2></A3> He concludes: “The principle is simple, and unaltered by technology, science or magic: if we want to enjoy the work that someone does, we should pay for it.”
 
-Ele: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons. <A3><A1>Casserly argues that there is a lot wrong with copyright, which was created a long time ago. She writes: “Copyright closes the door on the many ways that people can share, build upon and <D2>remix each other’s work,</D2> possibilities that we could not imagine when those laws were made.”</A1></A3> <D3><A2><D1>She says artists need to think creatively</D1> about how they earn money from their work.</A2></D3>
+Ele: <D3>“The technology is so dazzling</D3> that <D2>people can’t see that what they’re doing is morally wrong,”</D2> he writes. <A1>“It is outrageous that anyone can steal an artist’s work without punishment. It is theft, just as putting your hand in someone’s pocket and taking their wallet is theft.”</A1> His article comes after music industry leaders met British Prime Minister David Cameron in Downing Street to discuss the issue of web piracy. <A3><A2>Pullman, writer of the His Dark Materials trilogy, says <D1>authors and musicians work in poverty for years</D1> to bring their work to the level “that gives happiness to their audiences and, when they achieve that, the possibility of making money from it is taken away from them”.</A2></A3> He concludes: “If we want to enjoy the work that someone does, we should pay for it.”
 
-Q: What is Casserly’s stance on copyright law?
+Q: What does Pullman find outrageous?
+a: That someone pirating a book would not face consequences
+b: That someone stealing a wallet would not be punished
+c: That authors and musicians work in poverty for years
+d: That his book is one of the most pirated books on the Internet
+
+Q: What does Pullman imply about artists?
+a: They do not earn enough money for the amount of effort they put in
+b: Their happiness is derived from their audience’s happiness as a result of their work
+c: They can’t see some of the moral issues with illegal downloading
+d: They are unaware how often their works are pirated
+
+Q2: What does Pullman say about authors and musicians?
+a: Many don’t have financial success for many years
+b: They have to choose between bringing happiness to their audience and making money
+c: Many use technology extensively
+d: They rarely get recognized for their contributions
+
+# Paragraph
+
+Adv: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons, which offers open content licenses “that lets creators take copyright into their own hands”. <A1>Casserly argues that there is much wrong with copyright, which was created “in an analog age”. <A3>Casserly writes: “By default, copyright closes the door on countless ways that people can share, <D2>build upon and remix each other’s work,</D2> possibilities that were unimaginable when those laws were established.”</A3></A1> <A2><D3><D1>She says artists need to think creatively</D1> about how they distribute and monetize their work,</D3></A2> quoting the science fiction writer Cory Doctorow, who said: “My problem is not piracy, it’s obscurity.”
+
+Int: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons, which offers open content licenses “that lets creators take copyright into their own hands”. <A1>Casserly argues that there is much wrong with copyright, which was created “in an analog age”. <A3>Casserly writes: “By default, copyright closes the door on countless ways that people can share, <D2>build upon and remix each other’s work,</D2> possibilities that were unimaginable when those laws were established.”</A3></A1> <A2><D3><D1>She says artists need to think creatively</D1> about how they distribute and monetize their work,</D3></A2> quoting the science fiction writer Cory Doctorow, who said: “My problem is not piracy, it’s obscurity.”
+
+Ele: Pullman is writing in the next issue of the campaign group’s magazine in a dialogue with Cathy Casserly, chief executive of Creative Commons. <A1>Casserly argues that there is a lot wrong with copyright, which was created a long time ago. <A3>Casserly writes: “Copyright closes the door on the many ways that people can share, <D2>build upon and remix each other’s work,</D2> possibilities that we could not imagine when those laws were made.”</A3></A1> <D3><A2><D1>She says artists need to think creatively</D1> about how they earn money from their work.</A2></D3>
+
+Q: What is Casserly’s position on current copyright law?
 a: It is outdated and too strict
-b: It successfully protects authors from having their works stolen
-c: It prevents artists from thinking creatively
-d: It is a necessary evil
+b: It is unable to protect authors from having their work shared, built upon and remixed
+c: It will allow artists to do more creative work
+d: It is a good compromise between the needs of artists and consumers
 
-Q: What does Casserly recommend artists do?
-a: She does not recommend anything concrete
-b: She recommends that artists use a creative new system she designed to earn money
-c: She recommends remixing the work of other artists
-d: She recommends that artists offer more of their works for a cheaper cost
+Q: What does Casserly recommend that artists do?
+a: Think of out-of-the-box ways to get money from their work
+b: Use a creative new system that Casserly invented to earn money
+c: Build upon each other’s work
+d: Offer more of their creative output for a lower price
 
-Q1: According to Casserly, what does copyright prevent people from doing?
-a: Adding to or remixing the work of others
-b: Having the creative freedom to pursue their passion
+Q1: According to Casserly, what does the current copyright law prevent artists from doing?
+a: Adding to or editing work that was created by others
+b: Imagining new possibilities for protecting their work
 c: Earning money from the work they produce
-d: Legally downloading music from the internet
+d: Stealing the work of others
 
 # Paragraph
 
-Adv: Index on Censorship agrees. The magazine’s editor, Rachael Jolley, said: “Existing copyright laws don’t work in the digital age and risk criminalizing consumers. We need new models for how artists, writers and musicians earn a living from their work.” The debate is a lively one and the scale of illegal downloading vast. <A3><A1>Data collected by Ofcom (the independent regulator and competition authority for the UK communications industries) suggests that, between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated, along with 52 million TV shows, 29 million films, 18 million ebooks and 7 million software or games files.</A1></A3> Ofcom has said 18% of internet users aged over 12 admit to having recently pirated content, and <D2>9% say they fear getting caught.</D2> <A2>Pullman writes in his article: <D3><D1>“The ease and swiftness with which music can be acquired in the form of MP3 downloads</D1></D3> is still astonishing to those of us who have been building up our iTunes list for some time.”</A2>
+Adv: Index on Censorship agrees. The magazine’s editor, Rachael Jolley, said: “Existing copyright laws don’t work in the digital age and risk criminalizing consumers. We need new models for how artists, writers and musicians earn a living from their work.” The scale of illegal downloading vast. <A1><A3>Data collected by Ofcom (the competition authority for the UK communications industries) suggests that, between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated, along with 52 million TV shows, 29 million films, 18 million ebooks and 7 million software or games files.</A3> Ofcom has said 18% of Internet users aged over 12 admit to having recently pirated content, and <D2>9% say they fear getting caught.</D2></A1> <A2>Pullman writes in his article: <D3><D1>“The ease and swiftness with which music can be acquired in the form of MP3 downloads</D1></D3> is still astonishing to those of us who have been building up our iTunes list for some time.”</A2>
 
-Int: Index on Censorship agrees. The magazine’s editor, Rachael Jolley, said: “Existing copyright laws don’t work in the digital age and risk criminalizing consumers. We need new models for how artists, writers and musicians earn a living from their work.” The debate is a lively one and the scale of illegal downloading vast. <A3><A1>Data collected by Ofcom (the independent regulator and competition authority for the UK communications industries) suggests that, between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated, along with 52 million TV shows, 29 million films, 18 million ebooks and 7 million software or games files.</A1></A3> Ofcom has said 18% of internet users aged over 12 admit to having recently pirated content, and <D2>9% say they fear getting caught.</D2> <A2>Pullman writes in his article: <D3><D1>“The ease and swiftness with which music can be acquired in the form of MP3 downloads</D1></D3> is still astonishing to those of us who have been building up our iTunes list for some time.”</A2>
+Int: Index on Censorship agrees. The magazine’s editor, Rachael Jolley, said: “Existing copyright laws don’t work in the digital age and risk criminalizing consumers. We need new models for how artists, writers and musicians earn a living from their work.” The scale of illegal downloading vast. <A1><A3>Data collected by Ofcom (the competition authority for the UK communications industries) suggests that, between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated, along with 52 million TV shows, 29 million films, 18 million ebooks and 7 million software or games files.</A3> Ofcom has said 18% of Internet users aged over 12 admit to having recently pirated content, and <D2>9% say they fear getting caught.</D2></A1> <A2>Pullman writes in his article: <D3><D1>“The ease and swiftness with which music can be acquired in the form of MP3 downloads</D1></D3> is still astonishing to those of us who have been building up our iTunes list for some time.”</A2>
 
-Ele: Index on Censorship agrees. The magazine’s editor, Rachael Jolley, said: Illegal downloading is a very big problem. <A3><A1>Between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated along with 52 million TV shows, 29 million films,18 million ebooks and 7 million software or games files.</A1></A3> 18% of internet users aged over 12 say they have pirated items, and <D2>9% say they are afraid they will get caught.</D2> <A2>Pullman writes in his article: <D3><D1>“The ease and speed with which people can get music in MP3</D1></D3> is still very surprising to people like me who have been building up their iTunes list for some time.”</A2>
+Ele: Index on Censorship agrees. <A1>The magazine’s editor, Rachael Jolley, said: “Illegal downloading is a very big problem.” <A3>Between November 2012 and January 2013 in the UK, 280 million music tracks were digitally pirated along with 52 million TV shows, 29 million films, 18 million ebooks and 7 million software or games files.</A3> 18% of Internet users aged over 12 say they have pirated items, and <D2>9% say they are afraid they will get caught.</D2></A1> <A2>Pullman writes in his article: <D3><D1>“The ease and speed with which people can get music in MP3</D1></D3> is still very surprising to people like me who have been building up their iTunes list for some time.”</A2>
 
-Q: How do the statistics in the paragraph relate to the idea that pirating music is a problem?
-a: The statistics support the statement by providing evidence that pirating is a big problem
-b: The statistics contradict the statement by showing that TV show pirating is a bigger problem than music pirating
-c: The statistics are unrelated to the statement because they mainly discuss the ease and speed of getting music in MP3
-d: The statistics are somewhat related to the statement because they use exact numbers
+Q: What do the statistics in the paragraph convey?
+a: How frequently different kinds of digital content are pirated
+b: How pirating frequency has changed between November 2012 and January 2013
+c: The ease and quickness of the MP3 format
+d: How pirating has evolved over time to combat copyright law
 
 Q: What is the purpose of Pullman’s quote?
-a: It contrasts people who spend a lot of time and effort getting music legally with people who illegally download it
-b: It supports illegal downloading by showing how fast and easy it is to get music
-c: It says that only 9% of people are afraid they will get caught when pirating music
-d: It criticizes people who don’t support artists
+a: It contrasts the time and effort of getting music legally with downloading it illegally
+b: It conveys how strikingly well legal downloading services like iTunes work
+c: It informs that only 9% of people are fearful they might get caught when pirating music
+d: It informs people about the legal consequences of pirating
 
-Q1: Which type of digital media is pirated the least?
-a: Software
+Q1: Which type of digital media is pirated the least, according to the statistics presented in the passage?
+a: Software and games
 b: TV shows 
 c: MP3 music
-d: Podcasts
+d: Scholarly papers
 
 # Paragraph
 
-Adv: One thing to emerge from <D3><D1>the Downing Street meeting</D1></D3> was Cameron’s appointment of the Conservative MP Mike Weatherley to be his adviser on the subject. A spokesman for the BPI, the record industry trade body, said: <A3><A1>“Mike Weatherley is a strong champion of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A1></A3> <A2>We hope his influence and the prime minister’s endorsement of copyright will be brought to bear on the approach of the UK’s intellectual property office.”</A2>
+Adv: One thing to emerge from <D3><D1>the Downing Street meeting</D1></D3> was Cameron’s appointment of <A1>the Conservative Member of Parliament Mike Weatherley to be his adviser on the subject. <A3>A spokesman for the BPI, the record industry trade body, said: “Mike Weatherley is a strong champion of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A3></A1> <A2>We hope Weatherley’s influence and the prime minister’s endorsement of copyright will be brought to bear on the approach of the UK’s intellectual property office.”</A2>
 
-Int: One thing to emerge from <D3><D1>the Downing Street meeting</D1></D3> was Cameron’s appointment of the Conservative MP Mike Weatherley to be his adviser on the subject. A spokesman for the BPI, the record industry trade body, said: <A3><A1>“Mike Weatherley is a strong champion of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A1></A3> <A2>We hope his influence and the prime minister’s endorsement of copyright will be brought to bear on the approach of the UK’s intellectual property office.”</A2>
+Int: One thing to emerge from <D3><D1>the Downing Street meeting</D1></D3> was Cameron’s appointment of <A1>the Conservative member of parliament Mike Weatherley to be his adviser on the subject. <A3>A spokesman for the BPI, the record industry trade body, said: “Mike Weatherley is a strong champion of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A3></A1> <A2>We hope Weatherley’s influence and the prime minister’s endorsement of copyright will be brought to bear on the approach of the UK’s intellectual property office.”</A2>
 
-Ele: After <D3><D1>the Downing Street meeting,</D1></D3> Cameron asked the Conservative MP Mike Weatherley to be his adviser on the subject. The BPI, an organization that supports music companies, said: <A3><A1>“Mike Weatherley is a strong supporter of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A1></A3> <A2>We hope his influence and the prime minister’s support for copyright will change how we see illegal downloading in the UK.”</A2>
+Ele: After <D3><D1>the Downing Street meeting,</D1></D3> <A3>Cameron asked <A1>the Conservative member of parliament Mike Weatherley to be his adviser on the subject. The BPI, an organization that supports music companies, said: “Mike Weatherley is a strong supporter of copyright and <D2>the artists and creative producers it’s there to protect.</D2></A1></A3> <A2>We hope Weatherley’s influence and the prime minister’s support for copyright will change what the government does about illegal downloading in the UK.”</A2>
 
-Q: What does Weatherly support?
-a: Artists and copyright law
-b: Artists opposing copyright law
-c: The Downing Street meeting
-d: Listeners
+Q: Who is Mike Weatherly and what is his relation to the BPI?
+a: He is a politician who is endorsed by the BPI
+b: He is a conservative businessman who is the head of the BPI
+c: He is a resident of Downing Street who organizes meetings to oppose the BPI
+d: He is a lobbyist who works for the BPI
 
-Q: Who does BPI expect will drive change in copyright law?
-a: The influence of Mike Weatherly and the prime minister
-b: Only Mike Weatherly
+Q: Who does the BPI expect will drive change in copyright policy?
+a: Weatherly and the prime minister
+b: Weatherly and copyright supporters
 c: Artists and creative producers
-d: Listeners
+d: The general public and copyright activists
 
-Q1: According to BPI, copyright is meant to protect…
-a: Artists and producers
-b: Mike Weatherley
+Q1: Who states that copyright is meant to protect artists and producers?
+a: The BPI
+b: Cameron
 c: Downing Street
-d: Internet users
+d: Artist associations
+

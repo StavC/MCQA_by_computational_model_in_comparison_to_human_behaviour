@@ -19,6 +19,7 @@ from __future__ import absolute_import
 
 import argparse
 import csv
+import pandas as pd
 import logging
 import os
 import random
@@ -286,16 +287,14 @@ def load_data2(args, is_training=True):#use this when running from home
         return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'combined',
                                   is_training=is_training)
 
-def load_data(args, is_training=True):#use this when running through tmux
+def load_data(args, is_training=False):#use this when running through tmux
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
-    elif (not (args.run_yev)) and (is_training == True):
-        return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/train/combined'),
-                                  is_training=is_training)
     else:
-        return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/dev/combined'),
+        return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/combined'),
                                   is_training=is_training)
+
 
 
 def load_output_model(model, name):
@@ -337,11 +336,11 @@ def main():
                         action='store_true',
                         help="Set this flag if you are using an uncased model.")
     parser.add_argument("--train_batch_size",
-                        default=8,
+                        default=1,
                         type=int,
                         help="Total batch size for training.")
     parser.add_argument("--eval_batch_size",
-                        default=8,
+                        default=1,
                         type=int,
                         help="Total batch size for eval.")
     parser.add_argument("--learning_rate",
@@ -373,14 +372,8 @@ def main():
                         type=int,
                         default=1,
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
-    parser.add_argument('--fp16',
-                        action='store_true',
-                        help="Whether to use 16-bit float precision instead of 32-bit")
-    parser.add_argument('--loss_scale',
-                        type=float, default=0,
-                        help="Loss scaling to improve fp16 numeric stability. Only used when fp16 set to True.\n"
-                             "0 (default value): dynamic loss scaling.\n"
-                             "Positive power of 2: static loss scaling value.\n")
+
+
     parser.add_argument('--run-yev', action='store_true')
     parser.add_argument('--finetune', action='store_true')
     parser.add_argument('--max_batches', type=int, default=None)
@@ -395,8 +388,8 @@ def main():
         n_gpu = 1
         # Initializes the distributed backend which will take care of sychronizing nodes/GPUs
         torch.distributed.init_process_group(backend='nccl')
-    logger.info("device: {} n_gpu: {}, distributed training: {}, 16-bits training: {}".format(
-        device, n_gpu, bool(args.local_rank != -1), args.fp16))
+    logger.info("device: {} n_gpu: {}, distributed training: {}".format(
+        device, n_gpu, bool(args.local_rank != -1),))
 
     if args.gradient_accumulation_steps < 1:
         raise ValueError("Invalid gradient_accumulation_steps parameter: {}, should be >= 1".format(
@@ -424,29 +417,15 @@ def main():
 
     train_examples = None
     num_train_optimization_steps = None
-    if args.do_train:
-        train_examples = load_data(args, is_training=True)
-        num_train_optimization_steps = int(
-            len(train_examples) / args.train_batch_size / args.gradient_accumulation_steps) * args.num_train_epochs
-        if args.local_rank != -1:
-            num_train_optimization_steps = num_train_optimization_steps // torch.distributed.get_world_size()
+
 
     # Prepare model
     # model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model)
     model = RobertaForMultipleChoice.from_pretrained('roberta-base')
     output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
-    if args.finetune:
-        #load_output_model(model, os.path.join(args.output_dir, 'robertatraininguptoEpoch11/8acc:0.7468794761612442'))
-        #load_output_model(model, os.path.join(args.output_dir, '7acc:0.7487210967873952.pt'))
-        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/4acc:0.740536116226724'))
-
-        ##### Race tained model used to finetune on onestop
-        load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/robertatraininguptoEpoch11/2acc:0.7403314917127072')) # 0.7946 on epoch 6
-        ##### Race tained model used to finetune on onestop
-
-        # un comment above
-        #load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/RobertaTrainedRaceAndOneStopRDYToPredict/3acc:0.7912457912457912OneStopQA.pt')) # 0.7946 on epoch 6
+    # load the model that was trained on Roberta and then OneSTOPQA
+    load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/2acc:0.7577413479052824OneStopQA.pt')) # 0.7946 on epoch 6
 
     model.to(device)
     print(
@@ -456,201 +435,26 @@ def main():
     if n_gpu > 1:
         model = torch.nn.DataParallel(model)
 
-    # Prepare optimizer
-    param_optimizer = list(model.named_parameters())
 
-    # hack to remove pooler, which is not used
-    # thus it produce None grad that break apex
-    param_optimizer = [n for n in param_optimizer if 'pooler' not in n[0]]
+    #make predictions
+    eval_examples = load_data(args, is_training=False)
+    """print(type(eval_examples[0]))
 
-    no_decay = ['bias', 'LayerNorm.bias', 'LayerNorm.weight']
-    optimizer_grouped_parameters = [
-        {'params': [p for n, p in param_optimizer if not any(nd in n for nd in no_decay)], 'weight_decay': 0.01},
-        {'params': [p for n, p in param_optimizer if any(nd in n for nd in no_decay)], 'weight_decay': 0.0}
-    ]
+    print(eval_examples[0].id)
+    data=[]
+    for row in eval_examples:
+        data.append([row.id,row.context_sentence,row.start_ending,row.endings[0],row.endings[1],row.endings[2],row.endings[3],row.label])
+        #data.append([row.id])
 
-    """optimizer = BertAdam(optimizer_grouped_parameters,
-                             lr=args.learning_rate,
-                             warmup=args.warmup_proportion,
-                             t_total=num_train_optimization_steps)"""
-
-    #optimizer = AdamW(model.parameters())
-    #optimizer=AdamW(optimizer_grouped_parameters)
-    optimizer = AdamW(optimizer_grouped_parameters, lr=args.learning_rate)
-
-    """scheduler = WarmupLinearSchedule(optimizer, warmup_steps=args.warmup_proportion,
-                                     t_total=num_train_optimization_steps)  # PyTorch scheduler"""
-    scheduler = get_linear_schedule_with_warmup(optimizer, num_warmup_steps=args.warmup_proportion, num_training_steps=num_train_optimization_steps)
-
-    global_step = 0
-    if args.do_train:
-        train_features = convert_examples_to_features(
-            train_examples, tokenizer, args.max_seq_length, True)
-        logger.info("***** Running training *****")
-        logger.info("  Num examples = %d", len(train_examples))
-        logger.info("  Batch size = %d", args.train_batch_size)
-        logger.info("  Num steps = %d", num_train_optimization_steps)
-        all_input_ids = torch.tensor(select_field(train_features, 'input_ids'), dtype=torch.long)
-        all_input_mask = torch.tensor(select_field(train_features, 'input_mask'), dtype=torch.long)
-        all_label = torch.tensor([f.label for f in train_features], dtype=torch.long)
-        train_data = TensorDataset(all_input_ids, all_input_mask, all_label)
-
-        if args.local_rank == -1:
-            train_sampler = RandomSampler(train_data)
-        else:
-            train_sampler = DistributedSampler(train_data)
-        train_dataloader = DataLoader(train_data, sampler=train_sampler, batch_size=args.train_batch_size)
-        print('above train')
-        model.train()
-        n_trained_batches = 0
-        for _ in trange(int(args.num_train_epochs), desc="Epoch"):
-            model.train()
-            tr_loss = 0
-            nb_tr_examples, nb_tr_steps = 0, 0
-            for step, batch in enumerate(tqdm(train_dataloader, desc="Iteration")):
-                n_trained_batches += 1
-                if args.max_batches is not None:
-                    if n_trained_batches > args.max_batches:
-                        break
-                batch = tuple(t.to(device) for t in batch)
-                input_ids, input_mask, label_ids = batch
-
-                loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
-                if n_gpu > 1:
-                    # loss = loss.mean()  # mean() to average on multi-gpu.
-                    loss = loss.loss.mean()
-
-                if args.gradient_accumulation_steps > 1:
-                    loss = loss.loss / args.gradient_accumulation_steps
-
-                # tr_loss += loss.loss.item()
-                tr_loss += loss
-                nb_tr_examples += input_ids.size(0)
-                nb_tr_steps += 1
-
-                loss.backward()
-                scheduler.step()
-                optimizer.step()
-                optimizer.zero_grad()
-                global_step += 1
-                """if (step + 1) % args.gradient_accumulation_steps == 0:
-                    scheduler.step()
-                    optimizer.step()
-                    optimizer.zero_grad()
-                    global_step += 1"""
-
-            # now do eval
-            eval_examples = load_data(args, is_training=False)
-            eval_features = convert_examples_to_features(
-                eval_examples, tokenizer, args.max_seq_length, True)
-            logger.info("***** Running evaluation *****")
-            logger.info("  Num examples = %d", len(eval_examples))
-            logger.info("  Batch size = %d", args.eval_batch_size)
-            all_input_ids = torch.tensor(select_field(eval_features, 'input_ids'), dtype=torch.long)
-            all_input_mask = torch.tensor(select_field(eval_features, 'input_mask'), dtype=torch.long)
-            all_label = torch.tensor([f.label for f in eval_features], dtype=torch.long)
-            eval_data = TensorDataset(all_input_ids, all_input_mask, all_label)
-            # Run prediction for full data
-            eval_sampler = SequentialSampler(eval_data)
-            eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
-
-            model.eval()
-            eval_loss, eval_accuracy = 0, 0
-            nb_eval_steps, nb_eval_examples = 0, 0
-            eval_results = []
-            for input_ids, input_mask, label_ids in eval_dataloader:
-                input_ids = input_ids.to(device)
-                input_mask = input_mask.to(device)
-                label_ids = label_ids.to(device)
-
-                with torch.no_grad():
-                    #tmp_eval_loss = model(input_ids, input_mask, label_ids)
-                    tmp_eval_loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
-                    logits = model(input_ids=input_ids, attention_mask=input_mask)
-
-                # logits = logits.detach().cpu().numpy()
-                #logits = logits.numpy()
-                logits = logits.logits.detach().cpu().numpy()
-                eval_results.append(logits)
-                label_ids = label_ids.to('cpu').numpy()
-                tmp_eval_accuracy = accuracy(logits, label_ids)
-                print(label_ids)
-
-                #eval_loss += tmp_eval_loss.mean().item()
-                eval_loss += tmp_eval_loss.loss.mean()
-                eval_accuracy += tmp_eval_accuracy
-
-                nb_eval_examples += input_ids.size(0)
-                nb_eval_steps += 1
-            output_eval_pickle = os.path.join(args.output_dir, f"eval_resultsEpoch{_}.pickle")
-            torch.save(eval_results, output_eval_pickle)
-            eval_loss = eval_loss / nb_eval_steps
-            eval_accuracy = eval_accuracy / nb_eval_examples
-
-            result = {'eval_loss': eval_loss,
-                      'eval_accuracy': eval_accuracy,
-                      'global_step': global_step,
-                      }
-            if args.do_train:
-                try:
-                    result['loss'] = tr_loss / nb_tr_steps
-                except UnboundLocalError:
-                    if args.do_train:
-                        print("Training loss not available")
-            output_eval_file = os.path.join(args.output_dir, f"eval_results epoch:{_}.txt")
-            with open(output_eval_file, "w") as writer:
-                logger.info("***** Eval results *****")
-                for key in sorted(result.keys()):
-                    logger.info("  %s = %s", key, str(result[key]))
-                    writer.write("%s = %s\n" % (key, str(result[key])))
-                #### Stavs code
-            model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
-            #name = f'{_}acc:{eval_accuracy}'
-            name = f'{_}acc:{eval_accuracy}OneStopQA.pt'
-
-            output_model_file = os.path.join(args.output_dir, name)
-
-            torch.save(model_to_save.state_dict(), output_model_file)
-            ############ trying new saving
-            eval_accuracy_string=str(eval_accuracy)
-            name = f'{_}acc{eval_accuracy_string[2:]}OneStopQAWHOLEMODEL.pt'
-            output_model_file = os.path.join(args.output_dir, name)
-            torch.save(model, output_model_file)
+    df=pd.DataFrame(data=data,columns=['QuestionId','context','question','ending0','ending1','ending2','ending3','label'])"""
+    #df=pd.DataFrame(data=data)
 
 
-            output_config_file = os.path.join(args.output_dir, CONFIG_NAME)
-            with open(output_config_file, 'w') as f:
-                f.write(model_to_save.config.to_json_string())
-            ####
+    dataAndPrediction=[]
+    for row in eval_examples:
 
-    if args.do_train:
-        # Save a trained model and the associated configuration
-        model_to_save = model.module if hasattr(model, 'module') else model  # Only save the model it-self
-
-        #### Stavs code
-        output_model_file = os.path.join(args.output_dir, 'lastepoch')
-
-        ######
-
-        torch.save(model_to_save.state_dict(), output_model_file)
-        output_config_file = os.path.join(args.output_dir, CONFIG_NAME)
-        with open(output_config_file, 'w') as f:
-            f.write(model_to_save.config.to_json_string())
-        # Load a trained model and config that you have fine-tuned
-        config = RobertaConfig(output_config_file)
-        model = RobertaForMultipleChoice(config)
-        model.load_state_dict(torch.load(output_model_file))
-    else:
-        model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model)
-        load_output_model(model, output_model_file)
-        # model.load_state_dict(torch.load(output_model_file))
-
-    model.to(device)
-
-    if args.do_eval and (args.local_rank == -1 or torch.distributed.get_rank() == 0):
-        eval_examples = load_data(args, is_training=False)
         eval_features = convert_examples_to_features(
-            eval_examples, tokenizer, args.max_seq_length, True)
+            [row], tokenizer, args.max_seq_length, True)
         logger.info("***** Running evaluation *****")
         logger.info("  Num examples = %d", len(eval_examples))
         logger.info("  Batch size = %d", args.eval_batch_size)
@@ -659,8 +463,8 @@ def main():
         all_label = torch.tensor([f.label for f in eval_features], dtype=torch.long)
         eval_data = TensorDataset(all_input_ids, all_input_mask, all_label)
         # Run prediction for full data
-        eval_sampler = SequentialSampler(eval_data)
-        eval_dataloader = DataLoader(eval_data, sampler=eval_sampler, batch_size=args.eval_batch_size)
+
+        eval_dataloader = DataLoader(eval_data, batch_size=args.eval_batch_size)
 
         model.eval()
         eval_loss, eval_accuracy = 0, 0
@@ -671,46 +475,63 @@ def main():
             input_mask = input_mask.to(device)
             label_ids = label_ids.to(device)
 
+
+
             with torch.no_grad():
-                #tmp_eval_loss = model(input_ids, input_mask, label_ids)
+                # tmp_eval_loss = model(input_ids, input_mask, label_ids)
                 tmp_eval_loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
                 logits = model(input_ids=input_ids, attention_mask=input_mask)
-            print(logits)
+                logitsCopy=logits.copy()
 
-            #logits = logits.detach().cpu().numpy()
-            logits = logits.numpy()
+
+            logits = logits.logits.detach().cpu().numpy()
             eval_results.append(logits)
             label_ids = label_ids.to('cpu').numpy()
             tmp_eval_accuracy = accuracy(logits, label_ids)
 
-            #eval_loss += tmp_eval_loss.mean().item()
-            eval_loss += tmp_eval_loss.loss().mean()
 
+            ###stav addons for analyze
+            print(row)
+            """
+            print(row.id)
+            print(row.id.paragraph_id.article_id)
+            print(row.id.paragraph_id.paragraph_id)
+            print(row.id.paragraph_id.level)
+            print(row.id.question)
+            print('@@@@@@@@@@@')
+            print(logits)
+            print(label_ids)"""
+            m = torch.nn.Softmax(dim=1)
+            softmax=m(logitsCopy.logits)
+            predicted_label = np.argmax(logits)
+            dataAndPrediction.append(['OneStopQA',row.id.paragraph_id.article_id,row.id.paragraph_id.paragraph_id,row.id.paragraph_id.level,row.id.question,row.id, row.context_sentence, row.start_ending, row.endings[0], row.endings[1], row.endings[2],
+                         row.endings[3], row.label,logits,softmax,predicted_label])
+
+            # eval_loss += tmp_eval_loss.mean().item()
+            eval_loss += tmp_eval_loss.loss.mean()
             eval_accuracy += tmp_eval_accuracy
 
             nb_eval_examples += input_ids.size(0)
             nb_eval_steps += 1
-        output_eval_pickle = os.path.join(args.output_dir, "eval_results.pickle")
-        torch.save(eval_results, output_eval_pickle)
-        eval_loss = eval_loss / nb_eval_steps
-        eval_accuracy = eval_accuracy / nb_eval_examples
+    predictionDF=pd.DataFrame(data=dataAndPrediction,columns=['Dataset','article_id','paragraph_id','level','questionNumber','QuestionId','context','question','ending0','ending1','ending2','ending3','label','logits','softmax','predicted_label'])
 
-        result = {'eval_loss': eval_loss,
-                  'eval_accuracy': eval_accuracy,
-                  'global_step': global_step,
-                  }
-        if args.do_train:
-            try:
-                result['loss'] = tr_loss / nb_tr_steps
-            except UnboundLocalError:
-                if args.do_train:
-                    print("Training loss not available")
-        output_eval_file = os.path.join(args.output_dir, "eval_results.txt")
-        with open(output_eval_file, "w") as writer:
-            logger.info("***** Eval results *****")
-            for key in sorted(result.keys()):
-                logger.info("  %s = %s", key, str(result[key]))
-                writer.write("%s = %s\n" % (key, str(result[key])))
+    #predictionDF.to_csv(r'PredictionsOnRaceTest.csv',index=False)
+    predictionDF.to_csv(r'PredictionsOnOneStopQA.csv',index=False)
+    output_eval_pickle = os.path.join(args.output_dir, "eval_results.pickle")
+    torch.save(eval_results, output_eval_pickle)
+    eval_loss = eval_loss / nb_eval_steps
+    eval_accuracy = eval_accuracy / nb_eval_examples
+
+    result = {'eval_loss': eval_loss,
+              'eval_accuracy': eval_accuracy,
+              }
+    output_eval_file = os.path.join(args.output_dir, "eval_results.txt")
+    with open(output_eval_file, "w") as writer:
+        logger.info("***** Eval results *****")
+        for key in sorted(result.keys()):
+            logger.info("  %s = %s", key, str(result[key]))
+            writer.write("%s = %s\n" % (key, str(result[key])))
+
 
 
 if __name__ == "__main__":

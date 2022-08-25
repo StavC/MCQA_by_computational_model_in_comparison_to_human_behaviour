@@ -2,8 +2,12 @@
 
 This Project and Paper were created by Stav Cohen And Nurit Klimovitsky Maor
 
+
+
 cohnstav@campus.technion.ac.il
 knurit@campus.technion.ac.il
+
+we based some of our code on a pre existing legacy version that were given and created by Dr. Yevgeni Berzak.
 
 
 

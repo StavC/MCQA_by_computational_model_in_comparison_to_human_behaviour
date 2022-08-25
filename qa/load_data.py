@@ -1,5 +1,5 @@
 from dataclasses import dataclass
-from typing import List, Sequence, Any, Optional
+from typing import List, Sequence, Any
 import json
 import read_articles
 import random

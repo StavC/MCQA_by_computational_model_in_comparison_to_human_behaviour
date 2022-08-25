@@ -1,8 +1,7 @@
-import os
 ## 100% John's code, didn't touch it.
 
 from bs4 import BeautifulSoup
-from global_vars import *
+from qa.global_vars import *
 def sublist_inds(l, sub_l):
     span_len = len(sub_l)
     for i in range(len(l)):

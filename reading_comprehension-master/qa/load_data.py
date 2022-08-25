@@ -4,6 +4,13 @@ import json
 import read_articles
 import random
 
+"""
+Most of the code was taken from here :  https://github.com/rodgzilla/pytorch-pretrained-BERT/tree/multiple-choice-code/examples
+
+John's edited the code first and then then Stav and Nurit changed it to run on RoBerta and not BERT
+
+"""
+
 @dataclass()
 class OnestopId:
     article_id: int
@@ -86,11 +93,10 @@ def split_documentsOriginal(docs: Sequence[Document]): # original form johns cod
     for doc in docs:
         n_questions = len(doc.questions)
         for i in range(n_questions):
-            # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
             example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article, start_ending=doc.questions[i],
                               ending_0=doc.options[i][0], ending_1=doc.options[i][1], ending_2=doc.options[i][2],
                               ending_3=doc.options[i][3], label=doc.answers[i])
-            print(doc.answers[i])
+            #print(doc.answers[i])
             examples.append(example)
     return examples
 
@@ -102,7 +108,6 @@ def split_documents(docs: Sequence[Document], is_training):  # randomizing the q
                 n_questions = len(doc.questions)
                 for i in range(n_questions):
                     if j == 0:
-                        # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
                         example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
                                           start_ending=doc.questions[i],
                                           ending_0=doc.options[i][0], ending_1=doc.options[i][1],
@@ -135,7 +140,6 @@ def split_documents(docs: Sequence[Document], is_training):  # randomizing the q
             for doc in docs:
                 n_questions = len(doc.questions)
                 for i in range(n_questions):
-                    # example = Example(answer=doc.answers[i], options=doc.options[i], question=doc.questions[i], article=doc.article, article_id=doc.id)
                     example = Example(id=QuestionId(paragraph_id=doc.id, question=i), context_sentence=doc.article,
                                       start_ending=doc.questions[i],
                                       ending_0=doc.options[i][0], ending_1=doc.options[i][1],
@@ -172,7 +176,65 @@ def read_onestop_docs():
 def get_article_id(example: Example):
     return example.id.paragraph_id.article_id
 
-def read_onestop(is_training=True, return_all=False)->List[Example]:
+def read_onestop(is_training=True, return_all=False)->List[Example]: # 4Folded edition
+    docs = read_onestop_docs()
+    examples =  split_documents(docs,is_training)
+    if return_all:
+        return examples
+    article_ids = list(set([get_article_id(_) for _ in examples]))
+    last_state = random.getstate()
+    random.seed(0, version=2)
+    random.shuffle(article_ids)
+
+    n_07 = round(.7*len(article_ids))
+    n_03= round(0.3 * len(article_ids))
+    n_01 = round(0.1 * len(article_ids))
+    n_08=round(0.8 * len(article_ids))
+    n_06=round(0.6 * len(article_ids))
+
+
+
+    #### fold 1 original
+    n_train = round(.7*len(article_ids))
+    articles_train = set(article_ids[:n_train])
+    articles_test = set(article_ids[n_train:])
+    
+
+    """
+    #####fold 2
+    articles_train = set(article_ids[n_03:])
+    articles_test = set(article_ids[:n_03])
+    #### end fold 2
+   
+    
+    ####### fold 3
+    
+    articles_train = set(article_ids[:n_03])  # first 10%
+    articles_train.update(article_ids[n_07:])  # 40% to 100%
+
+    articles_test = set(article_ids[n_03:n_06])  # 10% to 40%
+
+    """
+    ####### fold 4
+    """
+    articles_train = set(article_ids[:n_06])  # first 10% to 80%
+    articles_train.update(article_ids[n_07:n_08])  # 40% to 100%
+
+
+    articles_test = set(article_ids[n_06:n_07])  # 0% to 10%
+    """
+
+    if is_training:
+        res = [_ for _ in examples if get_article_id(_) in articles_train]
+    else:
+        res = [_ for _ in examples if get_article_id(_) in articles_test]
+    random.setstate(last_state)
+    return res
+
+
+
+
+def read_onestopOrginal(is_training=True, return_all=False)->List[Example]: # original , 1 fold
     docs = read_onestop_docs()
     examples =  split_documents(docs,is_training)
     if return_all:
@@ -190,3 +252,4 @@ def read_onestop(is_training=True, return_all=False)->List[Example]:
         res = [_ for _ in examples if get_article_id(_) in articles_test]
     random.setstate(last_state)
     return res
+

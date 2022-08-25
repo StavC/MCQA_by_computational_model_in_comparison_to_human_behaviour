@@ -14,8 +14,26 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """BERT finetuning runner."""
-
 from __future__ import absolute_import
+
+"""
+Most of the code was taken from here :  https://github.com/rodgzilla/pytorch-pretrained-BERT/tree/multiple-choice-code/examples
+
+John's edited the code first and then then Stav and Nurit changed it to run on RoBerta and not BERT
+
+this code should just make predictions on OneStopQA and save a CSV file of the predictions.
+
+Need a trained model on Race + OneStopQA or Race.
+
+
+t
+Parmas just to run predictions on OneStopQA
+--RoBerta_model=roberta-base --output_dir=/home/cohnstav/ModelWeights/resultsOnOneSTOPQATest --do_eval --run-yev
+
+to run just on race
+--RoBerta_model=roberta-base --output_dir=/home/cohnstav/ModelWeights/resultsOnOneSTOPQATest --do_eval
+"""
+
 
 import argparse
 import csv
@@ -23,30 +41,15 @@ import pandas as pd
 import logging
 import os
 import random
-import sys
 from io import open
-import json
-from transformers import AdamW
 
-from dataclasses import dataclass
-from typing import Any, List, Sequence
 from pathlib import Path
 import numpy as np
 import torch
 from torch.utils.data import (DataLoader, RandomSampler, SequentialSampler,
                               TensorDataset)
-from torch.utils.data.distributed import DistributedSampler
-from tqdm import tqdm, trange
 
-from pytorch_pretrained_bert.file_utils import PYTORCH_PRETRAINED_BERT_CACHE
-from pytorch_pretrained_bert.modeling import (BertForMultipleChoice, BertConfig, WEIGHTS_NAME, CONFIG_NAME)
-from transformers import get_linear_schedule_with_warmup
-#from pytorch_pretrained_bert.optimization import BertAdam, WarmupLinearSchedule
-from pytorch_pretrained_bert.tokenization import BertTokenizer
-
-from transformers import RobertaConfig
 from transformers import RobertaTokenizer, RobertaForMultipleChoice
-from transformers import TrainingArguments, Trainer
 import transformers
 
 transformers.logging.set_verbosity_error()
@@ -79,24 +82,6 @@ class InputFeatures(object):
 
 def convert_examples_to_features(examples, tokenizer, max_seq_length,
                                  is_training):
-    """Loads a data file into a list of `InputBatch`s."""
-
-    # Swag is a multiple choice task. To perform this task using Bert,
-    # we will use the formatting proposed in "Improving Language
-    # Understanding by Generative Pre-Training" and suggested by
-    # @jacobdevlin-google in this issue
-    # https://github.com/google-research/bert/issues/38.
-    #
-    # Each choice will correspond to a sample on which we run the
-    # inference. For a given Swag example, we will create the 4
-    # following inputs:
-    # - [CLS] context [SEP] choice_1 [SEP]
-    # - [CLS] context [SEP] choice_2 [SEP]
-    # - [CLS] context [SEP] choice_3 [SEP]
-    # - [CLS] context [SEP] choice_4 [SEP]
-    # The model will output a single value for each input. To get the
-    # final decision of the model, we will run a softmax over these 4
-    # outputs.
     features = []
     for example_index, example in enumerate(examples):
         context_tokens = tokenizer.tokenize(example.context_sentence)
@@ -108,31 +93,17 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
             # able to shrink it according to ending_tokens
             context_tokens_choice = context_tokens[:]
             ending_tokens = start_ending_tokens + tokenizer.tokenize(ending)
-            # Modifies `context_tokens_choice` and `ending_tokens` in
-            # place so that the total length is less than the
-            # specified length.  Account for [CLS], [SEP], [SEP] with
-            # "- 3"
             _truncate_seq_pair(context_tokens_choice, ending_tokens, max_seq_length - 3)
-            #TODO: Stav Thinks we can change the truncate function to cut more context and not answers
+            # TODO: Stav Thinks we can change the truncate function to cut more context and not answers
 
             tokens = ["<s>"] + context_tokens_choice + ["</s>"] + ending_tokens + ["</s>"]
-            #segment_ids = [0] * (len(context_tokens_choice) + 2) + [1] * (len(ending_tokens) + 1)
 
             input_ids = tokenizer.convert_tokens_to_ids(tokens)
 
-            input_mask = [1] * len(input_ids) +[0] * (max_seq_length - len(input_ids))
+            input_mask = [1] * len(input_ids) + [0] * (max_seq_length - len(input_ids))
             # Zero-pad up to the sequence length.
-            #padding = [0] * (max_seq_length - len(input_ids))
-            padding_ids = [1] * (max_seq_length - len(input_ids)) # 1 for roberta
-            #padding_mask= [0] * (max_seq_length - len(input_ids)) # 0 for roberta
+            padding_ids = [1] * (max_seq_length - len(input_ids))  # 1 for roberta
             input_ids += padding_ids
-            #input_mask += padding_mask
-            #segment_ids += padding
-            #print(input_ids)
-            #print(input_mask)
-            #assert len(input_ids) == max_seq_length
-            #assert len(input_mask) == max_seq_length
-            #assert len(segment_ids) == max_seq_length
 
             choices_features.append((tokens, input_ids, input_mask))
 
@@ -145,91 +116,6 @@ def convert_examples_to_features(examples, tokenizer, max_seq_length,
                 logger.info("tokens: {}".format(' '.join(tokens)))
                 logger.info("input_ids: {}".format(' '.join(map(str, input_ids))))
                 logger.info("input_mask: {}".format(' '.join(map(str, input_mask))))
-            if is_training:
-                logger.info("label: {}".format(label))
-
-        features.append(
-            InputFeatures(
-                example_id=example.id,
-                choices_features=choices_features,
-                label=label
-            )
-        )
-
-    return features
-
-def convert_examples_to_features2(examples, tokenizer, max_seq_length,
-                                 is_training):
-    """Loads a data file into a list of `InputBatch`s."""
-
-    # Swag is a multiple choice task. To perform this task using Bert,
-    # we will use the formatting proposed in "Improving Language
-    # Understanding by Generative Pre-Training" and suggested by
-    # @jacobdevlin-google in this issue
-    # https://github.com/google-research/bert/issues/38.
-    #
-    # Each choice will correspond to a sample on which we run the
-    # inference. For a given Swag example, we will create the 4
-    # following inputs:
-    # - [CLS] context [SEP] choice_1 [SEP]
-    # - [CLS] context [SEP] choice_2 [SEP]
-    # - [CLS] context [SEP] choice_3 [SEP]
-    # - [CLS] context [SEP] choice_4 [SEP]
-    # The model will output a single value for each input. To get the
-    # final decision of the model, we will run a softmax over these 4
-    # outputs.
-    features = []
-    for example_index, example in enumerate(examples):
-        context_tokens = tokenizer.tokenize(example.context_sentence)
-        start_ending_tokens = tokenizer.tokenize(example.start_ending)
-
-        choices_features = []
-        for ending_index, ending in enumerate(example.endings):
-            # We create a copy of the context tokens in order to be
-            # able to shrink it according to ending_tokens
-            context_tokens_choice = context_tokens[:]
-            ending_tokens = start_ending_tokens + tokenizer.tokenize(ending)
-            # Modifies `context_tokens_choice` and `ending_tokens` in
-            # place so that the total length is less than the
-            # specified length.  Account for [CLS], [SEP], [SEP] with
-            # "- 3"
-            _truncate_seq_pair(context_tokens_choice, ending_tokens, max_seq_length - 3)
-            # TODO: Stav Thinks we can change the truncate function to cut more context and not answers
-            # second_part=example.start_ending+"</s>"+ending
-
-            second_part = example.context_sentence + '</s>' + example.start_ending + "</s>" + ending
-            # tokens = ["<s>"] + context_tokens_choice + ["</s>"] + ending_tokens + ["</s>"]
-
-            # tokenized_examples = tokenizer(example.context_sentence, second_part, truncation=True, max_length=512)
-            tokenized_examples = tokenizer(second_part, truncation=True, max_length=512, padding='max_length')
-
-            # input_ids = tokenizer.convert_tokens_to_ids(tokens)
-            # input_mask = [1] * len(input_ids)
-
-            # Zero-pad up to the sequence length.
-            # padding = [0] * (max_seq_length - len(input_ids))
-            # input_ids += padding
-            # input_mask += padding
-            #print(tokenized_examples)
-            full_sent = second_part
-            input_ids = tokenized_examples['input_ids']
-            input_mask = tokenized_examples['attention_mask']
-
-            # choices_features.append((full_sent, tokenized_examples['input_ids'], tokenized_examples['attention_mask']))
-            choices_features.append((full_sent, input_ids, input_mask))
-            # choices_features.append((tokens, input_ids, input_mask))
-
-        label = example.label
-        if example_index < 5:
-            logger.info("*** Example ***")
-            logger.info("id: {}".format(example.id))
-            for choice_idx, (
-            full_sent, tokenized_examples['input_ids'], tokenized_examples['attention_mask']) in enumerate(
-                    choices_features):
-                logger.info("choice: {}".format(choice_idx))
-                logger.info("tokens: {}".format(''.join(full_sent)))
-                logger.info("input_ids: {}".format(' '.join(map(str, tokenized_examples['input_ids']))))
-                logger.info("input_mask: {}".format(' '.join(map(str, tokenized_examples['attention_mask']))))
             if is_training:
                 logger.info("label: {}".format(label))
 
@@ -276,7 +162,7 @@ def select_field(features, field):
     ]
 
 
-def load_data2(args, is_training=True):#use this when running from home
+def load_data2(args, is_training=True):  # use this when running from home
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
@@ -287,14 +173,14 @@ def load_data2(args, is_training=True):#use this when running from home
         return read_race_examples(Path(__file__).parent.parent / 'data' / 'RACE' / 'dev' / 'combined',
                                   is_training=is_training)
 
-def load_data(args, is_training=False):#use this when running through tmux
+
+def load_data(args, is_training=False):  # use this when running through tmux
     if args.run_yev:
         print("Using yev data")
         return read_onestop(is_training=is_training)
     else:
         return read_race_examples(Path('/tmp/pycharm_project_972/reading_comprehension-master/data/RACE/test/combined'),
                                   is_training=is_training)
-
 
 
 def load_output_model(model, name):
@@ -344,8 +230,8 @@ def main():
                         type=int,
                         help="Total batch size for eval.")
     parser.add_argument("--learning_rate",
-                        #default=5e-5,
-                        default=0.000008,#0.00001 for roberta on race
+                        # default=5e-5,
+                        default=0.000008,  # 0.00001 for roberta on race
                         type=float,
                         help="The initial learning rate for Adam.")
     parser.add_argument("--num_train_epochs",
@@ -373,7 +259,6 @@ def main():
                         default=1,
                         help="Number of updates steps to accumulate before performing a backward/update pass.")
 
-
     parser.add_argument('--run-yev', action='store_true')
     parser.add_argument('--finetune', action='store_true')
     parser.add_argument('--max_batches', type=int, default=None)
@@ -389,7 +274,7 @@ def main():
         # Initializes the distributed backend which will take care of sychronizing nodes/GPUs
         torch.distributed.init_process_group(backend='nccl')
     logger.info("device: {} n_gpu: {}, distributed training: {}".format(
-        device, n_gpu, bool(args.local_rank != -1),))
+        device, n_gpu, bool(args.local_rank != -1), ))
 
     if args.gradient_accumulation_steps < 1:
         raise ValueError("Invalid gradient_accumulation_steps parameter: {}, should be >= 1".format(
@@ -406,26 +291,17 @@ def main():
     if not args.do_train and not args.do_eval:
         raise ValueError("At least one of `do_train` or `do_eval` must be True.")
 
-    # if os.path.exists(args.output_dir) and os.listdir(args.output_dir) and args.do_train:
-    #     raise ValueError("Output directory ({}) already exists and is not empty.".format(args.output_dir))
     if not os.path.exists(args.output_dir):
         os.makedirs(args.output_dir)
 
-    # tokenizer = BertTokenizer.from_pretrained(args.bert_model, do_lower_case=args.do_lower_case)
-    # tokenizer = RobertaTokenizer.from_pretrained(args.RoBerta_model,use_fast=True)
-    tokenizer = RobertaTokenizer.from_pretrained('roberta-base',use_fast=True)
-
-    train_examples = None
-    num_train_optimization_steps = None
-
+    tokenizer = RobertaTokenizer.from_pretrained('roberta-base', use_fast=True)
 
     # Prepare model
-    # model = RobertaForMultipleChoice.from_pretrained(args.RoBerta_model)
     model = RobertaForMultipleChoice.from_pretrained('roberta-base')
-    output_model_file = os.path.join(args.output_dir, WEIGHTS_NAME)
 
     # load the model that was trained on Roberta and then OneSTOPQA
-    load_output_model(model, os.path.join(args.output_dir, '/home/cohnstav/ModelWeights/2acc:0.7577413479052824OneStopQA.pt')) # 0.7946 on epoch 6
+    load_output_model(model, os.path.join(args.output_dir,
+                                          '/home/cohnstav/ModelWeights/Fold4Weights/9acc:0.7638888888888888OneStopQAFold4.pt'))  # fold 1 or original split
 
     model.to(device)
     print(
@@ -435,22 +311,10 @@ def main():
     if n_gpu > 1:
         model = torch.nn.DataParallel(model)
 
-
-    #make predictions
+    # make predictions
     eval_examples = load_data(args, is_training=False)
-    """print(type(eval_examples[0]))
 
-    print(eval_examples[0].id)
-    data=[]
-    for row in eval_examples:
-        data.append([row.id,row.context_sentence,row.start_ending,row.endings[0],row.endings[1],row.endings[2],row.endings[3],row.label])
-        #data.append([row.id])
-
-    df=pd.DataFrame(data=data,columns=['QuestionId','context','question','ending0','ending1','ending2','ending3','label'])"""
-    #df=pd.DataFrame(data=data)
-
-
-    dataAndPrediction=[]
+    dataAndPrediction = []
     for row in eval_examples:
 
         eval_features = convert_examples_to_features(
@@ -475,23 +339,19 @@ def main():
             input_mask = input_mask.to(device)
             label_ids = label_ids.to(device)
 
-
-
             with torch.no_grad():
                 # tmp_eval_loss = model(input_ids, input_mask, label_ids)
                 tmp_eval_loss = model(input_ids=input_ids, attention_mask=input_mask, labels=label_ids)
                 logits = model(input_ids=input_ids, attention_mask=input_mask)
-                logitsCopy=logits.copy()
-
+                logitsCopy = logits.copy()
 
             logits = logits.logits.detach().cpu().numpy()
             eval_results.append(logits)
             label_ids = label_ids.to('cpu').numpy()
             tmp_eval_accuracy = accuracy(logits, label_ids)
 
-
             ###stav addons for analyze
-            print(row)
+            # print(row)
             """
             print(row.id)
             print(row.id.paragraph_id.article_id)
@@ -502,10 +362,12 @@ def main():
             print(logits)
             print(label_ids)"""
             m = torch.nn.Softmax(dim=1)
-            softmax=m(logitsCopy.logits)
+            softmax = m(logitsCopy.logits)
             predicted_label = np.argmax(logits)
-            dataAndPrediction.append(['OneStopQA',row.id.paragraph_id.article_id,row.id.paragraph_id.paragraph_id,row.id.paragraph_id.level,row.id.question,row.id, row.context_sentence, row.start_ending, row.endings[0], row.endings[1], row.endings[2],
-                         row.endings[3], row.label,logits,softmax,predicted_label])
+            dataAndPrediction.append(['OneStopQA', row.id.paragraph_id.article_id, row.id.paragraph_id.paragraph_id,
+                                      row.id.paragraph_id.level, row.id.question, row.id, row.context_sentence,
+                                      row.start_ending, row.endings[0], row.endings[1], row.endings[2],
+                                      row.endings[3], row.label, logits, softmax, predicted_label])
 
             # eval_loss += tmp_eval_loss.mean().item()
             eval_loss += tmp_eval_loss.loss.mean()
@@ -513,10 +375,13 @@ def main():
 
             nb_eval_examples += input_ids.size(0)
             nb_eval_steps += 1
-    predictionDF=pd.DataFrame(data=dataAndPrediction,columns=['Dataset','article_id','paragraph_id','level','questionNumber','QuestionId','context','question','ending0','ending1','ending2','ending3','label','logits','softmax','predicted_label'])
+    predictionDF = pd.DataFrame(data=dataAndPrediction,
+                                columns=['Dataset', 'article_id', 'paragraph_id', 'level', 'questionNumber',
+                                         'QuestionId', 'context', 'question', 'ending0', 'ending1', 'ending2',
+                                         'ending3', 'label', 'logits', 'softmax', 'predicted_label'])
 
-    #predictionDF.to_csv(r'PredictionsOnRaceTest.csv',index=False)
-    predictionDF.to_csv(r'PredictionsOnOneStopQA.csv',index=False)
+    # predictionDF.to_csv(r'PredictionsOnRaceTest.csv',index=False)
+    predictionDF.to_csv(r'PredictionsOnOneStopQAFold1.csv', index=False)
     output_eval_pickle = os.path.join(args.output_dir, "eval_results.pickle")
     torch.save(eval_results, output_eval_pickle)
     eval_loss = eval_loss / nb_eval_steps
@@ -531,7 +396,6 @@ def main():
         for key in sorted(result.keys()):
             logger.info("  %s = %s", key, str(result[key]))
             writer.write("%s = %s\n" % (key, str(result[key])))
-
 
 
 if __name__ == "__main__":

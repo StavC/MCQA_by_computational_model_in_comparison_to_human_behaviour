@@ -1,4 +1,6 @@
 import os
+## 100% John's code, didn't touch it.
+
 from bs4 import BeautifulSoup
 from global_vars import *
 def sublist_inds(l, sub_l):

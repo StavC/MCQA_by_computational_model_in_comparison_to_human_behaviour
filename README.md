@@ -1,70 +1,29 @@
-# MCQA_by_computational_model_in_comparison_to_human_behaviour
+This Project and Paper were authored by Stav Cohen and Nurit Klimovitsky Maor.
 
-This Project and Paper were created by Stav Cohen And Nurit Klimovitsky Maor
-
-
+Contact:
 
 cohnstav@campus.technion.ac.il
 knurit@campus.technion.ac.il
+Acknowledgments:
+Some of the code utilized in this project was based on a pre-existing legacy version provided and developed by Dr. Yevgeni Berzak.
 
-we based some of our code on a pre existing legacy version that were given and created by Dr. Yevgeni Berzak.
+Abstract
+Multiple Choice Question Answering (MCQA) is a commonly employed method to assess reading comprehension in both humans and language models. The task of MCQA, based on a given contextual text, presents a significant challenge for language models.
 
+In traditional Natural Language Processing (NLP) research, the primary objective is to develop models that achieve high accuracy in selecting the correct answer.
 
+In this study, our goal is to compare the question-answering capabilities of a computational model with observed human behavior. We fine-tuned a RoBERTa model using the RACE (Lai et al., 2017) and OneStopQA (Berzak et al., 2020) datasets. Subsequently, we applied the fine-tuned model to the OneStopQA dataset and obtained prediction distributions for each question.
 
-# Abstract 
+The observed human behavior data utilized in this study was collected in (Berzak et al., 2020) through the crowd-sourcing platform Prolific (Pro). We present the results and analysis of the comparison between the model's predictions and human responses.
 
-Multiple Choice Question Answering (MCQA)
-is widely used to study and measure reading
-comprehension in humans and in language
-models. 
+Motivation
+A computational model trained to perform the MCQA task with a level of similarity to observed human behavior can have significant implications in various domains:
 
-The task of MCQA based on a given
-context text is a challenging task for language
-models.
-
-In traditional NLP research the main
-goal is to achieve models that select the correct
-answer with high accuracy scores.
-
-In this work
-we aim to compare the question answering abilities of a computational model to observed human behaviour.
-
-We utilize a RoBERTa model
-by fine-tuning it on RACE (Lai et al., 2017) and
-OneStopQA (Berzak et al., 2020).
-
-We run the
-fine-tuned model on OneStopQA and obtain
-the prediction distribution for each question.
+Reducing reliance on data gathered through human surveys and studies by using the model's predictions as substitutes for human responses.
+Identifying flawed questions used in assessment tests (e.g., SAT or other reading comprehension exams).
+Assessing the difficulty of text and questions.
+Evaluating text simplification by comparing the model's predictions across different levels of contextual complexity.
 
 
-The data that is used as the observed human behaviour is the data that was gathered in (Berzak
-et al., 2020) using the crowd-sourcing platform
-Prolific (Pro). 
-
-In this work we show the results
-analysis of the comparison between the model
-and the human responses
 
 
-# Motivation
-
-A computational model that is trained
-to perform the MCQA task with sufficient similarity to the observed human behaviour can have
-paramount influence on many fields.
-
-
-• Reducing the dependencies in data gathered
-by human surveys and studies. It can be done
-by using the model to get predictions that replace the need for human response.
-
-
-• Identifying faulty questions that are used for
-assessment tests (such as SAT test or any other
-reading comprehension exams).
-
-
-• Difficulty assessment of text and questions.
-
-• Assessment of text simplification by comparing the predictions of a model in different
-levels of the context text.
